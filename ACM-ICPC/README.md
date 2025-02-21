@@ -1,0 +1,1 @@
+**Please check out the posts in my competitive programming code repo.**: [link](https://github.com/LanternCX/Competitive-Programing/tree/main/Note)
