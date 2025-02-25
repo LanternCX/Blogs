@@ -142,6 +142,22 @@ sudo apt-get update && sudo apt-get install firefox-nightly
 
 非常好用的网易云第三方播放器：[YesPlayMusic](https://github.com/qier222/YesPlayMusic)
 
+## Media
+
+### obs
+
+```bash
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt update
+sudo apt install obs-studio
+```
+
+### vlc
+
+```bash
+sudo apt install vlc
+```
+
 ## Markdown
 
 ### Typora
@@ -228,7 +244,14 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
+设置代理
 
+```bash
+# HTTP
+git config --local http.proxy http://localhost:7890
+# HTTPS
+git config --local https.proxy https://localhost:7890
+```
 
 ## Chat
 
