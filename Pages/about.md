@@ -1,7 +1,7 @@
 欢迎你来到我的小站！
 
 ### 关于这个小站
-这个站基于[Typecho](https://github.com/typecho/typecho)和我自己修改的[Akina-for-Typecho主题](https://github.com/CDBxinhe/Akina-for-Typecho-CX)搭建
+这个站基于[Typecho](https://github.com/typecho/typecho)和我自己修改的[Akina-for-Typecho主题](https://github.com/LanternCX/Akina-for-Typecho-CX)搭建
 
 首页的动态字幕用的是[typewriterjs](https://github.com/tameemsafi/typewriterjs)
 
