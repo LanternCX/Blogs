@@ -20,7 +20,7 @@ $$
 
 为了对机械臂进行控制，我们需要完成机械臂运动学的正解与逆解
 
-![RRR](https://gitee.com/LanternCX/picx-images-hosting/raw/master/2025-08-06/RRR.8l0ek3xllt.svg)
+![RRR](https://gitee.com/LanternCX/picx-images-hosting/raw/master/2025-08-09/RRR.9rjpub4btx.webp)
 
 ## 运动学正解
 
