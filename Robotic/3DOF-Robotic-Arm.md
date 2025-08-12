@@ -115,14 +115,33 @@ $$
  = \frac{\pi}{2} - \left(\arctan2(h - L_1, \quad r) + \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right)
 $$
 
-fix: 实际上小臂使用连杆驱动，$ \theta_2$ 应该是关于水平面的夹角，还需要再减去 $ \alpha + \beta $：
-$$
-\theta_3 = \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) - \alpha - \beta \\
-= \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) -\arctan2(h - L_1, \quad r) -\arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)
-$$
+fix: 实际上小臂使用连杆驱动，小臂关于水平面的夹角在大臂运动时不变，因此$ \theta_2$ 应该是关于水平面的夹角，还需要再减去 $ \alpha + \beta $：
 
+$$
+\theta_3 = \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) - \left(\alpha + \beta\right) \\
+= \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) -\left(\arctan2(h - L_1, \quad r) +\arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right)
+$$
 
 柱面坐标下
+
 $$
 \theta_1 = \theta
 $$
+
+使用矩阵表示为：
+
+$$
+\begin{bmatrix}
+\theta_1 \\
+\theta_2 \\
+\theta_3 \\
+\end{bmatrix}
+= 
+\begin{bmatrix}
+\theta \\
+\frac{\pi}{2} - \left(\arctan2(h - L_1, \quad r) + \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right) \\
+\arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) -\left(\arctan2(h - L_1, \quad r) +\arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right) \\
+\end{bmatrix}
+$$
+
+这就是最终的运动学逆解
