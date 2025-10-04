@@ -8,7 +8,7 @@
 2. [Google-C++风格指南](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents.html)：Google 的开发风格指南系列
 3. [Bilibili-【代码美学】系列](https://space.bilibili.com/1629390/lists/1068921)：以视频的方式讲述了开发过程中写出优雅的代码的方法
 
-## 命令约定
+## 命名约定
 
 这一部分可以参考[Bilibili:【熟】代码美学：在代码中取名](https://www.bilibili.com/video/BV1nP4y1v7ww/)
 
@@ -22,24 +22,24 @@
 
 #### snake_case and camelCase
 
-视我项目依赖的库使用**小写下划线（`snake_case`）**命令或者**小驼峰（`camelCase`）**命名。但是全项目统一命名。
+视我项目依赖的库使用**小写下划线**（`snake_case`）命名或者**小驼峰**（`camelCase`）命名。但是全项目统一命名。
 
 例如我的项目主要依赖 `c++ stl` 库或者逐飞库，为了与这些库统一命名风格，我会使用 `snake_case`。
 
 如果我的项目主要依赖 `opencv` 或者 `Arduino` 之类的库，我则会选择使用 `camelCase` 命名。
 
-但是由于 `C++` 开发过程当中很多库的命名规范本身就不统一，实际上我会在写嵌入式或者较为底层的代码的时候使用这一领域较为常见的 `snkae_case` 而一些较为上层的代码，例如 `OpenCV` 之类的项目，则会使用 `camelCase`。
+但是由于 `C++` 开发过程当中很多库的命名规范本身就不统一，实际上我会在写嵌入式或者较为底层的代码的时候使用这一领域较为常见的 `snkae_case` ，而一些较为上层的代码，例如 `OpenCV` 之类的项目，则会使用 `camelCase`。
 
 例如我的项目[DebugLab-2024-Freshman-Project/src/page/Menu.cpp](https://github.com/LanternCX/DebugLab-2024-Freshman-Project/blob/main/src/page/Menu.cpp)，就使用了 `camelCase`：
 
 ```c++
 void Menu::excute() {
-  // Switch function
-  if(key == '*' && isShow){
-    currentIdx += 1;
-    currentIdx %= size;
-    currentPage = pages[currentIdx];
-  }
+    // Switch function
+    if (key == '*' && isShow) {
+        currentIdx += 1;
+        currentIdx %= size;
+        currentPage = pages[currentIdx];
+    }
 ...
 ```
 
@@ -59,7 +59,7 @@ pid.d_max = 30.0;
 
 重点就是风格的统一，尽量不要混用。
 
-#### 特殊变量的命令
+#### 特殊变量的命名
 
 1. **布尔谓词**
 
@@ -77,7 +77,7 @@ pid.d_max = 30.0;
    // 普通判断
    bool is_valid = false;
    if (is_valid) {
-     std::cout << "Valid" << std::endl;
+       std::cout << "Valid" << std::endl;
    }
    ```
 
@@ -92,7 +92,7 @@ pid.d_max = 30.0;
    int n = 10, cnt = 0;
    std::vector<int> arr(n);
    for (int x : arr) {
-     cnt += x % 2;
+       cnt += x % 2;
    }
    ```
 
@@ -108,10 +108,10 @@ pid.d_max = 30.0;
    const int target = 10;
    std::vector<int> arr(n);
    for (int i = 0; i < n; i++) {
-     if (arr[i] == target) {
-       idx = i;
-       break;
-     }
+       if (arr[i] == target) {
+           idx = i;
+           break;
+       }
    }
    ```
 
@@ -142,7 +142,7 @@ pid.d_max = 30.0;
        int idx, val;
    };
    int main() {
-     	int n = 10;
+       int n = 10;
        std::vector<Node> arr(n);
        auto it = std::lower_bound(arr.begin(), arr.end());
        node nd = *it;
@@ -162,8 +162,8 @@ pid.d_max = 30.0;
    bool flag = false;
    std::vector<int> arr(n);
    for (int x : arr) {
-     	if (x == 1) {
-         	flag = true;
+       if (x == 1) {
+           flag = true;
        }
    }
    std::cout << flag ? "Yes" : "No" << std::endl;
@@ -177,13 +177,13 @@ pid.d_max = 30.0;
    ```c++
    // 一般容器使用
    struct Dog {
-     int health, strength;
-   }
+       int health, strength;
+   } 
    int n = 0;
    std::vector<Dog> dogArray(n);
    ```
 
-   一般为了避免与 C++ 中的一些关键字冲突导致的迷惑，我们常常使用缩写或者对象+容器名称的形式命名。
+   一般为了避免与 C++ 中的一些关键字冲突导致的迷惑，我们常常使用缩写或者**对象+容类型**的形式命名。
 
 还有很多诸如此类的变量命名实例，通常可以从开源代码中学习得到，不一一赘述。
 
@@ -204,8 +204,8 @@ int* data_ptr;
 ```c++
 // 类
 class File {
-    public:
-        void open(const std::string& path);
+   public:
+    void open(const std::string& path);
 };
 // 枚举
 enum class LogLevel {
@@ -248,8 +248,8 @@ int getOffset(int now, int target);
 
 ```c++
 class File {
-    public:
-        void open(const std::string& path);
+   public:
+    void open(const std::string& path);
 };
 ```
 
@@ -268,11 +268,11 @@ const int MAX_HEIGHT = 60;
 // 正例
 const int MIN_OFFSET = 10;
 if (offset < MIN_OFFSET) {
-  std::cout << "exceed" << std::endl;
+    std::cout << "exceed" << std::endl;
 }
 // 反例
 if (offset < 10) {
-  std::cout << "exceed" << std::endl;
+    std::cout << "exceed" << std::endl;
 }
 ```
 
@@ -289,7 +289,7 @@ if (offset < 10) {
 ```c++
 int main() {
   int a = 10;
-  if(a > 0) {
+  if (a > 0) {
     printf("Positive\n");
   }
   return 0;
@@ -301,12 +301,25 @@ int main() {
 ```c++
 int main() {
     int a = 10;
-    if(a > 0) {
+    if (a > 0) {
         printf("Positive\n");
     }
     return 0;
 }
 ```
+
+我一般采用 4 缩进格式。
+
+值得一提的是，在 C++ 类的 `public` 和 `private` 等关键字处一般会采用 **3 + 1 缩进**
+
+```c++
+class File {
+   public:
+    void open(const std::string& path);
+};
+```
+
+例如这段代码的 `public` 关键字采用了 3 缩进，`void` 相对 `public` 关键字采用了 1 缩进，总共还是 4缩进
 
 #### 空格
 
@@ -318,7 +331,7 @@ int main() {
    int a = 0;
    a += 10;
    if (a > 10 && a < 10) {
-     	return 0;
+       return 0;
    }
    ```
 
@@ -386,12 +399,12 @@ if (a < 0) { std::cout << "Less" << std::endl; }
 ```c++
 int cnt = 0;
 {
-  	// add cnt to 10
-		while(cnt >= 0 && cnt < 10) {
-      cnt++;
+    // add cnt to 10
+    while (cnt >= 0 && cnt < 10) {
+        cnt++;
     }
-  	if (cnt < 10) {
-      	return;
+    if (cnt < 10) {
+        return;
     }
 }
 ```
@@ -477,7 +490,7 @@ if (is_x && is_y) {
    // 正例
    bool isValid(int x) {
        if (x < 0) {
-         return false;
+           return false;
        }
        return x % 2 == 0;
    }
@@ -485,28 +498,28 @@ if (is_x && is_y) {
 
    在 `while` 循环中使用 `break` 同理。
 
-2. **使用 `contoinue` 简化循环**：
+2. **使用 `continue` 简化循环**：
 
    ```c++
    // 反例
    for (int i = 0; i < 10; i++) {
        if (i % 2 == 0) {
-         std::cout << i << ': ';
-         for (int j = 0; j < 10; j++) {
-             std::cout << i + j<< ' '
-         }
-         std::cout << '\n';
+           std::cout << i << ': ';
+           for (int j = 0; j < 10; j++) {
+               std::cout << i + j << ' '
+           }
+           std::cout << '\n';
        }
    }
    
    // 正例
    for (int i = 0; i < 10; i++) {
        if (i % 2 != 0) {
-         continue;
+           continue;
        }
        std::cout << i << ': ';
        for (int j = 0; j < 10; j++) {
-           std::cout << i + j<< ' '
+           std::cout << i + j << ' '
        }
        std::cout << '\n';
    }
@@ -526,7 +539,7 @@ if (is_x && is_y) {
    
    // 正例
    if (x >= 0 && x % 2 == 0) {
-   	  std::cout << "not even and not negative" << std::endl;
+       std::cout << "not even and not negative" << std::endl;
    }
    ```
 
@@ -544,12 +557,14 @@ if (is_x && is_y) {
    }
    
    // 正例
-   bool isPositive(int x) { 
+   bool isPositive(int x) {
      return x > 0;
    }
-   bool isEven(int x) { 
+   
+   bool isEven(int x) {
      return x % 2 == 0;
    }
+   
    int main() {
        int x = 10;
        if (isPositive(x) && isEven(x)) {
@@ -574,9 +589,9 @@ if (is_x && is_y) {
    
    // 正例
    map<string, int> score = {
-       {"Alice", 90},
-       {"Bob", 85},
-       {"Cathy", 95}
+     {"Alice", 90},
+     {"Bob", 85},
+     {"Cathy", 95}
    };
    if (score.count(name)) {
        std::cout << score[name] << std::endl;
@@ -653,6 +668,8 @@ int main() {
 
 我一般使用行注释解释小的功能点，块注释解释函数、文档，使用 `Doxygen` 风格注释标注而外信息，例如我智能车赛的主函数文件：[SmartCar2025-Main/project/main/Main.cpp](https://github.com/LanternCX/SmartCar2025-Main/blob/master/project/main/Main.cpp)
 
+在一些较为通用场景也就是可能国际化的开源项目，尽量不使用中文注释
+
 #### Inline Comments
 
 我在使用行内注释的时候遵循几点规范：
@@ -728,3 +745,41 @@ int max(int a, int b);
 拓展阅读：[Doxygen - 治好了我的代码注释强迫症 | 知乎](https://zhuanlan.zhihu.com/p/314971283)
 
 总而言之，注释风格的第一要义就是工整，然后就是标记好必要的重要信息，以提高多人合作项目的开发效率。
+
+## Formatter
+
+其实现代化的代码编辑器都多多少少有一些自动格式化的工具，例如 `clang-format`。
+
+在此给出我 VS Code 的 `.clang-format` 配置，可以参考：
+
+```yaml
+# 继承 Google 风格
+BasedOnStyle: Google
+
+# 四缩进
+IndentWidth: 4
+
+# 大括号不提行的 K&R 格式
+BreakBeforeBraces: Attach
+
+# 不允许函数体写在一行
+# 例如： int f() { return 1; }
+# 会被格式化成：
+# int f() {
+# 		return 1;
+# }
+AllowShortFunctionsOnASingleLine: None
+
+# 分支与循环语句不能写成单行
+# 例如： if (x) doSomething();
+# 会被格式化成：
+# if (x) {
+# 		doSomething();
+# }
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+```
+
+主要修改了缩进与单行语句规则。
+
+并且我还使用 [Auto Comment Blocks](https://marketplace.visualstudio.com/items?itemName=kevinkyang.auto-comment-blocks) 这个插件帮助我写出规范的块注释。
