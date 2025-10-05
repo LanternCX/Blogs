@@ -32,7 +32,13 @@ $$
 r_1 = L_2 \sin\theta_2
 $$
 
-$ L_3 $ 在 $ r - \theta$ 平面的投影
+$\theta_3$ 应该是关于水平面的夹角，因此实际上还需要再加上 $ \alpha + \beta $
+
+$$
+\alpha + \beta = \frac{\pi}{2} - \theta_2
+$$
+
+$ L_3$ 在 $ r - \theta$ 平面的投影
 
 $$
 r_2 = L_3 \sin(\pi - \theta_1 - \theta_3)
@@ -41,28 +47,30 @@ $$
 则
 
 $$
-r = r_1 + r_2 = L_2\sin\theta_2 +L_3 \sin(\pi - \theta_1 - \theta_3)
+r = r_1 + r_2 = L_2\sin\theta_2 +L_3 \sin(\pi - \theta_1 - (\theta_3 + \alpha + \beta))
 $$
 
 同理我们可以求解 $ h $
 
 $$
 h_1 = L_2 \cos\theta_2 \\
-h_2 = L_3 \cos(\pi - \theta_1 - \theta_3)
+h_2 = L_3 \cos(\pi - \theta_2 - (\theta_3 + \alpha + \beta))
 $$
 
 根据几何关系有
 
 $$
 h = L_1 + h_1 - h_2 \\
-= L_1 + L_2 \cos\theta_2 - L_3 \cos(\pi - \theta_1 - \theta_3)
+= L_1 + L_2 \cos\theta_2 - L_3 \cos(\pi - \theta_2 - (\theta_3 + \alpha + \beta))
 $$
 
 于是我们有
 
 $$
-P(L_2\sin\theta_2 +L_3 \sin(\pi - \theta_1 - \theta_3),\quad \theta_1 ,\quad L_1 + L_2 \cos\theta_2 - L_3 \cos(\pi - \theta_1 - \theta_3))
+P(L_2\sin\theta_2 +L_3 \sin(\pi - \theta_2 - (\theta_3 + \frac{\pi}{2} - \theta_2)),\quad \theta_1 ,\quad L_1 + L_2 \cos\theta_2 - L_3 \cos(\pi - \theta_2 - (\theta_3 + \frac{\pi}{2} - \theta_2)))
 $$
+
+这就是最终的运动学正解
 
 ## 运动学逆解
 
@@ -105,21 +113,21 @@ $$
 $L^{\prime}$ 和 $L_1$ 的夹角，根据余弦定理
 
 $$
-\beta = \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)
+\beta = \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L^{\prime}}\right)
 $$
 
 则
 
 $$
 \theta_2 = \frac{\pi}{2} - (\alpha + \beta) \\
- = \frac{\pi}{2} - \left(\arctan2(h - L_1, \quad r) + \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right)
+ = \frac{\pi}{2} - \left(\arctan2(h - L_1, \quad r) + \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L^{\prime}}\right)\right)
 $$
 
-fix: 实际上小臂使用连杆驱动，小臂关于水平面的夹角在大臂运动时不变，因此$ \theta_2$ 应该是关于水平面的夹角，还需要再减去 $ \alpha + \beta $：
+fix: 实际上小臂使用连杆驱动，小臂关于水平面的夹角在大臂运动时不变，因此 $\theta_3$ 应该是关于水平面的夹角，还需要再减去 $ \alpha + \beta $：
 
 $$
 \theta_3 = \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) - \left(\alpha + \beta\right) \\
-= \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) -\left(\arctan2(h - L_1, \quad r) +\arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right)
+= \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) -\left(\arctan2(h - L_1, \quad r) +\arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L^{\prime}}\right)\right)
 $$
 
 柱面坐标下
@@ -140,7 +148,7 @@ $$
 \begin{bmatrix}
 \theta \\
 \frac{\pi}{2} - \left(\arctan2(h - L_1, \quad r) + \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right) \\
-\arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) -\left(\arctan2(h - L_1, \quad r) +\arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right) \\
+\arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) -\left(\arctan2(h - L_1, \quad r) +\arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L^{\prime}}\right)\right) \\
 \end{bmatrix}
 $$
 
