@@ -1,155 +1,56 @@
-# RRR 构型关节式三自由度机械臂的运动学解算
+# 3 自由度 RRR 构型机械臂
 
-## 简介
+## 机械
 
-RRR 型关节式 3DOF 机械臂一般由 3 个关节构成
+RRR 构型 3 自由度机械臂
 
-- $J_1$：绕 Z 轴旋转，控制机械臂的朝向
+自主建模设计
 
-- $J_2$：肩关节，控制抬升
+使用 PETG 3D打印制造，关节处使用一颗法兰轴承和一个轴肩螺栓固定
 
-- $J_3$：肘关节，控制伸缩
+串联了一组平行连杆保证末端平台水平
 
-利用柱面坐标，我们可以方便的表示末端关节的位置：
+减速器使用 1:20 摆线减速器，结构件 3D 打印制造
 
-$$
-P(r, \theta, h)
-$$
+## 电控
 
-其中 $ r $ 表示末端半径，$ \theta $ 表示末端旋转角度，$ h $ 表示末端高度
+电机采用三个 42 步进电机控制
 
-为了对机械臂进行控制，我们需要完成机械臂运动学的正解与逆解
+使用张大头步进电机闭环控制器进行 FOC 控制
 
-![RRR](https://gitee.com/LanternCX/picx-images-hosting/raw/master/2025-08-09/RRR.9rjpub4btx.webp)
+结合减速器实现了位置模式与速度模式的电机控制
 
-## 运动学正解
+通过数学建模与解析求解实现了机械臂末端位置的运动学正逆解
 
-求解 $r$
+解析解文章：[RRR 构型关节式三自由度机械臂的运动学解算 - Blog](https://www.caoxin.xyz/index.php/archives/50/)
 
-$ L_2$ 在 $ r - \theta$ 平面的投影
+控制平台使用 Arduino. + ESP32
 
-$$
-r_1 = L_2 \sin\theta_2
-$$
+实现了一套基于面向对象封装机制的机器人开发框架， Github Repo:[LanternCX/3DOF-Robotic-Arm-Control](https://github.com/LanternCX/3DOF-Robotic-Arm-Control)
 
-$\theta_3$ 应该是关于水平面的夹角，因此实际上还需要再加上 $ \alpha + \beta $
+## 语音控制
 
-$$
-\alpha + \beta = \frac{\pi}{2} - \theta_2
-$$
+基于 AI 小智后端进行的二次开发，小智原项目地址：[xinnan-tech/xiaozhi-esp32-server](https://github.com/xinnan-tech/xiaozhi-esp32-server)
 
-$ L_3$ 在 $ r - \theta$ 平面的投影
+二次开发的小智项目地址：[LanternCX/3DOF-Robotic-Arm-xiaozhi-server: 3DOF-Robotic-Arm-xiaozhi-server](https://github.com/LanternCX/3DOF-Robotic-Arm-xiaozhi-server)
 
-$$
-r_2 = L_3 \sin(\pi - \theta_1 - \theta_3)
-$$
+小智是一个语音控制开发框架，通过对接大模型（这里使用 [Deepseek 开放平台](https://platform.deepseek.com/)）的[对话补全 | DeepSeek API Docs](https://api-docs.deepseek.com/zh-cn/api/create-chat-completion)与 [Function Calling | DeepSeek API Docs](https://api-docs.deepseek.com/zh-cn/guides/function_calling)
 
-则
+语音识别使用了 Sense Voice Small 部署在本地将语音信息转换为文字
 
-$$
-r = r_1 + r_2 = L_2\sin\theta_2 +L_3 \sin(\pi - \theta_1 - (\theta_3 + \alpha + \beta))
-$$
+文字转换语音使用了 Edge 语音生成
 
-同理我们可以求解 $ h $
+## 视觉
 
-$$
-h_1 = L_2 \cos\theta_2 \\
-h_2 = L_3 \cos(\pi - \theta_2 - (\theta_3 + \alpha + \beta))
-$$
+基于 OpenCV 和 YoloV8 进行基础视觉处理与模型训练
 
-根据几何关系有
+YoloV8 实现了目标检测与缺陷检测等等
 
-$$
-h = L_1 + h_1 - h_2 \\
-= L_1 + L_2 \cos\theta_2 - L_3 \cos(\pi - \theta_2 - (\theta_3 + \alpha + \beta))
-$$
+OpenCV 实现了多类型目标指定与识别
 
-于是我们有
+## 上位机
 
-$$
-P(L_2\sin\theta_2 +L_3 \sin(\pi - \theta_2 - (\theta_3 + \frac{\pi}{2} - \theta_2)),\quad \theta_1 ,\quad L_1 + L_2 \cos\theta_2 - L_3 \cos(\pi - \theta_2 - (\theta_3 + \frac{\pi}{2} - \theta_2)))
-$$
+上位机负责主要的逻辑控制与功能实现，运行在本地部署的一台边缘计算服务器终端
 
-这就是最终的运动学正解
+上位机实现了视觉识别，运动学正逆解，电机逻辑控制，任务状态机维护，通过 Websocket 协议与小智后端交互，通过串口命令控制 ESP32 下位机通信与控制
 
-## 运动学逆解
-
-固定$\theta_1$，在 $r-h$ 平面内作辅助线 $L^{\prime}$ 连接 $J_2$ 和 $ P $
-
-首先解出 $\theta_3$
-
-根据勾股定理
-
-$$
-\left(L^{\prime}\right)^2 = r^2 + (h - L_1)^2
-$$
-
-根据余弦定理
-
-$$
-cos(\pi - \theta_3) = \frac{\left(L_2\right)^2 + \left(L_3\right)^2 - \left(L^{\prime}\right)^2}{2 L_2 L_3}
-$$
-
-根据诱导公式
-
-$$
-cos(\pi - \theta_3) = -cos(\theta_3)
-$$
-
-则
-
-$$
-\theta_3 = \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)
-$$
-
-同样的我们可以解出 $\theta_2$
-
-$r$ 和 $L^{\prime}$ 的夹角
-
-$$
-\alpha = \arctan2(h - L_1, \quad r)
-$$
-
-$L^{\prime}$ 和 $L_1$ 的夹角，根据余弦定理
-
-$$
-\beta = \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L^{\prime}}\right)
-$$
-
-则
-
-$$
-\theta_2 = \frac{\pi}{2} - (\alpha + \beta) \\
- = \frac{\pi}{2} - \left(\arctan2(h - L_1, \quad r) + \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L^{\prime}}\right)\right)
-$$
-
-fix: 实际上小臂使用连杆驱动，小臂关于水平面的夹角在大臂运动时不变，因此 $\theta_3$ 应该是关于水平面的夹角，还需要再减去 $ \alpha + \beta $：
-
-$$
-\theta_3 = \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) - \left(\alpha + \beta\right) \\
-= \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) -\left(\arctan2(h - L_1, \quad r) +\arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L^{\prime}}\right)\right)
-$$
-
-柱面坐标下
-
-$$
-\theta_1 = \theta
-$$
-
-使用矩阵表示为：
-
-$$
-\begin{bmatrix}
-\theta_1 \\
-\theta_2 \\
-\theta_3 \\
-\end{bmatrix}
-= 
-\begin{bmatrix}
-\theta \\
-\frac{\pi}{2} - \left(\arctan2(h - L_1, \quad r) + \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right) \\
-\arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) -\left(\arctan2(h - L_1, \quad r) +\arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L^{\prime}}\right)\right) \\
-\end{bmatrix}
-$$
-
-这就是最终的运动学逆解
