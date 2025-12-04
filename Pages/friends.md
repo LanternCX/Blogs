@@ -8,10 +8,18 @@ Please send the link to your blog, the icon link you would like to display, and 
 
 For example, sending `https://caoxin.xyz, https://avatars.githubusercontent.com/u/76872604?v=4, Cao Xin's Blog` will result in the following display:
 
-<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 10px; margin-top: 50px;">
-    <div style="isplay: flex; flex-direction: row; align-items: center; gap: 10px; font-family: '微软雅黑', sans-serif;">
-        <img src="https://foruda.gitee.com/avatar/1738160609325820286/9448389_lanterncx_1738160609.png!avatar200" alt="网站图标" style="width: 50px; height: 50px; margin-bottom: 5px;">
-        <a href="https://www.caoxin.xyz" target="_blank" style="text-decoration: underline; color: inherit; font-size: 16px;">Cao Xin's Blog</a>
+<div style="text-align: center; margin-top: 40px;">
+    <div style="display: inline-block; width: 60px; height: 60px;">
+        <img src="https://foruda.gitee.com/avatar/1738160609325820286/9448389_lanterncx_1738160609.png!avatar200"
+             alt="icon"
+             style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <div style="margin-top: 10px;">
+        <a href="https://www.caoxin.xyz"
+           target="_blank"
+           style="font-size: 16px; text-decoration: underline;">
+           Cao Xin's Blog
+        </a>
     </div>
 </div>
 
@@ -19,3 +27,19 @@ For example, sending `https://caoxin.xyz, https://avatars.githubusercontent.com/
 
 Thank you for visiting!
 
+## 友链 Link
+
+<div style="text-align: center; margin-top: 40px;">
+    <div style="display: inline-block; width: 60px; height: 60px;">
+        <img src="https://cdn.amiracle.site/avatar_cir.png"
+             alt="icon"
+             style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <div style="margin-top: 10px;">
+        <a href="https://amiracle.site"
+           target="_blank"
+           style="font-size: 16px; text-decoration: underline;">
+           Amiracle | 向往之处，便是归途
+        </a>
+    </div>
+</div>
