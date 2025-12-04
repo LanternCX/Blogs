@@ -147,7 +147,7 @@ $$
 = 
 \begin{bmatrix}
 \theta \\
-\frac{\pi}{2} - \left(\arctan2(h - L_1, \quad r) + \arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right) \\
+\frac{\pi}{2} - \left(\arctan2(h - L_1, \quad r) + \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right)\right) \\
 \arccos \left(\frac{\left(L^{\prime}\right)^2 - \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L_3}\right) -\left(\arctan2(h - L_1, \quad r) +\arccos \left(\frac{\left(L^{\prime}\right)^2 + \left(L_2\right)^2 - \left(L_3\right)^2}{2 L_2 L^{\prime}}\right)\right) \\
 \end{bmatrix}
 $$
