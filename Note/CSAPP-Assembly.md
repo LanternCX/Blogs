@@ -21,7 +21,7 @@
 
 `mov` `push` `pop`
 
-`leal`：`leal A(B, C, D), E` = `E = A + B - C * D`
+`leal`：`leal A(B, C, D), E` = `E = A + B + C * D`
 
 #### 算术运算
 
