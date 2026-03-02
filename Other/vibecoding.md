@@ -10,7 +10,9 @@
 
 恰好在知乎也读了胡渊鸣大佬的文章：[如何有效地给 10 个 Claude Code 打工](https://zhuanlan.zhihu.com/p/2007147036185744607)，深受启发，于是决定系统性的学习探索一下 Vibe Coding。
 
-PS：在我写完这篇文章之后我就在 Github 看到了和我类似思路但是更加完善的项目：[mindfold-ai/Trellis: All-in-one AI framework & toolkit](https://github.com/mindfold-ai/Trellis)。所以这篇文章的 workflow 似乎已经过时了
+PS：在我写完这篇文章之后我就在 Github 看到了和我类似思路但是更加完善的项目：[mindfold-ai/Trellis: All-in-one AI framework & toolkit](https://github.com/mindfold-ai/Trellis)。所以这篇文章的 workflow 似乎已经过时了。
+
+UPD(2026.3.3)：我现在的工作流是 [opencode](https://github.com/anomalyco/opencode) + [superpowers](https://github.com/obra/superpowers)，使用的是我自己的 fork：[LanternCX/superpowers](https://github.com/LanternCX/superpowers) 订阅使用的是 codex 的小黄鱼拼车版，一个月 7r ，额度每周重置，几乎用不完。也可以通过一些手段将 codex 的 oauth 认证转换为更为通用的 OpenAI API + API-Kay 的格式，我的项目 [LanternCX/codex-gateway](https://github.com/LanternCX/codex-gateway) 实现了这一点，当然社区也有其他类似实现。然后我的另一篇文章中根据这几天的使用体验对初始化要求做了更为严格的定义: [项目初始化 prompt](https://www.caoxin.xyz/index.php/archives/83/)
 
 ## 为什么需要一套自己的工作流
 

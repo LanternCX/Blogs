@@ -47,7 +47,7 @@
 4. 此项目携带的 co-author 头：Co-authored-by: opencode-agent[bot] <opencode-agent[bot]@users.noreply.github.com>
 5. 特别要求的技术栈：python
 
-项目说明：
+### 项目说明
 
 1. 
 
