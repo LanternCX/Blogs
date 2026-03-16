@@ -132,7 +132,7 @@
 
 如果是跑好几个甚至十几个 **Task** 的大任务，我直接换 **Copilot**，因为 **Copilot** 是按次数计费的。
 
-模型订阅就这么些，没啥好说的，思路类似之前看到的一篇文章：[[教程\] 某鱼 8 元拼车和 **ChatGPT Team** 版并将 **Codex** 反代到 **OpenClaw** (四) - 蓝点网](https://www.landiannews.com/archives/111964.html)
+模型订阅就这么些，没啥好说的，思路类似之前看到的一篇文章：[某鱼 8 元拼车和 **ChatGPT Team** 版并将 **Codex** 反代到 **OpenClaw** - 蓝点网](https://www.landiannews.com/archives/111964.html)
 
 另外由于 **Codex** 在非 **Mac** 平台老是登录不上 **OpenCode** 于是我直接 **Vibe** 了一个服务专门把我的 **OAuth** 转发到通用的 **OpenAI API**：[LanternCX/codex-gateway](https://github.com/LanternCX/codex-gateway)。这个项目我们后面展开聊。
 
