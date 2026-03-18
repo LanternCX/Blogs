@@ -8,7 +8,7 @@
 1. git 使用 git flow 以及 angular commit 规范，不要使用 superpowers 自带的 git-worktrees。
 2. 需要新建一个 using-git-worktrees skill 复写 superpowers 的同名 skill，并在内部将项目的 git 工作流重定向到项目自身的 git-workflow skill。
 3. 创建两个分支：main、dev 分支
-4. 每次commit 操作都必须向我确认。
+4. 每次 commit 操作都必须向我确认。
 5. commit 携带 co-author 头：下文配置
 
 ### CI

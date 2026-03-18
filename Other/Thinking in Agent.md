@@ -11,13 +11,15 @@
 - **Git** / **GitHub** 以及常见工作范式：**Actions**、**PR**、**Code Review**
 - 常见的 **Agent** 功能：**Skills**、**MCP**、**Commands**、**Agent**、**Subagent**
 
+当然也有很多类似 **Prompt Engineering**、**Content Engineering**、**Harness Engineering** 这样的词汇，但是这些词汇都是描述一个 **Topic** 而非具体的技术，其实就算不了解定义掌握了核心思维也是一样的。
+
 大概知道是个啥就好，不需要精通技术细节。如果你完全没接触过，可以这样简单理解：**Vibe Coding** 是一种全新的编程范式，核心是人类只负责高层架构设计和审美决策（对齐 **Vibe**），而将写代码的脏活累活全权交给 **AI Agent**。知道这些前置知识能够帮助你更好地阅读本文。
 
 ---
 
 ## 写在前面
 
-过年期间正好有空深度改造了一下自己的 **vibe coding** 工作流，在此之前我只是一个白嫖 **GitHub** 学生包用 **Copilot Pro** 的人。
+过年期间正好有空深度改造了一下自己的 **Vibe Coding** 工作流，在此之前我只是一个白嫖 **GitHub** 学生包用 **Copilot Pro** 的人。
 
 满打满算前后也有一个多月，期间根据我的实际需求 **Vibe** 了几个项目：
 
@@ -41,7 +43,7 @@
 
 因为最近快进入赛季了，如果能改造一下实验室工作流，在忙的时候我能省点心。
 
-也就是刚接触 **Vibe Coding** 的学生、小白，能够帮你在摸索 **vibe coding** 工程化的过程中少走一些弯路。
+也就是刚接触 **Vibe Coding** 的学生、小白，能够帮你在摸索 **Vibe Coding** 工程化的过程中少走一些弯路。
 
 最好是有 1-2 周或者 1-2 个项目的 **Vibe** 经验。
 
@@ -53,7 +55,7 @@
 
 ### 这篇文章是怎么写出的？
 
-我自己的部分：闲鱼试了各种方案，**vibe** 了几个项目，看了蛮多文章、帖子。
+我自己的部分：闲鱼试了各种方案，**Vibe** 了几个项目，看了蛮多文章、帖子。
 
 剩下都是我总结的。
 
@@ -73,13 +75,21 @@
 
    **Tw93** 大佬的文章，详细叙述了 **Vibe Coding** 过程中的有关问题以及治理范式，同时大佬也是 **X** 和 **GitHub** 上很有名的开源作者，严肃学习。这篇文章在 **Tw93** 博客的链接：[tw93.fun](https://tw93.fun/2026-03-12/claude.html)，知乎也有发，标题都是一样的可以自行寻找。
 
+- [anomalyco/opencode - Github](https://github.com/anomalyco/opencode)
+
+   可以认为是开源的 Claude Code。优点在于可以通过读源码指导我们优化上下文，以及可以更方便地接入更多的 LLM 提供商。缺点在 Bug 有点多。opencode 的官方文档同样值得阅读，可以通过阅读文档了解 opencode 的支持功能：[opencode.ai/docs](https://opencode.ai/docs)
+
+- ["Lessons from Building Claude Code: How We Use Skills " - X](https://x.com/trq212/status/2033949937936085378)
+
+   Claude 的 Skills 最佳实践指南，给出了 Skills 的常见类别以及最佳实现。核心思想在于上下文工程（Content Enginering）和渐进式披露（progressive disclosure）。中文翻译：["构建 Claude Code 的经验：我们如何使用 Skills【译】"  - X](https://x.com/dotey/status/2034002188994060691)
+
 - [WhynotTV - **B 站**](https://space.bilibili.com/14145636)
 
    几乎所有的博客/播客值得学习。尤其是最新一期的翁家翌大佬的播客（提到了 **idea** 和 **infra** 的关系）让我确定了改造自己的工作流和学习新的知识同样重要。
 
 - [**Prompting best practices** - **Claude API Docs**](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)
 
-   **Claude** 提示词最佳实践指南，可以用来详细了解 **Claude** 这样的 **Agent** 都设计了什么好用的功能，以及和 **AI** 对话的常见 **Trick**。
+   **Claude** 提示词最佳实践指南，可以用来详细了解 **Claude** 这样的 **Agent** 都设计了什么好用的功能，以及和 **AI** 对话的常见 **Trick**。因为官网上的中文翻译不全，于是我自己拿 AI 翻译了一下：[提示词最佳实践](https://www.caoxin.xyz/index.php/archives/84/)
    
 - [大模型进化论 - **B 站**](https://space.bilibili.com/3546981949507978/lists/7254252)
 
@@ -92,6 +102,10 @@
 - ["2016 年，我做过一次 **AI** 写代码创业" - **X**](https://x.com/xleaps/status/2033027083476054377)
 
    超级好的文章，大佬的真情流露，对我的启发更多是视野上的而非工作流上的。
+   
+- ["The Anatomy of an Agent Harness" - X](https://x.com/Vtrivedy10/status/2031408954517971368)
+
+   Langchain 工程师的一篇文章，提出了 `Agent = Model + Harness` 的概念，本质上本文探讨的核心：如何给 Agent 设计合理约束。
    
 - [affaan-m/everything-claude-code - **GitHub**](https://github.com/affaan-m/everything-claude-code)
 
@@ -117,6 +131,7 @@
 
    第一次听说 **Harness Engineering** 的文章，实际上就是在工程里面对 **AI** 加各种约束，同样也是本文探讨的核心。
 
+当然还有很多很多的文章，而且 X 上各大佬以及各 Agent 厂一直在频繁更新高质量的一手资料，这里的文章一定不是最新的也不是最全的，仅仅是我在写这篇文章之前度过的一些资料。
 
 人类就是这样，善于从海量模糊信息中总结经验模式，可以读这么多东西并且没有啥上下文限制，给 **AI** 读这么多东西还真不一定能提炼出最有用的核心（bushi）。
 
@@ -128,7 +143,7 @@
 
 **Codex** 是闲鱼收的，买了三份，质保一个月每份才 10r 不到，爽之爽之。
 
-基本上小任务，类似用 **Superpowers** 的 **Brainstorming** 我都是用我自己的订阅，因为是按 **Token** 计费。
+基本上小任务，类似用 **Superpowers** 的 [**Brainstorming**](#plan) 我都是用我自己的订阅，因为是按 **Token** 计费。
 
 如果是跑好几个甚至十几个 **Task** 的大任务，我直接换 **Copilot**，因为 **Copilot** 是按次数计费的。
 
@@ -149,7 +164,7 @@
 
 就像贡献 **GitHub** 项目，需要经过 **Issue** (feat or bug) -> **Develop** -> **CI** -> **Debug** -> **PR** -> **Review** -> **Merge** 这样一个完整的流程规范 **Contributor** 的行为，同样的，**AI** 也需要类似的工作流规范代码。
 
-因此 **Vibe Coding** 的重心逐渐转移到了 **Prompt Engineering**：如何设计合理的边界条件规范 **LLM** 行为，防止 **AI** 写史山、写 **Bug**。
+因此 **Vibe Coding** 的重心逐渐转移到了所谓的 **Harness Engineering**：如何设计合理的边界条件规范 **LLM** 行为，防止 **AI** 写史山、写 **Bug**。
 
 **Superpowers** 就是这样一个开箱即用的 **Skills** 库，通过引入一套完整的工作流，规范 **Agent** 写代码时会遇到的各种问题。
 
@@ -159,6 +174,8 @@
 - **Brainstorming**：通过和用户聊天进行意图对齐
 - **Review**：主动对 **LLM** 生成的代码进行 **Code Review**。
 - **Subagent-Driven**：子 **Agent** 通过将大任务拆分为小任务
+
+![Superpowers.webp](https://gitee.com/LanternCX/picx-images-hosting/raw/master/2026-03-17/Superpowers.webp)
 
 除了这些非常具有思考的开发哲学以外，还有 **Debug**、**Git** 等等常见的工作流技能。
 
@@ -171,7 +188,7 @@
 主要体现在三点：
 
 1. 我更喜欢在我的项目中使用设计语言更为一致、跨平台更为友好的仓库。
-2. 我认可作者认为的 **Everything is Skills** 思想，也就是 **Agent** 支持的 **Commands** / **Agents** 这样的层其实并不必要，甚至多余。
+2. 我认可作者认为的 [**Everything in Skills**](#everyting-in-skills) 思想，也就是 **Agent** 支持的 **Commands** / **Agents** 这样的层其实并不必要，甚至多余。
 3. 简洁、优雅、美观的设计，能够实现“最小改动”式的引入。
 
 更确切地说：**Superpowers** 的作者 **Obra** 对这个仓库的维护几乎是一言堂的模式，类似 **Linus** 对 **Linux** 的话语权。
@@ -196,7 +213,9 @@
 
 也就是说，这个 `Thought -> Action -> Observation` 的循环会持续进行，直到模型判断已经获得了充足的信息，并输出 **Final Answer** 结束任务。
 
-为什么要知道这个呢？通过熟悉 **Agent**运行的底层原理，我们优化工作流的方式就非常清晰了：帮助模型更好地在 **ReAct** 循环中搜集信息。
+![ReAct.webp](https://gitee.com/LanternCX/picx-images-hosting/raw/master/2026-03-17/ReAct.webp)
+
+为什么要知道这个呢？通过熟悉 **Agent** 运行的底层原理，我们优化工作流的方式就非常清晰了：帮助模型更好地在 **ReAct** 循环中搜集信息。
 
 也就是：过滤无效信息，留下有用信息，而不仅仅是增加信息。（可以认为是一层人工知识蒸馏）
 
@@ -230,6 +249,7 @@
 
 具体可以再多看看 **Tw93** 大佬的文章，在此不再过多赘述：[**Tw93**: 你不知道的 **Claude Code**：架构、治理与工程实践](https://x.com/hitw93/article/2032091246588518683)
 
+<span id="plan"></span>
 ## 意图对齐
 
 在现在看来其实是老生常谈的话题。不过在 **Plan** 模式出现之前这个问题是广泛存在的。
@@ -269,7 +289,7 @@ description: "You MUST use this before any creative work - creating features, bu
 
 关于这一点的设计，**Vue** 作者尤雨溪在自己的中文 **X** 上也有提及：[尤雨溪 on **X**](https://x.com/yuxiyou/status/2023892606317703654)，不知道算不算是大佬的殊途同归。
 
-关于项目级 **Memory** 我们后面再谈。
+关于项目级 **Memory** 我们[后面再谈](#memory)。
 
 ## **TDD**
 
@@ -295,13 +315,15 @@ description: "You MUST use this before any creative work - creating features, bu
 
 这就是 **Subagent**：将任务分发给子 **Agent** 来完成，以减少主 **Agent** 的无用上下文占用。
 
+![Subagent.webp](https://gitee.com/LanternCX/picx-images-hosting/raw/master/2026-03-17/Subagent.webp)
+
 在这个基础上，我还能给 **Subagent** 注入不同的角色设定提示词，激发更为专业的操作。
 
 一般来说更为常见的方法是通过设计不同的 **Subagent** 角色来适应不同的工作，但是 **Superpowers** 的实现更为简单而暴力。
 
 **Superpowers** 框架自带 [subagent-driven-development](https://github.com/obra/superpowers/tree/main/skills/subagent-driven-development) 这样的 **Skill**，通过直接对一个完全白板的 **Subagent**（在 **OpenCode** 中是 @general 或者 @explore）注入提示词实现。
 
-这样的设计也符合仓库的 **Everything in Skills** 设计理念。
+这样的设计也符合仓库的 [**Everything in Skills**](#everyting-in-skills) 设计理念。
 
 ## Code Review
 
@@ -316,6 +338,8 @@ description: "You MUST use this before any creative work - creating features, bu
 迁移到 **Agentic Workflow**，通过 **Code Review Agent** 对 **Coding Agent** 写的代码进行 **Code Review** 就是一个很自然的思想了。
 
 在 **Superpowers** 中，一个完整的开发周期会自动使用 `requesting-code-review` 在开发结束之后进行 **Code Review**，并且在 **Review** 之后使用 `receiving-code-review` 对收到的 **Review** 结果进行必要的修改。
+
+<span id="memory"></span>
 
 ## 项目级 Memory
 
@@ -377,6 +401,8 @@ description: "You MUST use this before any creative work - creating features, bu
 当然这并不是说 **MCP** 不好。**MCP** 和 **Skill** 解决的不是一类问题。简单来说，**MCP** 的核心是让不同模型标准化地访问本地资源与外部工具，相当于通用的外设接口；而 **Skill** 提供的是针对特定任务的工作流规范和认知引导，相当于操作手册。
 
 在上下文寸土寸金的地方，**Skill** 显然更好。而 **MCP** 更倾向于解决和服务端通信的稳定与格式化。
+
+<span id="everyting-in-skills"></span>
 
 ## Everything in Skills
 
@@ -499,6 +525,79 @@ Co-authored-by: opencode-agent[bot] <opencode-agent[bot]@users.noreply.github.co
 
 - 为什么 **Codex** 和 **Opus** 的编码能力这么强？因为 **Codex** 背后是**微软**和 **GitHub**，**Opus** 背后是 **Claude** 大量用户的交互数据。
 
+## 我的配置
+
+直接引入[我的 Superpowers Fork](https://github.com/LanternCX/superpowers)。
+
+然后参考我之前的文章新建项目：[项目初始化 prompt](https://www.caoxin.xyz/index.php/archives/83/)。
+
+当然这一定不是一个大而全的配置，也不是最优配置。
+
+我的核心思想是将最大限度的发挥空间留给 Agent，只加上最小约束。
+
+根据项目的不同，在下文的基础上进行修改，给 Agent 提供新的信息或者给 Agent 一个合理的工作流程。
+
+其实只要遵循本文所说的思想基本上不会做的太差。
+
+```markdown
+这是我的项目，要求如下：
+
+### git
+
+1. git 使用 git flow 以及 angular commit 规范，不要使用 superpowers 自带的 git-worktrees。
+2. 需要新建一个 using-git-worktrees skill 复写 superpowers 的同名 skill，并在内部将项目的 git 工作流重定向到项目自身的 git-workflow skill。
+3. 创建两个分支：main、dev 分支
+4. 每次 commit 操作都必须向我确认。
+5. commit 携带 co-author 头：下文配置
+
+### CI
+
+1. 如果撰写了测试代码，Github Action 的 workflow 在每次 Tag push 的时候运行项目测试
+2. 每次跨平台项目打包到：mac-arm64、linux-arm64、linux-x64、windows-x64 四个平台，根据平台选用压缩包格式，注意静态文件（配置文件、运行时数据库）的打包，每次 Tag push 时执行，并且自动生成 draft release
+
+### 代码风格
+
+1. 按照开源项目的标准撰写
+2. 注释风格
+    - 文档注释统一采用 Doxygen 风格, 默认使用 `@brief`, 按需补充 `@param`, `@return`, `@note`, `@warning`
+    - 注释与文档字符串中的标点使用半角符号, 且标点后需跟一个空格, 例如 `你好, 世界`
+    - 单行注释行尾不加句号, 逗号, 分号, 冒号等收尾标点
+3. 项目设计采用高内聚低耦合架构，自行尽量根据类似的最佳实践设计
+4. 静态可持久化文件一律存储到程序运行目录，不要写入系统目录，例如（日志、配置数据）等
+5. 需要有工业级的日志系统：std 输出以及可持久化日志切片
+6. 英文项目：注释使用英文
+7. 中文项目：注释使用中文
+
+### 文档风格
+
+1. 按照开源项目的标准撰写
+2. 文档需要区分用户文档以及开发文档
+3. 用户文档根需要包含项目介绍、快速开始，跳转到开发文档以及详细部署配置文档的链接
+4. 开发文档需要注明代码规范（架构说明以及代码风格）、git 工作流、agent 使用规范（项目 skill 建立在 .opencode/skill） 
+5. 英文项目：文档撰写中文 + 英文两份文档，除了根文档都撰写到 docs/ 目录下，例如 docs/zh-cn，docs/en
+6. 中文项目：文档使用中文
+
+### Agent
+
+1. 必须使用 LanternCX/superpowers 这个 fork 开发
+2. 本项目采用 .opencode 作为 agent 工作目录，如果需要迁移请完整迁移
+
+### 配置项
+
+1. 此项目语言为：英文
+2. 此项目是否撰写测试（TDD）：是
+3. 此项目是否进行跨平台打包：是
+4. 此项目携带的 co-author 头：Co-authored-by: opencode-agent[bot] <opencode-agent[bot]@users.noreply.github.com>
+5. 特别要求的技术栈：python
+
+### 项目说明
+
+1. 
+
+根据以上要求，在 .opencode 文件夹生成三个 skills： doc-maintainer，git-workflow， code-standard。
+如果有疑问，使用 superpowers 的 brainstorming skill 和我确认。
+```
+
 ## 杂谈
 
 ### 关于思考
@@ -590,6 +689,12 @@ Co-authored-by: opencode-agent[bot] <opencode-agent[bot]@users.noreply.github.co
 还会从失败中学习、改进自己的工作流、设计代码复用效率更高的脚手架等等。
 
 也就是说：**解决问题的能力 and 想出解决方案的能力并不等同**。
+
+### Project Based Learning
+
+项目式学习（Project Based Learning，简称 PBL），是一种基于项目的学习方法。与传统的先学理论，后做练习不同，PBL 将项目本身作为学习的载体。为了完成这个项目，学生必须主动去学习和掌握相关的理论知识。
+
+对于工科类的知识学习，沿用高中死读书式的学习效果是远不如动手实践来得好的。也可以看成一种 ReAct 机制（？）
 
 ### 以前写过的文章
 
