@@ -1,0 +1,13 @@
+title: Caoxin Blog
+language: zh-CN
+timezone: Asia/Shanghai
+url: https://www.caoxin.xyz
+root: /
+permalink: :year/:month/:day/:title/
+future: true
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+theme: landscape
