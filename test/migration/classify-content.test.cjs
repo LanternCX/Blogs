@@ -34,3 +34,12 @@ test('classifyContent only fixes separators and does not rewrite path segments',
 
   assert.equal(classifyContent('Misc/../Pages/about.md').kind, 'post');
 });
+
+test('classifyContent uses content rules as the single rule source for content paths', () => {
+  const { classifyContent } = loadSubject();
+
+  assert.deepEqual(classifyContent('content/Pages/about.md'), {
+    kind: 'page',
+    slug: 'about'
+  });
+});

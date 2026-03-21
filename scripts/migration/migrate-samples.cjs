@@ -5,16 +5,47 @@ const { execSync } = require('node:child_process');
 const { classifyContent } = require('./classify-content.cjs');
 const { extractTitle } = require('./extract-title.cjs');
 const { buildGitDateCommand, normalizeGitDates } = require('./git-dates.cjs');
+const { extractManualAppendix } = require('./migration-doc.cjs');
 const { mapTargetPath } = require('./path-mapper.cjs');
-const { renderFrontMatterDocument } = require('./render-front-matter.cjs');
 const { SAMPLE_PATHS } = require('./sample-set.cjs');
 
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const MAPPING_DOC_PATH = 'docs/migration/hexo-sample-mapping.md';
-const MANUAL_APPENDIX_HEADING = '## 手工附录';
+
+function normalizeSourcePath(sourcePath) {
+  return sourcePath.replaceAll('\\', '/');
+}
+
+function stripContentPrefix(sourcePath) {
+  const normalizedSourcePath = normalizeSourcePath(sourcePath);
+  return normalizedSourcePath.startsWith('content/')
+    ? normalizedSourcePath.slice('content/'.length)
+    : normalizedSourcePath;
+}
+
+function getPostCategory(sourcePath) {
+  return stripContentPrefix(sourcePath).split('/')[0];
+}
+
+function resolveSampleSourcePath(repoRoot, sourcePath) {
+  const normalizedSourcePath = normalizeSourcePath(sourcePath);
+  const directPath = path.join(repoRoot, normalizedSourcePath);
+
+  if (fs.existsSync(directPath)) {
+    return normalizedSourcePath;
+  }
+
+  const contentPath = path.posix.join('content', stripContentPrefix(normalizedSourcePath));
+
+  if (fs.existsSync(path.join(repoRoot, contentPath))) {
+    return contentPath;
+  }
+
+  return normalizedSourcePath;
+}
 
 function buildSampleRecord({ sourcePath, markdown, gitDateLines }) {
-  const normalizedSourcePath = sourcePath.replaceAll('\\', '/');
+  const normalizedSourcePath = normalizeSourcePath(sourcePath);
   const classification = classifyContent(normalizedSourcePath);
   const title = extractTitle(markdown);
   const dates = normalizeGitDates({ lines: gitDateLines });
@@ -30,7 +61,7 @@ function buildSampleRecord({ sourcePath, markdown, gitDateLines }) {
   };
 
   if (classification.kind === 'post') {
-    frontMatter.categories = [normalizedSourcePath.split('/')[0]];
+    frontMatter.categories = [getPostCategory(normalizedSourcePath)];
   }
 
   return {
@@ -43,7 +74,7 @@ function buildSampleRecord({ sourcePath, markdown, gitDateLines }) {
 }
 
 function buildSampleRecordWithOptionalMetadata({ sourcePath, markdown, title, dates }) {
-  const normalizedSourcePath = sourcePath.replaceAll('\\', '/');
+  const normalizedSourcePath = normalizeSourcePath(sourcePath);
   const classification = classifyContent(normalizedSourcePath);
   const fileName = path.posix.basename(normalizedSourcePath);
   const targetPath = mapTargetPath(normalizedSourcePath, {
@@ -62,7 +93,7 @@ function buildSampleRecordWithOptionalMetadata({ sourcePath, markdown, title, da
   }
 
   if (classification.kind === 'post') {
-    frontMatter.categories = [normalizedSourcePath.split('/')[0]];
+    frontMatter.categories = [getPostCategory(normalizedSourcePath)];
   }
 
   return {
@@ -74,23 +105,11 @@ function buildSampleRecordWithOptionalMetadata({ sourcePath, markdown, title, da
   };
 }
 
-function extractManualAppendix(existingDocument) {
-  if (!existingDocument) {
-    return '';
-  }
-
-  const startIndex = existingDocument.indexOf(MANUAL_APPENDIX_HEADING);
-
-  if (startIndex === -1) {
-    return '';
-  }
-
-  return existingDocument.slice(startIndex).trimEnd();
-}
-
 function renderSampleMappingDocument({ records, manualReviewItems, manualAppendix = '' }) {
   const lines = [
     '# Hexo Sample Mapping',
+    '',
+    '> 样本回归入口: 仅用于验证少量样本映射规则与人工复核信号, 不写入正式 `source/` 站点产物',
     '',
     '| 来源路径 | 目标路径 | 内容类型 | categories |',
     '| --- | --- | --- | --- |'
@@ -165,7 +184,8 @@ function migrateSamples(options = {}) {
   const manualReviewItems = [];
 
   for (const sourcePath of samplePaths) {
-    const absoluteSourcePath = path.join(repoRoot, sourcePath);
+    const normalizedSourcePath = resolveSampleSourcePath(repoRoot, sourcePath);
+    const absoluteSourcePath = path.join(repoRoot, normalizedSourcePath);
     const markdown = fs.readFileSync(absoluteSourcePath, 'utf8');
     let gitDateLines = [];
     let title;
@@ -174,40 +194,34 @@ function migrateSamples(options = {}) {
     try {
       title = extractTitle(markdown);
     } catch {
-      manualReviewItems.push(`${sourcePath}: missing title`);
+        manualReviewItems.push(`${normalizedSourcePath}: missing title`);
     }
 
     try {
-      gitDateLines = readGitDateLines(sourcePath);
+        gitDateLines = readGitDateLines(stripContentPrefix(normalizedSourcePath));
 
-      if (gitDateLines.length === 0) {
-        manualReviewItems.push(`${sourcePath}: missing git author dates`);
-      } else {
-        dates = normalizeGitDates({ lines: gitDateLines });
+        if (gitDateLines.length === 0) {
+          manualReviewItems.push(`${normalizedSourcePath}: missing git author dates`);
+        } else {
+          dates = normalizeGitDates({ lines: gitDateLines });
+        }
+      } catch {
+        manualReviewItems.push(`${normalizedSourcePath}: missing git author dates`);
       }
-    } catch {
-      manualReviewItems.push(`${sourcePath}: missing git author dates`);
-    }
 
     let record;
 
     if (title && dates) {
-      record = buildSampleRecord({ sourcePath, markdown, gitDateLines });
-    } else {
-      record = buildSampleRecordWithOptionalMetadata({
-        sourcePath,
-        markdown,
-        title,
-        dates
+        record = buildSampleRecord({ sourcePath: normalizedSourcePath, markdown, gitDateLines });
+      } else {
+        record = buildSampleRecordWithOptionalMetadata({
+          sourcePath: normalizedSourcePath,
+          markdown,
+          title,
+          dates
       });
     }
 
-    const document = renderFrontMatterDocument({
-      frontMatter: record.frontMatter,
-      body: record.body
-    });
-
-    writeTextFile(repoRoot, record.targetPath, document);
     records.push(record);
   }
 
@@ -229,13 +243,12 @@ function migrateSamples(options = {}) {
 if (require.main === module) {
   const result = migrateSamples();
   process.stdout.write(
-    `Migrated ${result.records.length} samples and wrote ${result.mappingDocumentPath}\n`
+    `Migrated ${result.records.length} regression samples and wrote ${result.mappingDocumentPath}\n`
   );
 }
 
 module.exports = {
   buildSampleRecord,
-  extractManualAppendix,
   migrateSamples,
   renderSampleMappingDocument
 };

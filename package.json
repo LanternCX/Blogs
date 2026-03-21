@@ -6,7 +6,8 @@
     "hexo:clean": "hexo clean",
     "hexo:generate": "hexo generate",
     "hexo:serve": "hexo server",
-    "migrate:samples": "node scripts/migration/migrate-samples.cjs"
+    "migrate:samples": "node scripts/migration/migrate-samples.cjs",
+    "migrate:all": "node scripts/migration/migrate-all.cjs"
   },
   "dependencies": {
     "hexo": "^7.3.0",

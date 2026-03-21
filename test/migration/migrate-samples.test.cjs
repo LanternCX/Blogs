@@ -80,8 +80,10 @@ test('migrateSamples records missing title for manual review without aborting', 
   const repoRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'migrate-samples-'));
   const sourcePath = 'Note/untitled.md';
 
-  fs.mkdirSync(path.join(repoRoot, 'Note'), { recursive: true });
-  fs.writeFileSync(path.join(repoRoot, sourcePath), '只有正文\n\n没有标题', 'utf8');
+  fs.mkdirSync(path.join(repoRoot, 'content/Note'), { recursive: true });
+  fs.writeFileSync(path.join(repoRoot, 'content/Note/untitled.md'), '只有正文\n\n没有标题', 'utf8');
+  fs.mkdirSync(path.join(repoRoot, 'source/_posts'), { recursive: true });
+  fs.writeFileSync(path.join(repoRoot, 'source/_posts/existing.md'), '# existing\n', 'utf8');
 
   const result = migrateSamples({
     repoRoot,
@@ -91,11 +93,8 @@ test('migrateSamples records missing title for manual review without aborting', 
 
   assert.equal(result.records.length, 1);
   assert.match(result.manualReviewItems[0], /missing title/i);
-
-  const migrated = fs.readFileSync(path.join(repoRoot, 'source/_posts/untitled.md'), 'utf8');
-  assert.doesNotMatch(migrated, /^title:/m);
-  assert.match(migrated, /^date: "2024-01-01T00:00:00\+08:00"/m);
-  assert.match(migrated, /^updated: "2024-01-03T00:00:00\+08:00"/m);
+  assert.equal(fs.existsSync(path.join(repoRoot, 'source/_posts/untitled.md')), false);
+  assert.equal(fs.readFileSync(path.join(repoRoot, 'source/_posts/existing.md'), 'utf8'), '# existing\n');
 });
 
 test('migrateSamples preserves manual appendix in mapping document', () => {
@@ -132,4 +131,53 @@ test('migrateSamples preserves manual appendix in mapping document', () => {
   assert.match(mappingDocument, /## 手工附录/);
   assert.match(mappingDocument, /这段说明需要在脚本重跑后保留/);
   assert.match(mappingDocument, /最终验证：已执行/);
+});
+
+test('migrateSamples reads sample content from content/ directory model', () => {
+  const repoRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'migrate-samples-'));
+
+  fs.mkdirSync(path.join(repoRoot, 'content/Note'), { recursive: true });
+  fs.writeFileSync(path.join(repoRoot, 'content/Note/OOP.md'), '# OOP\n\n正文', 'utf8');
+
+  const result = migrateSamples({
+    repoRoot,
+    samplePaths: ['content/Note/OOP.md'],
+    readGitDateLines: () => ['2024-01-03T00:00:00+08:00', '2024-01-01T00:00:00+08:00']
+  });
+
+  assert.equal(result.records.length, 1);
+  assert.equal(result.records[0].sourcePath, 'content/Note/OOP.md');
+  assert.equal(result.records[0].targetPath, 'source/_posts/OOP.md');
+  assert.match(
+    fs.readFileSync(path.join(repoRoot, 'docs/migration/hexo-sample-mapping.md'), 'utf8'),
+    /\| `content\/Note\/OOP\.md` \| `source\/_posts\/OOP\.md` \| `post` \| `Note` \|/
+  );
+});
+
+test('migrateSamples resolves legacy sample-set paths against content/ directory', () => {
+  const repoRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'migrate-samples-'));
+
+  fs.mkdirSync(path.join(repoRoot, 'content/Note'), { recursive: true });
+  fs.writeFileSync(path.join(repoRoot, 'content/Note/OOP.md'), '# OOP\n\n正文', 'utf8');
+
+  const result = migrateSamples({
+    repoRoot,
+    samplePaths: ['Note/OOP.md'],
+    readGitDateLines: () => ['2024-01-03T00:00:00+08:00', '2024-01-01T00:00:00+08:00']
+  });
+
+  assert.equal(result.records.length, 1);
+  assert.equal(result.records[0].sourcePath, 'content/Note/OOP.md');
+  assert.equal(result.records[0].frontMatter.categories[0], 'Note');
+});
+
+test('renderSampleMappingDocument states sample regression scope without formal source output responsibility', () => {
+  const document = renderSampleMappingDocument({
+    records: [],
+    manualReviewItems: []
+  });
+
+  assert.match(document, /样本回归入口/);
+  assert.match(document, /仅用于验证少量样本映射规则/);
+  assert.doesNotMatch(document, /成功生成 Hexo 目标文件/);
 });
