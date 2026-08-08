@@ -1,3 +1,8 @@
+---
+title: 'CSAPP-Chapter 5: 程序的执行'
+pubDate: 2026-01-22
+---
+
 # CSAPP
 
 ## Chapter 05 程序的执行

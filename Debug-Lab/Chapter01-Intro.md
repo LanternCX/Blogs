@@ -1,3 +1,8 @@
+---
+title: '[Debug 2025 Freshman] CP Chapter 01 Intro'
+pubDate: 2025-09-25
+---
+
 # Debug 2025 Freshman - C Programing
 
 ## 开始之前

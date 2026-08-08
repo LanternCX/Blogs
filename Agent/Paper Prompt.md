@@ -1,3 +1,8 @@
+---
+title: 'Gemini 中文论文 prompt'
+pubDate: 2026-01-03
+---
+
 # Gemini 中文论文 prompt
 
 自用的 Gemini 中文论文 prompt
@@ -111,4 +116,3 @@
 
 字数必须达到4000字要求
 ```
-

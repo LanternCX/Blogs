@@ -1,3 +1,8 @@
+---
+title: '[Debug 2025 Freshman] CP Chapter 04 - Struct, Pointer and Debugger'
+pubDate: 2025-10-20
+---
+
 # Debug 2025 Freshman - C Programing
 
 ## Chapter04 - Struct, Pointer and Debugger
@@ -771,4 +776,3 @@ GDB（GNU Debugger） 是 GNU 项目下的开源调试器，
 简而言之：GDB 能够帮助你看清程序运行的时候程序内部到底发生了什么。
 
 详细的在 Dev-C++ 中使用 Debugger 的方法，可以看这篇文章：[DevC++调试程序详解 - C语言中文网](https://c.biancheng.net/view/ftfzduv.html)
-

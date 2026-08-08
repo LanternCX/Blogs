@@ -1,3 +1,8 @@
+---
+title: 'HZCU 2025 Freshman STL: Homework Editorial'
+pubDate: 2025-11-04
+---
+
 # HZCU 2025 Freshman STL: Homework Editorial
 
 ## [A - P3156 【深基15.例1】询问学号](https://www.luogu.com.cn/problem/P3156)
@@ -364,4 +369,3 @@ while (pq.size() > 1) {
 
 cout << ans;
 ```
-

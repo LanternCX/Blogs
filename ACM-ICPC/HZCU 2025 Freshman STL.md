@@ -1,3 +1,8 @@
+---
+title: 'HZCU 2025 Freshman STL'
+pubDate: 2025-10-29
+---
+
 # HZCU 2025 Freshman STL
 
 STL 的全称是 **Standard Template Library**，中文一般译为 **标准模板库**。
@@ -591,4 +596,3 @@ s.insert(int pos, string str);
 // 在 pos 开始i后的 count 个字符替换为 str 的内容
 s.replace(int pos, int count, string str);
 ```
-

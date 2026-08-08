@@ -1,3 +1,8 @@
+---
+title: '技术部攻略 | 直播技术初步'
+pubDate: 2025-02-21
+---
+
 ## 技术部攻略 | 直播技术初步
 
 ### 〇、基本概念
@@ -534,7 +539,7 @@ OBS还提供了更为**高级的音频配置**，合理的配置这些选项，*
 
 录制出的文件在Pr中查看就能看到多条音轨：
 
-![Pr中的轨道](/home/caoxin/Code/hello-xysu-tech/live/.https:/gitee.com/LanternCX/picx-images-hosting/raw/master/2025-02-21/Pr中的轨道.13lwpo24r7.webp)
+![Pr中的轨道](https://gitee.com/LanternCX/picx-images-hosting/raw/master/2025-02-21/Pr中的轨道.13lwpo24r7.webp)
 
 音频轨道中的音频信息和我们配置的完全一致
 

@@ -4,6 +4,8 @@ theme: uncover
 _class: invert
 paginate: true
 size: 16:9
+title: '面向 Agent 编程'
+pubDate: 2026-03-18
 ---
 
 # 面向 **Agent** 编程

@@ -1,3 +1,8 @@
+---
+title: 'CSAPP-Chapter 6: 存储'
+pubDate: 2026-01-22
+---
+
 # CSAPP
 
 ## Chapter 06 层次结构存储系统

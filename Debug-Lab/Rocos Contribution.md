@@ -1,3 +1,8 @@
+---
+title: 'Debug Lab - Contribution Guide for Rocos Repo'
+pubDate: 2025-03-11
+---
+
 # Debug Lab - Rocos repo
 
 fork from [Robocup-ssl-China/rocos](https://github.com/Robocup-ssl-China/rocos)

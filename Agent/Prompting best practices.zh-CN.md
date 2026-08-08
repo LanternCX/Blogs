@@ -1,3 +1,8 @@
+---
+title: '提示词最佳实践'
+pubDate: 2026-03-11
+---
+
 # 提示词最佳实践
 
 翻译自 [Prompting best practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)

@@ -1,3 +1,8 @@
+---
+title: '[Debug 2025 Freshman] CP Practice 03 - Struct, Pointer and Debugger Editorial'
+pubDate: 2025-10-23
+---
+
 # Debug 2025 Freshman - C Programing
 
 ## [Practice 03 - Struct, Pointer and Debugger](https://vjudge.net/contest/758974) Editorial
@@ -441,4 +446,3 @@ int main() {
     return 0;
 }
 ```
-

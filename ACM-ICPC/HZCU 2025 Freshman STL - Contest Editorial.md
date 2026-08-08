@@ -1,3 +1,8 @@
+---
+title: 'HZCU 2025 Freshman STL: Contest Editorial'
+pubDate: 2025-11-04
+---
+
 # HZCU 2025 Freshman STL: Contest Editorial
 
 ## A 明明的随机数

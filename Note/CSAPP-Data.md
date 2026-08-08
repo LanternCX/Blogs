@@ -1,3 +1,8 @@
+---
+title: 'CSAPP-Chapter 2: 数据的机器级表示'
+pubDate: 2026-01-22
+---
+
 # CSAPP
 
 ## Chapter 04：数据的机器级表示与处理

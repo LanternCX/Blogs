@@ -1,3 +1,8 @@
+---
+title: '[Debug 2025 Freshman] CP Pracitce 01: I/O and Flow Control Editorial'
+pubDate: 2025-10-02
+---
+
 # Debug 2025 Freshman - C Programing
 
 ## [Practice 01: I/O and Flow Control](https://vjudge.net/contest/751860) Editorial

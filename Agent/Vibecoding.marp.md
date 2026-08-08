@@ -4,6 +4,8 @@ theme: uncover
 _class: invert
 paginate: true
 size: 16:9
+title: '浅尝 Vibe Coding'
+pubDate: 2026-02-23
 ---
 
 <style>

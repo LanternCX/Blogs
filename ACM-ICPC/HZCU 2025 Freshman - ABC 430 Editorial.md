@@ -1,3 +1,8 @@
+---
+title: 'HZCU 2025 Freshman - ABC 430 A-D Editorial'
+pubDate: 2025-11-04
+---
+
 # HZCU 2025 Freshman - ABC 430 A-D Editorial
 
 ## [A - Candy Cookie Law](https://atcoder.jp/contests/abc430/tasks/abc430_a)

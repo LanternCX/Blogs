@@ -1,3 +1,8 @@
+---
+title: '[Debug 2025 Freshman] CP Chapter 03 Array, String and Function'
+pubDate: 2025-10-13
+---
+
 # Debug 2025 Freshman - C Programing
 
 ## Chapter03 - Array, String and Function
@@ -666,4 +671,3 @@ int main() {
 | 局部变量                 | 函数或代码块内部 | 从定义处开始，到代码块结束时销毁             |
 | 全局变量                 | 整个程序         | 从程序开始到程序结束                         |
 | 静态局部变量（`static`） | 函数内部         | 在整个程序运行期间都存在，但只能在函数内访问 |
-

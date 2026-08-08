@@ -1,3 +1,8 @@
+---
+title: '项目初始化 prompt'
+pubDate: 2026-03-02
+---
+
 # 项目初始化 prompt
 
 ```markdown
@@ -58,4 +63,3 @@
 根据以上要求，在 .opencode 文件夹生成三个 skills： doc-maintainer，git-workflow， code-standard。
 如果有疑问，使用 superpowers 的 brainstorming skill 和我确认。
 ```
-

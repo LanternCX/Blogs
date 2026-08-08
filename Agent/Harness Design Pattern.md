@@ -1,3 +1,8 @@
+---
+title: 'Harness 设计模式'
+pubDate: 2026-03-23
+---
+
 # Harness 设计模式
 
 两篇文章的省流版。

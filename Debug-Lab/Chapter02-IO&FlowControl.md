@@ -1,3 +1,8 @@
+---
+title: '[Debug 2025 Freshman] CP Chapter 02 IO and Flow Control'
+pubDate: 2025-09-28
+---
+
 # Debug 2025 Freshman - C Programing
 
 ## Chapter02 - IO and Flow Control

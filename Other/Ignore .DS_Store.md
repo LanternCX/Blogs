@@ -1,3 +1,8 @@
+---
+title: 'MacOS 下 git 全局 ignore .DS_Store'
+pubDate: 2025-10-03
+---
+
 # MacOS 下 git 全局 ignore .DS_Store
 
 `.DS_Strore` 文件是 **MacOS** 自动生成的 **Desktop Services Store** 文件，用于存储文件夹的显示设置
@@ -61,4 +66,3 @@ chmod +x setup_gitignore.sh
 ```bash
 ./setup_gitignore.sh
 ```
-
