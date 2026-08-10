@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="660" viewBox="0 0 1050 660"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="525" y="42" text-anchor="middle" class="title">SQL 查询的逻辑执行顺序</text>
+<rect x="390" y="75" width="270" height="64" rx="12" class="blue"/><text x="525" y="116" text-anchor="middle" class="h">1. FROM / JOIN</text>
+<rect x="390" y="160" width="270" height="64" rx="12" class="orange"/><text x="525" y="201" text-anchor="middle" class="h">2. WHERE</text>
+<rect x="390" y="245" width="270" height="64" rx="12" class="purple"/><text x="525" y="286" text-anchor="middle" class="h">3. GROUP BY</text>
+<rect x="390" y="330" width="270" height="64" rx="12" class="red"/><text x="525" y="371" text-anchor="middle" class="h">4. HAVING</text>
+<rect x="390" y="415" width="270" height="64" rx="12" class="green"/><text x="525" y="456" text-anchor="middle" class="h">5. SELECT</text>
+<rect x="390" y="500" width="270" height="64" rx="12" class="gray"/><text x="525" y="541" text-anchor="middle" class="h">6. DISTINCT / ORDER / LIMIT</text>
+<path d="M525 139 V160" class="arrow"/><path d="M525 224 V245" class="arrow"/><path d="M525 309 V330" class="arrow"/><path d="M525 394 V415" class="arrow"/><path d="M525 479 V500" class="arrow"/>
+<text x="55" y="196" class="t">WHERE：分组前筛选原始行</text><text x="700" y="366" class="t">HAVING：分组后筛选组</text><text x="55" y="450" class="t">SELECT 中的别名通常不能直接给 WHERE 使用</text><text x="700" y="535" class="t">最后才排序和分页</text>
+</svg>

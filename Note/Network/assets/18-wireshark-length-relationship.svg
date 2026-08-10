@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="55" y="80" width="990" height="95" rx="5" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.7"/>
+<text x="550.0" y="128.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="600" fill="#172033">Ethernet II 帧</text>
+<rect x="125" y="120" width="850" height="55" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="550.0" y="148.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">IP 数据报</text>
+<rect x="215" y="135" width="670" height="30" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="550.0" y="151.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">TCP 段 / UDP 用户数据报</text>
+<rect x="340" y="140" width="420" height="20" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.7"/>
+<text x="550.0" y="151.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">应用层数据</text>
+<rect x="55" y="250" width="470" height="175" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="290.0" y="319.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="290.0" dy="0">帧长 = 14 B 以太网首部</tspan>
+<tspan x="290.0" dy="23">+ IP 总长度</tspan>
+<tspan x="290.0" dy="23">（抓包可能不含 4 B FCS）</tspan>
+</text>
+<rect x="575" y="250" width="470" height="175" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="810.0" y="319.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="810.0" dy="0">应用数据长度 = IP 总长度</tspan>
+<tspan x="810.0" dy="23">− IP 首部长度</tspan>
+<tspan x="810.0" dy="23">− TCP/UDP 首部长度</tspan>
+</text>
+<text x="550" y="470" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">由外层长度逐层减去首部，可反推出内层数据长度</text>
+</svg>

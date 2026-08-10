@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="650" viewBox="0 0 1150 650"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="575" y="42" text-anchor="middle" class="title">E-R 图转换为关系模式</text>
+<rect x="40" y="90" width="300" height="90" rx="14" class="blue"/><text x="190" y="125" text-anchor="middle" class="h">部门 1 —— N 员工</text><text x="190" y="155" text-anchor="middle" class="t">一对多</text>
+<path d="M340 135 H440" class="arrow"/><rect x="440" y="80" width="660" height="110" rx="14" class="green"/><text x="770" y="120" text-anchor="middle" class="h">在 N 端加入外码</text><text x="770" y="154" text-anchor="middle" class="mono">Employee(Eid, Ename, DeptId FK)</text>
+<rect x="40" y="260" width="300" height="90" rx="14" class="purple"/><text x="190" y="295" text-anchor="middle" class="h">学生 M —— N 课程</text><text x="190" y="325" text-anchor="middle" class="t">联系含属性 Grade</text>
+<path d="M340 305 H440" class="arrow"/><rect x="440" y="245" width="660" height="120" rx="14" class="orange"/><text x="770" y="285" text-anchor="middle" class="h">建立独立中间表</text><text x="770" y="320" text-anchor="middle" class="mono">SC(Sno PK/FK, Cno PK/FK, Grade)</text><text x="770" y="346" text-anchor="middle" class="s">两个外码通常共同组成复合主码</text>
+<rect x="40" y="440" width="300" height="90" rx="14" class="red"/><text x="190" y="475" text-anchor="middle" class="h">员工 1 —— 1 工位</text><text x="190" y="505" text-anchor="middle" class="t">一对一</text>
+<path d="M340 485 H440" class="arrow"/><rect x="440" y="425" width="660" height="120" rx="14" class="gray"/><text x="770" y="465" text-anchor="middle" class="h">把一方主码放入另一方，并加 UNIQUE</text><text x="770" y="500" text-anchor="middle" class="mono">Employee(..., DeskId FK UNIQUE)</text><text x="770" y="526" text-anchor="middle" class="s">通常放到参与更完全、访问更频繁的一方</text>
+<text x="575" y="610" text-anchor="middle" class="t">联系本身的属性永远不能丢：成绩、日期、数量、名次等应进入承载该联系的关系。</text>
+</svg>

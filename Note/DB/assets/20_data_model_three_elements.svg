@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="500" viewBox="0 0 1050 500"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="525" y="45" text-anchor="middle" class="title">数据模型必须同时回答三个问题</text>
+<rect x="90" y="130" width="250" height="150" rx="16" class="blue"/><text x="215" y="172" text-anchor="middle" class="h">数据结构</text><text x="215" y="210" text-anchor="middle" class="t">用什么单位组织数据</text><text x="215" y="238" text-anchor="middle" class="t">以及单位之间怎样联系</text>
+<rect x="400" y="130" width="250" height="150" rx="16" class="green"/><text x="525" y="172" text-anchor="middle" class="h">数据操作</text><text x="525" y="210" text-anchor="middle" class="t">允许怎样查询、插入</text><text x="525" y="238" text-anchor="middle" class="t">修改、删除和遍历</text>
+<rect x="710" y="130" width="250" height="150" rx="16" class="orange"/><text x="835" y="172" text-anchor="middle" class="h">完整性约束</text><text x="835" y="210" text-anchor="middle" class="t">哪些状态被允许</text><text x="835" y="238" text-anchor="middle" class="t">哪些组合必须被拒绝</text>
+<rect x="215" y="360" width="620" height="70" rx="16" class="gray"/><text x="525" y="403" text-anchor="middle" class="t">只描述表长什么样不够，还必须描述能做什么，以及什么数据不合法。</text>
+</svg>

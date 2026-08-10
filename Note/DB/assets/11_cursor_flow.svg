@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="650" viewBox="0 0 1050 650"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="525" y="42" text-anchor="middle" class="title">游标处理流程</text>
+<rect x="365" y="80" width="320" height="65" rx="12" class="blue"/><text x="525" y="121" text-anchor="middle" class="h">DECLARE 变量、游标、处理器</text>
+<rect x="365" y="180" width="320" height="65" rx="12" class="green"/><text x="525" y="221" text-anchor="middle" class="h">OPEN cursor</text>
+<rect x="365" y="280" width="320" height="65" rx="12" class="orange"/><text x="525" y="321" text-anchor="middle" class="h">FETCH INTO 变量</text>
+<polygon points="525,380 675,450 525,520 375,450" class="purple"/><text x="525" y="444" text-anchor="middle" class="h">done = TRUE ?</text><text x="525" y="473" text-anchor="middle" class="t">是否读完</text>
+<rect x="80" y="415" width="220" height="70" rx="12" class="gray"/><text x="190" y="458" text-anchor="middle" class="h">处理当前行</text>
+<rect x="750" y="415" width="220" height="70" rx="12" class="red"/><text x="860" y="458" text-anchor="middle" class="h">CLOSE cursor</text>
+<path d="M525 145 V180" class="arrow"/><path d="M525 245 V280" class="arrow"/><path d="M525 345 V380" class="arrow"/><path d="M375 450 H300" class="arrow"/><text x="325" y="433" class="s">否</text><path d="M190 415 C190 340 300 310 365 312" class="arrow"/><path d="M675 450 H750" class="arrow"/><text x="705" y="433" class="s">是</text>
+<text x="525" y="595" text-anchor="middle" class="t">NOT FOUND 处理器只负责把 done 设为 TRUE；循环根据 done 决定何时退出。</text>
+</svg>

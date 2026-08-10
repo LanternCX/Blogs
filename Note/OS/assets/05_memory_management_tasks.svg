@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}.title{font-size:26px;font-weight:700}.label{font-size:18px;font-weight:600}.small{font-size:15px}.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:12}.accent{fill:#eef2ff;stroke:#4f46e5;stroke-width:2;rx:12}.good{fill:#ecfdf5;stroke:#059669;stroke-width:2;rx:12}.warn{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:12}.line{stroke:#334155;stroke-width:2.2;fill:none}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="450" y="42" text-anchor="middle" class="title">内存管理的四类任务</text>
+<rect x="80" y="120" width="170" height="70" class="accent"/><text x="165" y="148" text-anchor="middle" class="label">分配与回收</text><text x="165" y="174" text-anchor="middle" class="small">管理空闲空间</text>
+<rect x="280" y="120" width="170" height="70" class="box"/><text x="365" y="148" text-anchor="middle" class="label">地址转换</text><text x="365" y="174" text-anchor="middle" class="small">逻辑到物理</text>
+<rect x="480" y="120" width="170" height="70" class="good"/><text x="565" y="148" text-anchor="middle" class="label">保护与共享</text><text x="565" y="174" text-anchor="middle" class="small">隔离和授权</text>
+<rect x="680" y="120" width="170" height="70" class="warn"/><text x="765" y="148" text-anchor="middle" class="label">扩充与置换</text><text x="765" y="174" text-anchor="middle" class="small">虚拟存储基础</text>
+<path d="M250,155 L280,155" class="line" marker-end="url(#arrow)"/><path d="M450,155 L480,155" class="line" marker-end="url(#arrow)"/><path d="M650,155 L680,155" class="line" marker-end="url(#arrow)"/>
+</svg>

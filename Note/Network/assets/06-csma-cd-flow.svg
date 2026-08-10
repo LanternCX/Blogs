@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="620" viewBox="0 0 1020 620">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="400" y="35" width="220" height="60" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="510.0" y="70.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="510.0" dy="0">准备发送</tspan>
+</text>
+<rect x="400" y="125" width="220" height="70" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="510.0" y="153.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="510.0" dy="0">监听信道</tspan>
+<tspan x="510.0" dy="23">Carrier Sense</tspan>
+</text>
+<polygon points="510,225 625,285 510,345 395,285" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="510" y="276" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">
+<tspan x="510" dy="0">信道</tspan>
+<tspan x="510" dy="22">空闲？</tspan>
+</text>
+<rect x="400" y="385" width="220" height="70" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="510.0" y="413.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="510.0" dy="0">发送并继续监听</tspan>
+<tspan x="510.0" dy="23">Collision Detection</tspan>
+</text>
+<polygon points="510,485 625,545 510,605 395,545" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+<text x="510" y="536" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">
+<tspan x="510" dy="0">检测到</tspan>
+<tspan x="510" dy="22">冲突？</tspan>
+</text>
+<line x1="510" y1="95" x2="510" y2="125" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<line x1="510" y1="195" x2="510" y2="225" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<line x1="510" y1="345" x2="510" y2="385" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<line x1="510" y1="455" x2="510" y2="485" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="60" y="245" width="230" height="80" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="175.0" y="278.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="175.0" dy="0">信道忙</tspan>
+<tspan x="175.0" dy="23">继续监听</tspan>
+</text>
+<line x1="395" y1="285" x2="290" y2="285" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<text x="335" y="266" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">否</text>
+<path d="M 175 245 C 180 130 320 140 400 160" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="730" y="505" width="230" height="80" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="845.0" y="538.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="845.0" dy="0">未冲突</tspan>
+<tspan x="845.0" dy="23">帧发送完成</tspan>
+</text>
+<line x1="625" y1="545" x2="730" y2="545" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<text x="675" y="525" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">否</text>
+<rect x="730" y="265" width="230" height="95" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+<text x="845.0" y="294.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="845.0" dy="0">冲突：停止发送</tspan>
+<tspan x="845.0" dy="23">发送干扰信号</tspan>
+<tspan x="845.0" dy="23">二进制指数退避</tspan>
+</text>
+<path d="M 510 605 C 510 650 845 650 845 600" stroke="#dc2626" stroke-width="2.2" fill="none" marker-end="url(#arrowRed)"/>
+<line x1="845" y1="505" x2="845" y2="360" stroke="#dc2626" stroke-width="2.2" fill="none" marker-end="url(#arrowRed)"/>
+<text x="865" y="465" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="700" fill="#dc2626">是</text>
+<path d="M 730 312 C 650 312 650 70 620 65" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+</svg>

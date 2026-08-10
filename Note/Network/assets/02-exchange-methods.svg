@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="500" viewBox="0 0 1080 500">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="40" y="50" width="320" height="390" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2" filter="url(#shadow)"/>
+<text x="200" y="90" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="700" fill="#172033">电路交换</text>
+<line x1="95" y1="145" x2="305" y2="145" stroke="#4f46e5" stroke-width="4" fill="none"/>
+<line x1="95" y1="190" x2="305" y2="190" stroke="#4f46e5" stroke-width="4" fill="none"/>
+<line x1="95" y1="235" x2="305" y2="235" stroke="#4f46e5" stroke-width="4" fill="none"/>
+<circle cx="95" cy="190" r="13" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<circle cx="305" cy="190" r="13" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="200" y="310" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="500" fill="#172033">• 建立专用通路</text>
+<text x="200" y="348" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="500" fill="#172033">• 通信期间资源独占</text>
+<text x="200" y="386" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="500" fill="#172033">• 时延稳定但空闲浪费</text>
+<rect x="380" y="50" width="320" height="390" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+<text x="540" y="90" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="700" fill="#172033">报文交换</text>
+<rect x="425" y="150" width="65" height="58" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="457.5" y="184.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="457.5" dy="0">报文</tspan>
+</text>
+<line x1="490" y1="179" x2="508" y2="179" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="510" y="150" width="65" height="58" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="542.5" y="184.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="542.5" dy="0">报文</tspan>
+</text>
+<line x1="575" y1="179" x2="593" y2="179" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="595" y="150" width="65" height="58" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="627.5" y="184.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="627.5" dy="0">报文</tspan>
+</text>
+<text x="540" y="310" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="500" fill="#172033">• 整份报文存储转发</text>
+<text x="540" y="348" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="500" fill="#172033">• 结点需大容量缓冲</text>
+<text x="540" y="386" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="500" fill="#172033">• 长报文会阻塞后续报文</text>
+<rect x="720" y="50" width="320" height="390" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+<text x="880" y="90" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="21" font-weight="700" fill="#172033">分组交换</text>
+<rect x="765" y="135" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="790.0" y="148.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P11</text>
+<rect x="823" y="135" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="848.0" y="148.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P12</text>
+<rect x="881" y="135" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="906.0" y="148.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P13</text>
+<rect x="939" y="135" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="964.0" y="148.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P14</text>
+<rect x="765" y="170" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="790.0" y="183.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P21</text>
+<rect x="823" y="170" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="848.0" y="183.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P22</text>
+<rect x="881" y="170" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="906.0" y="183.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P23</text>
+<rect x="939" y="170" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="964.0" y="183.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P24</text>
+<rect x="765" y="205" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="790.0" y="218.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P31</text>
+<rect x="823" y="205" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="848.0" y="218.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P32</text>
+<rect x="881" y="205" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="906.0" y="218.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P33</text>
+<rect x="939" y="205" width="50" height="25" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="964.0" y="218.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">P34</text>
+<line x1="765" y1="260" x2="995" y2="260" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<text x="880" y="310" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="500" fill="#172033">• 报文拆成较小分组</text>
+<text x="880" y="348" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="500" fill="#172033">• 多个用户统计复用</text>
+<text x="880" y="386" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="500" fill="#172033">• 可能排队、丢失和乱序</text>
+</svg>

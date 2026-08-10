@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="120" y="70" width="105" height="42" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1"/>
+<text x="172.5" y="91" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">1</text>
+<line x1="120" y1="112" x2="120" y2="450" stroke="#e2e8f0" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<rect x="225" y="70" width="105" height="42" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1"/>
+<text x="277.5" y="91" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">0</text>
+<line x1="225" y1="112" x2="225" y2="450" stroke="#e2e8f0" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<rect x="330" y="70" width="105" height="42" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1"/>
+<text x="382.5" y="91" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">1</text>
+<line x1="330" y1="112" x2="330" y2="450" stroke="#e2e8f0" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<rect x="435" y="70" width="105" height="42" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1"/>
+<text x="487.5" y="91" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">1</text>
+<line x1="435" y1="112" x2="435" y2="450" stroke="#e2e8f0" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<rect x="540" y="70" width="105" height="42" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1"/>
+<text x="592.5" y="91" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">0</text>
+<line x1="540" y1="112" x2="540" y2="450" stroke="#e2e8f0" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<rect x="645" y="70" width="105" height="42" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1"/>
+<text x="697.5" y="91" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">0</text>
+<line x1="645" y1="112" x2="645" y2="450" stroke="#e2e8f0" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<rect x="750" y="70" width="105" height="42" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1"/>
+<text x="802.5" y="91" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">1</text>
+<line x1="750" y1="112" x2="750" y2="450" stroke="#e2e8f0" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<rect x="855" y="70" width="105" height="42" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1"/>
+<text x="907.5" y="91" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#172033">0</text>
+<line x1="855" y1="112" x2="855" y2="450" stroke="#e2e8f0" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<line x1="960" y1="112" x2="960" y2="450" stroke="#e2e8f0" stroke-width="1" fill="none" stroke-dasharray="4 5"/>
+<text x="55" y="165" text-anchor="start" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#172033">曼彻斯特</text>
+<text x="55" y="330" text-anchor="start" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#172033">差分曼彻斯特</text>
+<polyline points="120,125 172.5,125 172.5,205 225,205 225,205 277.5,205 277.5,125 330,125 330,125 382.5,125 382.5,205 435,205 435,125 487.5,125 487.5,205 540,205 540,205 592.5,205 592.5,125 645,125 645,205 697.5,205 697.5,125 750,125 750,125 802.5,125 802.5,205 855,205 855,205 907.5,205 907.5,125 960,125" fill="none" stroke="#4f46e5" stroke-width="4" stroke-linejoin="round"/>
+<polyline points="120,290 172.5,290 172.5,370 225,370 225,290 277.5,290 277.5,370 330,370 330,370 382.5,370 382.5,290 435,290 435,290 487.5,290 487.5,370 540,370 540,290 592.5,290 592.5,370 645,370 645,290 697.5,290 697.5,370 750,370 750,370 802.5,370 802.5,290 855,290 855,370 907.5,370 907.5,290 960,290" fill="none" stroke="#059669" stroke-width="4" stroke-linejoin="round"/>
+<text x="550" y="475" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="500" fill="#172033">每一位中间都跳变；差分编码再用“位开始处是否跳变”表示数据</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550" y="45" text-anchor="middle" class="title">运动队数据库 E-R 结构</text>
+<rect x="70" y="150" width="210" height="95" rx="14" class="blue"/><text x="175" y="185" text-anchor="middle" class="h">运动队</text><text x="175" y="218" text-anchor="middle" class="t">队名、主教练</text>
+<rect x="445" y="150" width="210" height="95" rx="14" class="green"/><text x="550" y="185" text-anchor="middle" class="h">运动员</text><text x="550" y="218" text-anchor="middle" class="t">编号、姓名、性别、年龄</text>
+<rect x="820" y="150" width="210" height="95" rx="14" class="purple"/><text x="925" y="185" text-anchor="middle" class="h">运动项目</text><text x="925" y="218" text-anchor="middle" class="t">项目编号、项目名、类别</text>
+<polygon points="362,150 425,197 362,245 299,197" class="orange"/><text x="362" y="204" text-anchor="middle" class="h">属于</text>
+<polygon points="738,150 801,197 738,245 675,197" class="orange"/><text x="738" y="204" text-anchor="middle" class="h">参加</text>
+<line x1="280" y1="197" x2="299" y2="197" class="line"/><line x1="425" y1="197" x2="445" y2="197" class="line"/><line x1="655" y1="197" x2="675" y2="197" class="line"/><line x1="801" y1="197" x2="820" y2="197" class="line"/>
+<text x="290" y="182" class="h">1</text><text x="430" y="182" class="h">N</text><text x="665" y="182" class="h">M</text><text x="805" y="182" class="h">N</text>
+<rect x="525" y="350" width="420" height="105" rx="16" class="gray"/><text x="735" y="390" text-anchor="middle" class="h">参加联系属性</text><text x="735" y="425" text-anchor="middle" class="t">名次、成绩、比赛日期</text>
+<path d="M738 245 V350" class="line dash"/>
+<text x="550" y="510" text-anchor="middle" class="t">1:N 把队名放入运动员表；M:N 建立参加表，并保存联系自身属性。</text>
+</svg>

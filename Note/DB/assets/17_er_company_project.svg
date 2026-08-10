@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="430" viewBox="0 0 1050 430"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="525" y="45" text-anchor="middle" class="title">软件公司项目管理系统 E-R 结构</text>
+<rect x="70" y="150" width="200" height="90" rx="14" class="blue"/><text x="170" y="186" text-anchor="middle" class="h">Department</text><text x="170" y="216" text-anchor="middle" class="t">DeptId, DeptName</text>
+<rect x="425" y="150" width="200" height="90" rx="14" class="green"/><text x="525" y="186" text-anchor="middle" class="h">Employee</text><text x="525" y="216" text-anchor="middle" class="t">Eid, Ename</text>
+<rect x="780" y="150" width="200" height="90" rx="14" class="purple"/><text x="880" y="186" text-anchor="middle" class="h">Project</text><text x="880" y="216" text-anchor="middle" class="t">Pid, Pname, Budget</text>
+<polygon points="348,150 405,195 348,240 291,195" class="orange"/><text x="348" y="202" text-anchor="middle" class="h">拥有</text>
+<polygon points="702,150 759,195 702,240 645,195" class="orange"/><text x="702" y="202" text-anchor="middle" class="h">承担</text>
+<line x1="270" y1="195" x2="291" y2="195" class="line"/><line x1="405" y1="195" x2="425" y2="195" class="line"/><line x1="625" y1="195" x2="645" y2="195" class="line"/><line x1="759" y1="195" x2="780" y2="195" class="line"/>
+<text x="280" y="180" class="h">1</text><text x="410" y="180" class="h">N</text><text x="632" y="180" class="h">M</text><text x="762" y="180" class="h">N</text>
+<rect x="260" y="315" width="530" height="65" rx="14" class="gray"/><text x="525" y="356" text-anchor="middle" class="t">Department 1:N Employee；Employee M:N Project，因此需要 Undertake 联系表。</text>
+</svg>

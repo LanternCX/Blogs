@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430">
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}.title{font-size:26px;font-weight:700}.label{font-size:18px;font-weight:600}.small{font-size:15px}.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:12}.accent{fill:#eef2ff;stroke:#4f46e5;stroke-width:2;rx:12}.good{fill:#ecfdf5;stroke:#059669;stroke-width:2;rx:12}.warn{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:12}.line{stroke:#334155;stroke-width:2.2;fill:none}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="450" y="42" text-anchor="middle" class="title">页面置换题的单列判断流程</text>
+<rect x="320" y="82" width="260" height="58" class="accent"/><text x="450" y="118" text-anchor="middle" class="label">页面已在页框？</text>
+<rect x="110" y="210" width="250" height="70" class="good"/><text x="235" y="238" text-anchor="middle" class="label">是：命中</text><text x="235" y="264" text-anchor="middle" class="small">不增加缺页数，更新状态</text>
+<rect x="540" y="210" width="250" height="70" class="warn"/><text x="665" y="238" text-anchor="middle" class="label">否：缺页</text><text x="665" y="264" text-anchor="middle" class="small">检查是否有空框</text>
+<rect x="435" y="330" width="210" height="58" class="box"/><text x="540" y="366" text-anchor="middle" class="label">有空框：装入</text>
+<rect x="675" y="330" width="210" height="58" class="box"/><text x="780" y="355" text-anchor="middle" class="label">无空框</text><text x="780" y="379" text-anchor="middle" class="small">按算法选牺牲页</text>
+<path d="M390,140 C320,170 270,185 235,210" class="line" marker-end="url(#arrow)"/><path d="M510,140 C580,170 630,185 665,210" class="line" marker-end="url(#arrow)"/>
+<path d="M640,280 C600,305 570,315 540,330" class="line" marker-end="url(#arrow)"/><path d="M690,280 C720,305 750,315 780,330" class="line" marker-end="url(#arrow)"/>
+</svg>

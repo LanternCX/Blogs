@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="450" y="45" text-anchor="middle" class="title">函数依赖图：AB→C，B→D，C→E</text>
+<circle cx="170" cy="145" r="45" class="blue"/><text x="170" y="153" text-anchor="middle" class="h">A</text>
+<circle cx="170" cy="285" r="45" class="blue"/><text x="170" y="293" text-anchor="middle" class="h">B</text>
+<circle cx="430" cy="215" r="55" class="purple"/><text x="430" y="223" text-anchor="middle" class="h">C</text>
+<circle cx="675" cy="215" r="45" class="green"/><text x="675" y="223" text-anchor="middle" class="h">E</text>
+<circle cx="430" cy="335" r="45" class="orange"/><text x="430" y="343" text-anchor="middle" class="h">D</text>
+<path d="M213 159 C270 172 318 188 376 205" class="arrow"/><path d="M213 271 C270 258 318 242 376 225" class="arrow"/><path d="M485 215 H630" class="arrow"/><path d="M213 297 C282 318 340 331 386 334" class="arrow"/>
+<rect x="90" y="390" width="720" height="55" rx="14" class="gray"/><text x="450" y="424" text-anchor="middle" class="t">A 与 B 合起来决定 C；B 单独决定 D；C 再决定 E。</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="40" y="80" width="185" height="86" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="132.5" y="116.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="132.5" dy="0">原始数据</tspan>
+<tspan x="132.5" dy="23">1110101</tspan>
+</text>
+<line x1="225" y1="123" x2="285" y2="123" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="285" y="80" width="210" height="86" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="390.0" y="116.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="390.0" dy="0">补 4 个 0</tspan>
+<tspan x="390.0" dy="23">11101010000</tspan>
+</text>
+<line x1="495" y1="123" x2="555" y2="123" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="555" y="80" width="210" height="86" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="660.0" y="116.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="660.0" dy="0">模 2 除法</tspan>
+<tspan x="660.0" dy="23">除数 10011</tspan>
+</text>
+<line x1="765" y1="123" x2="825" y2="123" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="825" y="80" width="225" height="86" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="937.5" y="116.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="937.5" dy="0">余数</tspan>
+<tspan x="937.5" dy="23">0111</tspan>
+</text>
+<rect x="260" y="260" width="580" height="95" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="550.0" y="301.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="600" fill="#172033">
+<tspan x="550.0" dy="0">发送序列</tspan>
+<tspan x="550.0" dy="23">1110101 + 0111 = 11101010111</tspan>
+</text>
+<line x1="550" y1="166" x2="550" y2="260" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="80" y="405" width="380" height="70" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="270.0" y="433.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="270.0" dy="0">接收端再次除以 10011</tspan>
+<tspan x="270.0" dy="23">余数为 0 → 未检测到错误</tspan>
+</text>
+<rect x="640" y="405" width="380" height="70" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+<text x="830.0" y="433.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="830.0" dy="0">余数不为 0</tspan>
+<tspan x="830.0" dy="23">说明传输中出现差错</tspan>
+</text>
+</svg>

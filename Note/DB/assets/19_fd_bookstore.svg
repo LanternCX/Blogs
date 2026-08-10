@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="600" y="45" text-anchor="middle" class="title">BookStore 函数依赖图</text>
+<rect x="70" y="130" width="190" height="90" rx="14" class="blue"/><text x="165" y="183" text-anchor="middle" class="h">AuthorID</text>
+<rect x="360" y="90" width="250" height="70" rx="12" class="green"/><text x="485" y="133" text-anchor="middle" class="h">AuthorName</text>
+<rect x="360" y="190" width="250" height="70" rx="12" class="green"/><text x="485" y="233" text-anchor="middle" class="h">AuthorPhone</text>
+<rect x="70" y="375" width="190" height="90" rx="14" class="blue"/><text x="165" y="428" text-anchor="middle" class="h">BookNo</text>
+<rect x="360" y="335" width="250" height="70" rx="12" class="purple"/><text x="485" y="378" text-anchor="middle" class="h">BookTitle</text>
+<rect x="360" y="435" width="250" height="70" rx="12" class="purple"/><text x="485" y="478" text-anchor="middle" class="h">Edition, Price</text>
+<rect x="700" y="385" width="190" height="70" rx="12" class="orange"/><text x="795" y="428" text-anchor="middle" class="h">Publisher</text>
+<rect x="980" y="385" width="160" height="70" rx="12" class="red"/><text x="1060" y="428" text-anchor="middle" class="h">PubAddr</text>
+<polygon points="520,260 600,305 520,350 440,305" class="gray"/><text x="520" y="298" text-anchor="middle" class="t">作者-图书</text><text x="520" y="324" text-anchor="middle" class="t">记录</text>
+<path d="M260 165 C300 140 325 130 360 125" class="arrow"/><path d="M260 185 C300 210 325 220 360 225" class="arrow"/>
+<path d="M260 415 C300 390 325 378 360 370" class="arrow"/><path d="M260 425 C300 455 325 468 360 470" class="arrow"/><path d="M610 420 H700" class="arrow"/><path d="M890 420 H980" class="arrow"/>
+<path d="M218 210 C270 250 360 285 440 302" class="line dash"/><path d="M218 375 C270 345 360 320 440 308" class="line dash"/>
+<rect x="285" y="540" width="630" height="50" rx="14" class="gray"/><text x="600" y="572" text-anchor="middle" class="t">候选码通常为 AuthorID 与 BookNo 的组合；Publisher 再决定 PubAddr。</text>
+</svg>

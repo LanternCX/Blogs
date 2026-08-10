@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="260" y="45" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="700" fill="#172033">UDP（固定首部 8 B）</text>
+<text x="45" y="70" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#475569">0</text>
+<text x="260" y="70" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#475569">15 16</text>
+<text x="475" y="70" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#475569">31</text>
+<rect x="45" y="80" width="430" height="90" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+<rect x="45" y="170" width="430" height="90" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+<rect x="45" y="80" width="215" height="90" rx="5" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.7"/>
+<text x="152.5" y="126.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">源端口 16bit</text>
+<rect x="260" y="80" width="215" height="90" rx="5" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.7"/>
+<text x="367.5" y="126.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">目的端口 16bit</text>
+<rect x="45" y="170" width="215" height="90" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="152.5" y="216.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">长度 16bit</text>
+<rect x="260" y="170" width="215" height="90" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="367.5" y="216.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">校验和 16bit</text>
+<rect x="45" y="260" width="430" height="70" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="260" y="296.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">UDP 数据</text>
+<text x="820" y="45" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="700" fill="#172033">TCP（基本首部 20 B）</text>
+<text x="590" y="70" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#475569">0</text>
+<text x="822.5" y="70" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#475569">15 16</text>
+<text x="1055" y="70" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="700" fill="#475569">31</text>
+<rect x="590" y="80" width="232.5" height="70" rx="0" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="706.25" y="116.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">源端口 16bit</text>
+<rect x="822.5" y="80" width="232.5" height="70" rx="0" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="938.75" y="116.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">目的端口 16bit</text>
+<rect x="590" y="150" width="465" height="70" rx="0" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="822.5" y="186.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">序号 Sequence Number 32bit</text>
+<rect x="590" y="220" width="465" height="70" rx="0" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="822.5" y="256.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">确认号 Acknowledgment 32bit</text>
+<rect x="590" y="290" width="58.125" height="70" rx="0" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="619.0625" y="316.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="11" font-weight="600" fill="#172033">
+<tspan x="619.0625" dy="0">首部长</tspan>
+<tspan x="619.0625" dy="18">4bit</tspan>
+</text>
+<rect x="648.125" y="290" width="58.125" height="70" rx="0" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="677.1875" y="316.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="11" font-weight="600" fill="#172033">
+<tspan x="677.1875" dy="0">保留位</tspan>
+<tspan x="677.1875" dy="18">4bit</tspan>
+</text>
+<rect x="706.25" y="290" width="116.25" height="70" rx="0" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="764.375" y="316.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="600" fill="#172033">
+<tspan x="764.375" dy="0">标志位</tspan>
+<tspan x="764.375" dy="18">8bit</tspan>
+</text>
+<rect x="822.5" y="290" width="232.5" height="70" rx="0" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="938.75" y="326.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">窗口 16bit</text>
+<rect x="590" y="360" width="232.5" height="70" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="706.25" y="396.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">校验和 16bit</text>
+<rect x="822.5" y="360" width="232.5" height="70" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="938.75" y="396.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">紧急指针 16bit</text>
+<rect x="590" y="430" width="465" height="70" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="822.5" y="466.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">选项（可选）+ 填充</text>
+<rect x="590" y="500" width="465" height="70" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="822.5" y="536.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">TCP 数据</text>
+<rect x="155" y="380" width="260" height="95" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="285.0" y="421.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="285.0" dy="0">无连接、尽力交付</tspan>
+<tspan x="285.0" dy="23">不排序、不重传</tspan>
+</text>
+<text x="820" y="610" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">序号、确认、窗口和标志位共同支撑可靠连接</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="470" viewBox="0 0 1100 470">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="70" y="70" text-anchor="start" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="700" fill="#172033">/27 → 主机位 5 位 → 每块 2⁵ = 32 个地址</text>
+<rect x="65" y="150" width="110" height="85" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="120.0" y="193.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">0～31</text>
+<text x="120.0" y="260" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">网络 0</text>
+<rect x="183" y="150" width="110" height="85" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="238.0" y="193.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">32～63</text>
+<text x="238.0" y="260" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">网络 32</text>
+<rect x="301" y="150" width="110" height="85" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="356.0" y="193.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">64～95</text>
+<text x="356.0" y="260" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">网络 64</text>
+<rect x="419" y="150" width="110" height="85" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="474.0" y="193.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">96～127</text>
+<text x="474.0" y="260" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">网络 96</text>
+<rect x="537" y="150" width="110" height="85" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="592.0" y="193.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">128～159</text>
+<text x="592.0" y="260" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">网络 128</text>
+<rect x="655" y="150" width="110" height="85" rx="5" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.7"/>
+<text x="710.0" y="193.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">160～191</text>
+<text x="710.0" y="260" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">网络 160</text>
+<rect x="773" y="150" width="110" height="85" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="828.0" y="193.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">192～223</text>
+<text x="828.0" y="260" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">网络 192</text>
+<rect x="891" y="150" width="110" height="85" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="946.0" y="193.5" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">224～255</text>
+<text x="946.0" y="260" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">网络 224</text>
+<rect x="285" y="325" width="530" height="80" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="550.0" y="358.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="550.0" dy="0">地址 164 落在 160～191</tspan>
+<tspan x="550.0" dy="23">网络地址 160，广播地址 191</tspan>
+</text>
+<line x1="710" y1="235" x2="550" y2="325" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+</svg>

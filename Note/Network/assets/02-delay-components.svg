@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="470" viewBox="0 0 1100 470">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="45" y="180" width="150" height="72" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="120.0" y="209.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="120.0" dy="0">分组到达</tspan>
+<tspan x="120.0" dy="23">路由器</tspan>
+</text>
+<rect x="210" y="135" width="170" height="110" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="295.0" y="183.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="295.0" dy="0">处理时延</tspan>
+<tspan x="295.0" dy="23">检查首部、检错</tspan>
+</text>
+<line x1="380" y1="190" x2="405" y2="190" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="410" y="135" width="170" height="110" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="495.0" y="183.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="495.0" dy="0">排队时延</tspan>
+<tspan x="495.0" dy="23">等待输出链路</tspan>
+</text>
+<line x1="580" y1="190" x2="605" y2="190" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="610" y="135" width="170" height="110" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="695.0" y="183.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="695.0" dy="0">发送时延</tspan>
+<tspan x="695.0" dy="23">逐比特推上链路</tspan>
+</text>
+<line x1="780" y1="190" x2="805" y2="190" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="810" y="135" width="170" height="110" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="895.0" y="183.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="895.0" dy="0">传播时延</tspan>
+<tspan x="895.0" dy="23">信号沿介质移动</tspan>
+</text>
+<line x1="195" y1="216" x2="210" y2="190" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="805" y="315" width="230" height="85" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="920.0" y="351.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="920.0" dy="0">端到端总时延</tspan>
+<tspan x="920.0" dy="23">四部分在每一跳累积</tspan>
+</text>
+<path d="M 700 245 C 740 300 790 310 805 350" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<text x="550" y="70" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#64748b">结点内部</text>
+<line x1="205" y1="95" x2="785" y2="95" stroke="#64748b" stroke-width="2" fill="none" stroke-dasharray="7 6"/>
+<text x="895" y="70" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="700" fill="#64748b">链路上</text>
+<line x1="795" y1="95" x2="1040" y2="95" stroke="#64748b" stroke-width="2" fill="none" stroke-dasharray="7 6"/>
+</svg>

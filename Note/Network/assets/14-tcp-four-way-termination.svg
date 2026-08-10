@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#059669"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="170" y="45" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="700" fill="#172033">主动关闭方 A</text>
+<text x="930" y="45" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="700" fill="#172033">被动关闭方 B</text>
+<line x1="170" y1="75" x2="170" y2="625" stroke="#334155" stroke-width="2" fill="none"/>
+<line x1="930" y1="75" x2="930" y2="625" stroke="#334155" stroke-width="2" fill="none"/>
+
+<line x1="170" y1="125" x2="930" y2="125" stroke="#dc2626" stroke-width="3" fill="none" marker-end="url(#arrowRed)"/>
+<rect x="365" y="89" width="370" height="60" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="550" y="124" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="550" dy="0">FIN=1, seq=u</tspan>
+</text>
+<text x="111" y="132" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc2626">FIN-WAIT-1</text>
+
+<line x1="930" y1="235" x2="170" y2="235" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#arrowGreen)"/>
+<rect x="405" y="199" width="290" height="60" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="550" y="234" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="550" dy="0">ACK=1, ack=u+1</tspan>
+</text>
+<text x="995" y="244" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#059669">CLOSE-WAIT</text>
+<text x="107" y="250" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#2563eb">FIN-WAIT-2</text>
+
+<rect x="735" y="288" width="290" height="64" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="880" y="313" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="880" dy="0">B 仍可发送剩余数据</tspan>
+<tspan x="880" dy="22">A 只是不再发送数据</tspan>
+</text>
+
+<line x1="930" y1="395" x2="170" y2="395" stroke="#dc2626" stroke-width="3" fill="none" marker-end="url(#arrowRed)"/>
+<rect x="365" y="359" width="370" height="60" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="550" y="394" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="550" dy="0">FIN=1, seq=v, ack=u+1</tspan>
+</text>
+<text x="993" y="404" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#dc2626">LAST-ACK</text>
+
+<line x1="170" y1="505" x2="930" y2="505" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="405" y="469" width="290" height="60" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="550" y="504" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="550" dy="0">ACK=1, ack=v+1</tspan>
+</text>
+<text x="104" y="520" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#2563eb">TIME-WAIT</text>
+
+<rect x="315" y="585" width="470" height="82" rx="14" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+<text x="550" y="617" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="550" dy="0">四次挥手的核心</tspan>
+<tspan x="550" dy="24">FIN 只关闭一个发送方向，两个方向要分别确认</tspan>
+</text>
+<text x="550" y="695" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">SYN 和 FIN 各自占用一个序号</text>
+</svg>

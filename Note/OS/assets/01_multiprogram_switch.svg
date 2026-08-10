@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="280" viewBox="0 0 900 280">
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}.title{font-size:26px;font-weight:700}.label{font-size:18px;font-weight:600}.small{font-size:15px}.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:12}.accent{fill:#eef2ff;stroke:#4f46e5;stroke-width:2;rx:12}.good{fill:#ecfdf5;stroke:#059669;stroke-width:2;rx:12}.line{stroke:#334155;stroke-width:2.2;fill:none}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="450" y="42" text-anchor="middle" class="title">多道程序：等待 I/O 时切换到其他程序</text>
+<rect x="95" y="92" width="260" height="58" class="accent"/><text x="225" y="128" text-anchor="middle" class="label">程序 A 等待 I/O</text>
+<rect x="545" y="92" width="260" height="58" class="box"/><text x="675" y="128" text-anchor="middle" class="label">CPU 执行程序 B</text>
+<path d="M355,121 L545,121" class="line" marker-end="url(#arrow)"/><text x="450" y="107" text-anchor="middle" class="small">调度切换</text>
+<rect x="95" y="178" width="260" height="58" class="box"/><text x="225" y="214" text-anchor="middle" class="label">程序 B 等待 I/O</text>
+<rect x="545" y="178" width="260" height="58" class="good"/><text x="675" y="214" text-anchor="middle" class="label">CPU 执行程序 C</text>
+<path d="M355,207 L545,207" class="line" marker-end="url(#arrow)"/><text x="450" y="193" text-anchor="middle" class="small">继续切换</text>
+</svg>

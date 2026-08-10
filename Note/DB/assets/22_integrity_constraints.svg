@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="530" viewBox="0 0 1100 530"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550" y="45" text-anchor="middle" class="title">完整性约束：把业务规则交给数据库检查</text>
+<rect x="80" y="120" width="280" height="155" rx="16" class="blue"/><text x="220" y="162" text-anchor="middle" class="h">实体完整性</text><text x="220" y="200" text-anchor="middle" class="t">主码不能为空</text><text x="220" y="228" text-anchor="middle" class="t">也不能重复</text>
+<rect x="410" y="120" width="280" height="155" rx="16" class="green"/><text x="550" y="162" text-anchor="middle" class="h">参照完整性</text><text x="550" y="200" text-anchor="middle" class="t">外码必须指向</text><text x="550" y="228" text-anchor="middle" class="t">真实存在的记录</text>
+<rect x="740" y="120" width="280" height="155" rx="16" class="orange"/><text x="880" y="162" text-anchor="middle" class="h">用户定义完整性</text><text x="880" y="200" text-anchor="middle" class="t">成绩范围、预算大于 0</text><text x="880" y="228" text-anchor="middle" class="t">名称唯一等业务限制</text>
+<rect x="185" y="360" width="730" height="80" rx="16" class="gray"/><text x="550" y="395" text-anchor="middle" class="t">规则写在数据库中，网页、脚本和后台程序写入数据时都会经过同一套检查。</text><text x="550" y="423" text-anchor="middle" class="s">常见表达：PRIMARY KEY、FOREIGN KEY、UNIQUE、CHECK、NOT NULL</text>
+</svg>

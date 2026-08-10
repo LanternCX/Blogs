@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="280" viewBox="0 0 920 280">
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}.title{font-size:26px;font-weight:700}.label{font-size:18px;font-weight:600}.small{font-size:15px}.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:10}.accent{fill:#eef2ff;stroke:#4f46e5;stroke-width:2;rx:10}.good{fill:#ecfdf5;stroke:#059669;stroke-width:2;rx:10}.line{stroke:#334155;stroke-width:2.2;fill:none}.dash{stroke:#64748b;stroke-width:2;stroke-dasharray:8 7;fill:none}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="460" y="42" text-anchor="middle" class="title">DMA 成块传输时 CPU 与 DMA 并行</text>
+<text x="90" y="116" class="label">CPU</text><rect x="170" y="86" width="180" height="56" class="accent"/><text x="260" y="121" text-anchor="middle" class="label">初始化 DMA</text><path d="M350,114 L735,114" class="dash"/><rect x="735" y="86" width="150" height="56" class="box"/><text x="810" y="121" text-anchor="middle" class="label">完成中断</text>
+<text x="90" y="205" class="label">DMA</text><rect x="360" y="175" width="330" height="56" class="good"/><text x="525" y="210" text-anchor="middle" class="label">设备 ↔ 内存成块传输</text>
+<path d="M350,142 L360,175" class="line" marker-end="url(#arrow)"/><path d="M690,203 L735,114" class="line" marker-end="url(#arrow)"/>
+</svg>

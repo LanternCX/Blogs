@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="560" viewBox="0 0 1120 560">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="45" y="65" width="90" height="70" rx="5" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.7"/>
+<text x="90.0" y="101.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">Flag</text>
+<text x="90.0" y="159" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">1 B</text>
+<rect x="135" y="65" width="105" height="70" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="187.5" y="101.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">Address</text>
+<text x="187.5" y="159" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">1 B</text>
+<rect x="240" y="65" width="105" height="70" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="292.5" y="101.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">Control</text>
+<text x="292.5" y="159" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">1 B</text>
+<rect x="345" y="65" width="125" height="70" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="407.5" y="101.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">Protocol</text>
+<text x="407.5" y="159" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">2 B</text>
+<rect x="470" y="65" width="380" height="70" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="660.0" y="101.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">Information</text>
+<text x="660.0" y="159" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">≤1500 B</text>
+<rect x="850" y="65" width="120" height="70" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.7"/>
+<text x="910.0" y="101.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">FCS</text>
+<text x="910.0" y="159" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">2/4 B</text>
+<rect x="970" y="65" width="90" height="70" rx="5" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.7"/>
+<text x="1015.0" y="101.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">Flag</text>
+<text x="1015.0" y="159" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">1 B</text>
+<rect x="60" y="310" width="150" height="70" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="135.0" y="350.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="135.0" dy="0">链路静止</tspan>
+</text>
+<line x1="210" y1="345" x2="260" y2="345" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="260" y="310" width="150" height="70" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="335.0" y="350.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="335.0" dy="0">LCP 配置</tspan>
+</text>
+<line x1="410" y1="345" x2="460" y2="345" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="460" y="310" width="150" height="70" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="535.0" y="350.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="535.0" dy="0">鉴别</tspan>
+</text>
+<line x1="610" y1="345" x2="660" y2="345" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="660" y="310" width="150" height="70" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="735.0" y="350.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="735.0" dy="0">NCP 配置</tspan>
+</text>
+<line x1="810" y1="345" x2="860" y2="345" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="860" y="310" width="150" height="70" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="935.0" y="350.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="935.0" dy="0">链路开放</tspan>
+</text>
+<rect x="365" y="435" width="390" height="72" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="560.0" y="464.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="560.0" dy="0">结束通信：NCP 释放 → LCP 终止</tspan>
+<tspan x="560.0" dy="23">随后物理链路回到静止状态</tspan>
+</text>
+</svg>

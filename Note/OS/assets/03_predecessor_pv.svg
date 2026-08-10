@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330">
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}.title{font-size:26px;font-weight:700}.label{font-size:18px;font-weight:600}.small{font-size:15px}.mono{font-size:15px;font-family:Menlo,Consolas,monospace}.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:12}.accent{fill:#eef2ff;stroke:#4f46e5;stroke-width:2;rx:12}.good{fill:#ecfdf5;stroke:#059669;stroke-width:2;rx:12}.line{stroke:#334155;stroke-width:2.2;fill:none}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="450" y="42" text-anchor="middle" class="title">用 P/V 表达前驱关系</text>
+<text x="450" y="82" text-anchor="middle" class="small">初值：S = 0；A 完成后通知，B 才能继续</text>
+<rect x="120" y="120" width="240" height="150" class="accent"/><text x="240" y="152" text-anchor="middle" class="label">进程 A</text><text x="240" y="197" text-anchor="middle" class="mono">执行 A</text><text x="240" y="232" text-anchor="middle" class="mono">V(S)</text>
+<rect x="540" y="120" width="240" height="150" class="good"/><text x="660" y="152" text-anchor="middle" class="label">进程 B</text><text x="660" y="197" text-anchor="middle" class="mono">P(S)</text><text x="660" y="232" text-anchor="middle" class="mono">执行 B</text>
+<path d="M360,230 C430,270 470,270 540,200" class="line" marker-end="url(#arrow)"/>
+<text x="450" y="292" text-anchor="middle" class="small">V(S) 发生后，等待在 P(S) 的进程 B 被允许推进</text>
+</svg>
