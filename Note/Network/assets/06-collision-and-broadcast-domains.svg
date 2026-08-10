@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="45" y="55" width="300" height="55" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="195.0" y="87.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="195.0" dy="0">集线器：复制信号</tspan>
+</text>
+<circle cx="105" cy="180" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="105" y1="155" x2="195" y2="120" stroke="#334155" stroke-width="2" fill="none"/>
+<circle cx="170" cy="180" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="170" y1="155" x2="195" y2="120" stroke="#334155" stroke-width="2" fill="none"/>
+<circle cx="235" cy="180" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="235" y1="155" x2="195" y2="120" stroke="#334155" stroke-width="2" fill="none"/>
+<circle cx="300" cy="180" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="300" y1="155" x2="195" y2="120" stroke="#334155" stroke-width="2" fill="none"/>
+<rect x="145" y="95" width="100" height="50" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="195.0" y="125.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="195.0" dy="0">HUB</tspan>
+</text>
+<rect x="70" y="235" width="250" height="90" rx="14" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+<text x="195" y="270" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">
+<tspan x="195" dy="0">1 个冲突域</tspan>
+<tspan x="195" dy="28">1 个广播域</tspan>
+</text>
+<rect x="400" y="55" width="300" height="55" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="550.0" y="87.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="550.0" dy="0">交换机：按 MAC 转发</tspan>
+</text>
+<rect x="500" y="105" width="100" height="50" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="550.0" y="135.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="550.0" dy="0">SW</tspan>
+</text>
+<circle cx="440" cy="190" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="440" y1="165" x2="550" y2="155" stroke="#334155" stroke-width="2" fill="none"/>
+<circle cx="513" cy="190" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="513" y1="165" x2="550" y2="155" stroke="#334155" stroke-width="2" fill="none"/>
+<circle cx="586" cy="190" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="586" y1="165" x2="550" y2="155" stroke="#334155" stroke-width="2" fill="none"/>
+<circle cx="659" cy="190" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="659" y1="165" x2="550" y2="155" stroke="#334155" stroke-width="2" fill="none"/>
+<rect x="415" y="235" width="270" height="90" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="550" y="270" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">
+<tspan x="550" dy="0">每端口独立冲突域</tspan>
+<tspan x="550" dy="28">仍属于同一广播域</tspan>
+</text>
+<rect x="755" y="55" width="300" height="55" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="905.0" y="87.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="905.0" dy="0">路由器：按 IP 转发</tspan>
+</text>
+<rect x="855" y="105" width="100" height="50" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="905.0" y="135.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="17" font-weight="600" fill="#172033">
+<tspan x="905.0" dy="0">R</tspan>
+</text>
+<circle cx="795" cy="190" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="795" y1="165" x2="905" y2="155" stroke="#334155" stroke-width="2" fill="none"/>
+<circle cx="868" cy="190" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="868" y1="165" x2="905" y2="155" stroke="#334155" stroke-width="2" fill="none"/>
+<circle cx="941" cy="190" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="941" y1="165" x2="905" y2="155" stroke="#334155" stroke-width="2" fill="none"/>
+<circle cx="1014" cy="190" r="25" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<line x1="1014" y1="165" x2="905" y2="155" stroke="#334155" stroke-width="2" fill="none"/>
+<rect x="770" y="235" width="270" height="90" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="905" y="270" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">
+<tspan x="905" dy="0">接口隔离冲突域</tspan>
+<tspan x="905" dy="28">接口也隔离广播域</tspan>
+</text>
+<rect x="260" y="395" width="580" height="75" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="550.0" y="426.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">
+<tspan x="550.0" dy="0">设备处理对象不同：比特 → 帧 → IP 数据报</tspan>
+<tspan x="550.0" dy="23">边界由设备所在层次决定</tspan>
+</text>
+</svg>

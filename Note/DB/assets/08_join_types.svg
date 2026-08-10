@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="560" viewBox="0 0 1150 560"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="575" y="42" text-anchor="middle" class="title">连接查询：匹配成功与未匹配行怎样处理</text>
+<circle cx="210" cy="200" r="110" class="blue"/><circle cx="310" cy="200" r="110" class="green"/><text x="160" y="205" class="h">A</text><text x="350" y="205" class="h">B</text><text x="260" y="205" text-anchor="middle" class="t">匹配区</text>
+<rect x="500" y="95" width="590" height="300" rx="16" class="box"/>
+<text x="530" y="140" class="h">INNER JOIN</text><text x="770" y="140" class="t">只保留匹配区</text>
+<text x="530" y="200" class="h">LEFT JOIN</text><text x="770" y="200" class="t">A 全部保留，B 缺失处补 NULL</text>
+<text x="530" y="260" class="h">RIGHT JOIN</text><text x="770" y="260" class="t">B 全部保留，A 缺失处补 NULL</text>
+<text x="530" y="320" class="h">FULL JOIN</text><text x="770" y="320" class="t">两边全部保留（MySQL 无直接语法）</text>
+<rect x="85" y="380" width="350" height="100" rx="14" class="orange"/><text x="260" y="420" text-anchor="middle" class="h">“没有……”高频写法</text><text x="260" y="452" text-anchor="middle" class="mono">LEFT JOIN ... WHERE B.id IS NULL</text>
+<path d="M435 430 H500" class="arrow"/><text x="530" y="435" class="t">也可使用 NOT EXISTS，通常语义更直接。</text>
+</svg>

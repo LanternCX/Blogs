@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="570" viewBox="0 0 1100 570"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550" y="42" text-anchor="middle" class="title">一张关系表中各个概念的位置</text>
+<rect x="80" y="90" width="700" height="330" rx="8" class="box"/>
+<rect x="80" y="90" width="700" height="65" class="blue"/>
+<line x1="260" y1="90" x2="260" y2="420" class="line thin"/><line x1="450" y1="90" x2="450" y2="420" class="line thin"/><line x1="610" y1="90" x2="610" y2="420" class="line thin"/>
+<line x1="80" y1="155" x2="780" y2="155" class="line thin"/><line x1="80" y1="220" x2="780" y2="220" class="line thin"/><line x1="80" y1="285" x2="780" y2="285" class="line thin"/><line x1="80" y1="350" x2="780" y2="350" class="line thin"/>
+<text x="170" y="130" text-anchor="middle" class="h">Sno</text><text x="355" y="130" text-anchor="middle" class="h">Sname</text><text x="530" y="130" text-anchor="middle" class="h">Sdept</text><text x="695" y="130" text-anchor="middle" class="h">Age</text>
+<text x="170" y="196" text-anchor="middle" class="t">2026001</text><text x="355" y="196" text-anchor="middle" class="t">张三</text><text x="530" y="196" text-anchor="middle" class="t">计算学院</text><text x="695" y="196" text-anchor="middle" class="t">20</text>
+<text x="170" y="261" text-anchor="middle" class="t">2026002</text><text x="355" y="261" text-anchor="middle" class="t">李四</text><text x="530" y="261" text-anchor="middle" class="t">计算学院</text><text x="695" y="261" text-anchor="middle" class="t">21</text>
+<text x="170" y="326" text-anchor="middle" class="t">2026003</text><text x="355" y="326" text-anchor="middle" class="t">王五</text><text x="530" y="326" text-anchor="middle" class="t">自动化学院</text><text x="695" y="326" text-anchor="middle" class="t">19</text>
+<text x="170" y="391" text-anchor="middle" class="t">2026004</text><text x="355" y="391" text-anchor="middle" class="t">赵六</text><text x="530" y="391" text-anchor="middle" class="t">商学院</text><text x="695" y="391" text-anchor="middle" class="t">20</text>
+<path d="M790 125 H900" class="arrow"/><text x="915" y="130" class="t">属性（列）</text>
+<path d="M790 252 H900" class="arrow"/><text x="915" y="257" class="t">元组（行）</text>
+<path d="M170 435 V500" class="arrow"/><text x="170" y="530" text-anchor="middle" class="t">候选码 / 主码</text>
+<path d="M695 435 V500" class="arrow"/><text x="695" y="530" text-anchor="middle" class="t">域：允许的年龄集合</text>
+<text x="875" y="355" class="t">度：属性数 = 4</text><text x="875" y="390" class="t">基数：元组数 = 4</text>
+</svg>

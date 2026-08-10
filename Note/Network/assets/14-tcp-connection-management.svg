@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="170" y="45" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="700" fill="#172033">客户端</text>
+<text x="930" y="45" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="19" font-weight="700" fill="#172033">服务器</text>
+<line x1="170" y1="70" x2="170" y2="560" stroke="#334155" stroke-width="2" fill="none"/>
+<line x1="930" y1="70" x2="930" y2="560" stroke="#334155" stroke-width="2" fill="none"/>
+<line x1="170" y1="115" x2="930" y2="115" stroke="#4f46e5" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<rect x="355" y="79" width="390" height="60" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="550.0" y="114.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="550.0" dy="0">SYN=1, seq=x</tspan>
+</text>
+<line x1="930" y1="215" x2="170" y2="215" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<rect x="420" y="179" width="390" height="60" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="615.0" y="214.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="615.0" dy="0">SYN=1, ACK=1, seq=y, ack=x+1</tspan>
+</text>
+<line x1="170" y1="315" x2="930" y2="315" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrowBlue)"/>
+<rect x="355" y="279" width="390" height="60" rx="14" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="550.0" y="314.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="550.0" dy="0">ACK=1, seq=x+1, ack=y+1</tspan>
+</text>
+<rect x="330" y="405" width="440" height="100" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="550.0" y="437.0" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="550.0" dy="0">第三次确认的意义</tspan>
+<tspan x="550.0" dy="23">服务器确认自己的 SYN 已到达客户端</tspan>
+<tspan x="550.0" dy="23">双方初始序号与双向能力均被确认</tspan>
+</text>
+<text x="550" y="570" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">SYN 和 FIN 各自占用一个序号</text>
+</svg>

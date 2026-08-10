@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="620" viewBox="0 0 1150 620"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="575" y="42" text-anchor="middle" class="title">Neo4j：节点、关系与路径本身就是数据结构</text>
+<circle cx="180" cy="250" r="90" class="blue"/><text x="180" y="235" text-anchor="middle" class="h">Student</text><text x="180" y="270" text-anchor="middle" class="t">张三</text>
+<circle cx="565" cy="155" r="90" class="green"/><text x="565" y="140" text-anchor="middle" class="h">Course</text><text x="565" y="175" text-anchor="middle" class="t">数据库原理</text>
+<circle cx="565" cy="390" r="90" class="green"/><text x="565" y="375" text-anchor="middle" class="h">Course</text><text x="565" y="410" text-anchor="middle" class="t">数据结构</text>
+<circle cx="970" cy="250" r="90" class="purple"/><text x="970" y="235" text-anchor="middle" class="h">Teacher</text><text x="970" y="270" text-anchor="middle" class="t">王老师</text>
+<path d="M267 228 L475 176" class="arrow"/><text x="370" y="180" text-anchor="middle" class="t">SC {Grade:90}</text>
+<path d="M268 280 L475 365" class="arrow"/><text x="370" y="340" text-anchor="middle" class="t">SC</text>
+<path d="M880 220 L655 170" class="arrow"/><text x="770" y="165" text-anchor="middle" class="t">TEACH</text>
+<path d="M880 280 L655 375" class="arrow"/><text x="770" y="350" text-anchor="middle" class="t">TEACH</text>
+<rect x="250" y="510" width="650" height="70" rx="14" class="gray"/><text x="575" y="553" text-anchor="middle" class="mono">MATCH (s:Student)-[sc:SC]->(c:Course)&#160; RETURN s, sc.Grade, c</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="270" viewBox="0 0 900 270">
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}.title{font-size:26px;font-weight:700}.label{font-size:18px;font-weight:600}.small{font-size:15px}.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:10}.accent{fill:#eef2ff;stroke:#4f46e5;stroke-width:2;rx:10}.line{stroke:#334155;stroke-width:2.2;fill:none}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="450" y="42" text-anchor="middle" class="title">单核 CPU 上的并发执行</text>
+<path d="M130,80 L790,80" class="line" marker-end="url(#arrow)"/><text x="805" y="86" class="small">时间</text>
+<text x="88" y="132" text-anchor="middle" class="label">P1</text>
+<text x="88" y="200" text-anchor="middle" class="label">P2</text>
+<rect x="140" y="105" width="170" height="48" class="accent"/><text x="225" y="135" text-anchor="middle" class="label">运行</text>
+<rect x="520" y="105" width="170" height="48" class="accent"/><text x="605" y="135" text-anchor="middle" class="label">运行</text>
+<rect x="310" y="173" width="210" height="48" class="box"/><text x="415" y="203" text-anchor="middle" class="label">运行</text>
+<text x="450" y="248" text-anchor="middle" class="small">两个进程在同一时间段内交替推进，但同一时刻只有一个在 CPU 上运行</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="340" viewBox="0 0 920 340">
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}.title{font-size:26px;font-weight:700}.label{font-size:18px;font-weight:600}.small{font-size:15px}.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:12}.accent{fill:#eef2ff;stroke:#4f46e5;stroke-width:2;rx:12}.warn{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:12}.bad{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:12}.line{stroke:#334155;stroke-width:2.2;fill:none}.red{stroke:#dc2626;stroke-width:2.4;fill:none}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker><marker id="redArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="460" y="42" text-anchor="middle" class="title">先拿互斥锁再等空位可能导致死锁</text>
+<rect x="90" y="90" width="300" height="62" class="accent"/><text x="240" y="115" text-anchor="middle" class="label">生产者拿到 mutex</text><text x="240" y="139" text-anchor="middle" class="small">P(mutex) 成功</text>
+<rect x="90" y="210" width="300" height="62" class="bad"/><text x="240" y="235" text-anchor="middle" class="label">生产者等待 empty</text><text x="240" y="259" text-anchor="middle" class="small">缓冲区已满，拿着锁阻塞</text>
+<rect x="530" y="90" width="300" height="62" class="warn"/><text x="680" y="115" text-anchor="middle" class="label">消费者需要 mutex</text><text x="680" y="139" text-anchor="middle" class="small">才能进入缓冲区取产品</text>
+<rect x="530" y="210" width="300" height="62" class="bad"/><text x="680" y="235" text-anchor="middle" class="label">消费者拿不到锁</text><text x="680" y="259" text-anchor="middle" class="small">无法释放空位</text>
+<path d="M240,152 L240,210" class="line" marker-end="url(#arrow)"/><path d="M680,152 L680,210" class="line" marker-end="url(#arrow)"/>
+<path d="M390,241 C455,285 465,285 530,241" class="red" marker-end="url(#redArrow)"/><path d="M530,121 C465,75 455,75 390,121" class="red" marker-end="url(#redArrow)"/>
+<text x="460" y="315" text-anchor="middle" class="small">一方等空位，另一方等锁，条件无法被改变</text>
+</svg>

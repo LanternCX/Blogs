@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="430" viewBox="0 0 820 430">
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}.title{font-size:26px;font-weight:700}.label{font-size:18px;font-weight:600}.small{font-size:15px}.good{fill:#ecfdf5;stroke:#059669;stroke-width:2}.warn{fill:#fff7ed;stroke:#ea580c;stroke-width:2}.muted{fill:#f8fafc;stroke:#334155;stroke-width:2}</style>
+<rect width="100%" height="100%" fill="white"/>
+<text x="410" y="42" text-anchor="middle" class="title">虚拟地址空间中的页面驻留状态</text>
+<rect x="250" y="90" width="320" height="56" class="good"/><text x="410" y="125" text-anchor="middle" class="label">页0：在内存</text>
+<rect x="250" y="146" width="320" height="56" class="warn"/><text x="410" y="181" text-anchor="middle" class="label">页1：在外存</text>
+<rect x="250" y="202" width="320" height="56" class="good"/><text x="410" y="237" text-anchor="middle" class="label">页2：在内存</text>
+<rect x="250" y="258" width="320" height="56" class="warn"/><text x="410" y="293" text-anchor="middle" class="label">页3：在外存</text>
+<rect x="250" y="314" width="320" height="56" class="muted"/><text x="410" y="349" text-anchor="middle" class="label">...</text>
+<text x="410" y="398" text-anchor="middle" class="small">逻辑空间可以很大，但只有当前需要的页面驻留内存</text>
+</svg>

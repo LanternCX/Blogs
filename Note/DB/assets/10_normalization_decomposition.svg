@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="600" y="42" text-anchor="middle" class="title">从一张冗余大表分解到 3NF</text>
+<rect x="50" y="100" width="420" height="170" rx="16" class="red"/><text x="260" y="137" text-anchor="middle" class="h">R(A, B, C, D, E)</text><text x="260" y="175" text-anchor="middle" class="mono">AB → C　　B → D　　C → E</text><text x="260" y="208" text-anchor="middle" class="t">候选码：AB</text><text x="260" y="238" text-anchor="middle" class="t">B → D 是部分依赖，因此最高仅 1NF</text>
+<path d="M470 185 H590" class="arrow"/><text x="530" y="165" text-anchor="middle" class="s">按依赖拆分</text>
+<rect x="650" y="85" width="500" height="90" rx="14" class="blue"/><text x="900" y="122" text-anchor="middle" class="h">R1(B, D)</text><text x="900" y="151" text-anchor="middle" class="mono">B → D</text>
+<rect x="650" y="220" width="500" height="90" rx="14" class="purple"/><text x="900" y="257" text-anchor="middle" class="h">R2(A, B, C)</text><text x="900" y="286" text-anchor="middle" class="mono">AB → C</text>
+<rect x="650" y="355" width="500" height="90" rx="14" class="green"/><text x="900" y="392" text-anchor="middle" class="h">R3(C, E)</text><text x="900" y="421" text-anchor="middle" class="mono">C → E</text>
+<rect x="170" y="390" width="350" height="155" rx="16" class="orange"/><text x="345" y="430" text-anchor="middle" class="h">为什么要分解</text><text x="345" y="465" text-anchor="middle" class="t">减少重复存储</text><text x="345" y="493" text-anchor="middle" class="t">避免插入、删除、更新异常</text><text x="345" y="521" text-anchor="middle" class="t">每个事实只在合适的关系中保存一次</text>
+<text x="600" y="605" text-anchor="middle" class="t">考试口径：2NF 消除非主属性对候选码的部分依赖；3NF 再消除非主属性的传递依赖。</text>
+</svg>

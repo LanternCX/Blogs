@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="45" y="55" width="1010" height="410" rx="24" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+<text x="90" y="85" text-anchor="start" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="700" fill="#64748b">互联网范围</text>
+<rect x="120" y="110" width="860" height="300" rx="22" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<text x="165" y="140" text-anchor="start" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#2563eb">端到端：IP 地址</text>
+<rect x="195" y="165" width="710" height="190" rx="20" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+<text x="240" y="195" text-anchor="start" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="700" fill="#ea580c">当前一跳：MAC 地址</text>
+<rect x="235" y="235" width="180" height="75" rx="14" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+<text x="325.0" y="254.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="325.0" dy="0">应用进程 A</tspan>
+<tspan x="325.0" dy="23">IP: 10.0.0.5</tspan>
+<tspan x="325.0" dy="23">端口: 52000</tspan>
+</text>
+<rect x="685" y="235" width="180" height="75" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="775.0" y="254.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">
+<tspan x="775.0" dy="0">Web 进程</tspan>
+<tspan x="775.0" dy="23">IP: 203.0.113.8</tspan>
+<tspan x="775.0" dy="23">端口: 80</tspan>
+</text>
+<line x1="415" y1="272" x2="685" y2="272" stroke="#334155" stroke-width="2.2" fill="none" marker-end="url(#arrow)"/>
+<text x="550" y="335" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">域名由 DNS 映射为目标 IP；端口只在主机内部定位进程</text>
+</svg>

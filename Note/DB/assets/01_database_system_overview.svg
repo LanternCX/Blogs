@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550" y="45" text-anchor="middle" class="title">数据库系统：从现实业务到可查询数据</text>
+<rect x="40" y="115" width="190" height="120" rx="16" class="orange"/><text x="135" y="155" text-anchor="middle" class="h">现实世界</text><text x="135" y="190" text-anchor="middle" class="t">学生、课程、订单</text><text x="135" y="216" text-anchor="middle" class="t">以及它们的联系</text>
+<rect x="300" y="95" width="220" height="160" rx="16" class="purple"/><text x="410" y="135" text-anchor="middle" class="h">数据库设计</text><text x="410" y="170" text-anchor="middle" class="t">E-R 模型</text><text x="410" y="198" text-anchor="middle" class="t">关系模式与范式</text><text x="410" y="226" text-anchor="middle" class="t">主码、外码、约束</text>
+<rect x="590" y="75" width="230" height="200" rx="16" class="blue"/><text x="705" y="115" text-anchor="middle" class="h">DBMS</text><text x="705" y="150" text-anchor="middle" class="t">保存与组织数据</text><text x="705" y="178" text-anchor="middle" class="t">执行 SQL / 权限检查</text><text x="705" y="206" text-anchor="middle" class="t">索引与查询优化</text><text x="705" y="234" text-anchor="middle" class="t">完整性与并发控制</text>
+<rect x="890" y="115" width="170" height="120" rx="16" class="green"/><text x="975" y="155" text-anchor="middle" class="h">应用程序</text><text x="975" y="190" text-anchor="middle" class="t">查询、统计</text><text x="975" y="216" text-anchor="middle" class="t">插入、修改、删除</text>
+<path d="M230 175 H300" class="arrow"/><path d="M520 175 H590" class="arrow"/><path d="M820 175 H890" class="arrow"/>
+<rect x="250" y="350" width="600" height="135" rx="18" class="gray"/><text x="550" y="390" text-anchor="middle" class="h">这门课始终在回答四个问题</text><text x="550" y="425" text-anchor="middle" class="t">数据怎样建模　·　怎样保证结构合理　·　怎样查询修改　·　怎样高效执行</text><text x="550" y="457" text-anchor="middle" class="s">E-R / 关系模型　　函数依赖 / 范式　　SQL / 关系代数　　索引 / 查询优化</text>
+</svg>

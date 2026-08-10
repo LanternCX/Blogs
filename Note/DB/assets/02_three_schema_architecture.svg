@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="500" y="42" text-anchor="middle" class="title">三级模式与两级映像</text>
+<rect x="80" y="90" width="250" height="90" rx="14" class="blue"/><text x="205" y="125" text-anchor="middle" class="h">外模式 A</text><text x="205" y="154" text-anchor="middle" class="t">学生看到的成绩视图</text>
+<rect x="375" y="90" width="250" height="90" rx="14" class="blue"/><text x="500" y="125" text-anchor="middle" class="h">外模式 B</text><text x="500" y="154" text-anchor="middle" class="t">教师看到的课程视图</text>
+<rect x="670" y="90" width="250" height="90" rx="14" class="blue"/><text x="795" y="125" text-anchor="middle" class="h">外模式 C</text><text x="795" y="154" text-anchor="middle" class="t">管理员看到的全局视图</text>
+<rect x="250" y="280" width="500" height="110" rx="16" class="purple"/><text x="500" y="322" text-anchor="middle" class="h">模式（概念模式）</text><text x="500" y="355" text-anchor="middle" class="t">整个数据库的逻辑结构：有哪些表、属性与联系</text>
+<rect x="250" y="500" width="500" height="100" rx="16" class="orange"/><text x="500" y="540" text-anchor="middle" class="h">内模式</text><text x="500" y="573" text-anchor="middle" class="t">文件、页、索引等物理存储结构</text>
+<path d="M205 180 C205 235 330 240 400 280" class="arrow"/><path d="M500 180 V280" class="arrow"/><path d="M795 180 C795 235 670 240 600 280" class="arrow"/>
+<path d="M500 390 V500" class="arrow"/>
+<text x="820" y="245" class="t">外模式/模式映像</text><text x="820" y="270" class="s">支持逻辑数据独立性</text>
+<text x="770" y="445" class="t">模式/内模式映像</text><text x="770" y="470" class="s">支持物理数据独立性</text>
+</svg>

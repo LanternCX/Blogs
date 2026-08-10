@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600" viewBox="0 0 1100 600"><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#596579"/></marker></defs><style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="550" y="42" text-anchor="middle" class="title">E-R 图中的三种基数关系</text>
+<rect x="60" y="100" width="220" height="80" rx="12" class="blue"/><text x="170" y="148" text-anchor="middle" class="h">部门</text>
+<polygon points="420,100 500,140 420,180 340,140" class="orange"/><text x="420" y="147" text-anchor="middle" class="h">管理</text>
+<rect x="560" y="100" width="220" height="80" rx="12" class="green"/><text x="670" y="148" text-anchor="middle" class="h">经理</text>
+<line x1="280" y1="140" x2="340" y2="140" class="line"/><line x1="500" y1="140" x2="560" y2="140" class="line"/><text x="305" y="125" class="h">1</text><text x="525" y="125" class="h">1</text><text x="865" y="148" class="t">一对一：1 : 1</text>
+<rect x="60" y="260" width="220" height="80" rx="12" class="blue"/><text x="170" y="308" text-anchor="middle" class="h">部门</text>
+<polygon points="420,260 500,300 420,340 340,300" class="orange"/><text x="420" y="307" text-anchor="middle" class="h">拥有</text>
+<rect x="560" y="260" width="220" height="80" rx="12" class="green"/><text x="670" y="308" text-anchor="middle" class="h">员工</text>
+<line x1="280" y1="300" x2="340" y2="300" class="line"/><line x1="500" y1="300" x2="560" y2="300" class="line"/><text x="305" y="285" class="h">1</text><text x="525" y="285" class="h">N</text><text x="865" y="308" class="t">一对多：1 : N</text>
+<rect x="60" y="420" width="220" height="80" rx="12" class="blue"/><text x="170" y="468" text-anchor="middle" class="h">学生</text>
+<polygon points="420,420 500,460 420,500 340,460" class="orange"/><text x="420" y="467" text-anchor="middle" class="h">选课</text>
+<rect x="560" y="420" width="220" height="80" rx="12" class="green"/><text x="670" y="468" text-anchor="middle" class="h">课程</text>
+<line x1="280" y1="460" x2="340" y2="460" class="line"/><line x1="500" y1="460" x2="560" y2="460" class="line"/><text x="305" y="445" class="h">M</text><text x="525" y="445" class="h">N</text><text x="865" y="468" class="t">多对多：M : N</text>
+<text x="550" y="560" text-anchor="middle" class="t">判断基数时不要看当前样例数据，要看业务规则允许的最大数量。</text>
+</svg>

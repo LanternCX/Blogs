@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360">
+<style>text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}.title{font-size:26px;font-weight:700}.label{font-size:17px;font-weight:600}.small{font-size:14px}.box{fill:#f8fafc;stroke:#334155;stroke-width:2;rx:12}.accent{fill:#eef2ff;stroke:#4f46e5;stroke-width:2;rx:12}.good{fill:#ecfdf5;stroke:#059669;stroke-width:2;rx:12}.warn{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:12}.line{stroke:#334155;stroke-width:2.2;fill:none}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="490" y="42" text-anchor="middle" class="title">典型中断处理流程</text>
+<rect x="45" y="125" width="118" height="60" class="accent"/><text x="104" y="149" text-anchor="middle" class="label">硬件</text><text x="104" y="172" text-anchor="middle" class="small">检测事件</text>
+<rect x="185" y="125" width="118" height="60" class="box"/><text x="244" y="149" text-anchor="middle" class="label">保存断点</text><text x="244" y="172" text-anchor="middle" class="small">部分状态</text>
+<rect x="325" y="125" width="118" height="60" class="warn"/><text x="384" y="149" text-anchor="middle" class="label">切换到</text><text x="384" y="172" text-anchor="middle" class="small">内核态</text>
+<rect x="465" y="125" width="118" height="60" class="box"/><text x="524" y="149" text-anchor="middle" class="label">查中断</text><text x="524" y="172" text-anchor="middle" class="small">向量</text>
+<rect x="605" y="125" width="118" height="60" class="good"/><text x="664" y="149" text-anchor="middle" class="label">保存现场</text><text x="664" y="172" text-anchor="middle" class="small">并处理</text>
+<rect x="745" y="125" width="118" height="60" class="box"/><text x="804" y="149" text-anchor="middle" class="label">恢复现场</text><text x="804" y="172" text-anchor="middle" class="small">返回程序</text>
+<path d="M163,155 L185,155" class="line" marker-end="url(#arrow)"/><path d="M303,155 L325,155" class="line" marker-end="url(#arrow)"/><path d="M443,155 L465,155" class="line" marker-end="url(#arrow)"/><path d="M583,155 L605,155" class="line" marker-end="url(#arrow)"/><path d="M723,155 L745,155" class="line" marker-end="url(#arrow)"/>
+<text x="490" y="260" text-anchor="middle" class="small">暂停当前程序，处理事件，之后通常回到原程序继续执行</text>
+</svg>

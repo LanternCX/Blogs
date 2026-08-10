@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="620" viewBox="0 0 1080 620">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/></filter>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="70" y="45" width="940" height="70" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.8"/>
+<rect x="70" y="115" width="940" height="70" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.8"/>
+<rect x="70" y="185" width="940" height="70" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.8"/>
+<rect x="70" y="255" width="940" height="70" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.8"/>
+<rect x="70" y="325" width="940" height="70" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.8"/>
+<rect x="70" y="395" width="940" height="70" rx="0" fill="#f8fafc" stroke="#334155" stroke-width="1.8"/>
+<rect x="70" y="45" width="117.5" height="70" rx="5" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.7"/>
+<text x="128.75" y="81.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">版本</text>
+<rect x="187.5" y="45" width="117.5" height="70" rx="5" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.7"/>
+<text x="246.25" y="81.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">IHL</text>
+<rect x="305.0" y="45" width="235.0" height="70" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="422.5" y="81.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">DS/ECN</text>
+<rect x="540.0" y="45" width="470.0" height="70" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="775.0" y="81.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">总长度</text>
+<rect x="70" y="115" width="470.0" height="70" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="305.0" y="151.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">标识</text>
+<rect x="540.0" y="115" width="88.125" height="70" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.7"/>
+<text x="584.0625" y="151.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">标志</text>
+<rect x="628.125" y="115" width="381.875" height="70" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.7"/>
+<text x="819.0625" y="151.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">片偏移</text>
+<rect x="70" y="185" width="235.0" height="70" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="187.5" y="221.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">TTL</text>
+<rect x="305.0" y="185" width="235.0" height="70" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.7"/>
+<text x="422.5" y="221.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">协议</text>
+<rect x="540.0" y="185" width="470.0" height="70" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="775.0" y="221.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="600" fill="#172033">首部校验和</text>
+<rect x="70" y="255" width="940" height="70" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="540.0" y="291.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">源 IP 地址</text>
+<rect x="70" y="325" width="940" height="70" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.7"/>
+<text x="540.0" y="361.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">目的 IP 地址</text>
+<rect x="70" y="395" width="940" height="70" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.7"/>
+<text x="540.0" y="431.0" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">选项（可选） + 填充</text>
+<text x="40" y="80" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">0</text>
+<text x="1020" y="80" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#172033">31</text>
+<rect x="300" y="505" width="480" height="70" rx="14" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+<text x="540.0" y="533.5" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">
+<tspan x="540.0" dy="0">基本首部 20 B；IHL 以 4 B 为单位</tspan>
+<tspan x="540.0" dy="23">总长度包含首部和数据</tspan>
+</text>
+</svg>
