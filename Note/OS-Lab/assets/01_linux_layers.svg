@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#596579"/>
+  </marker>
+</defs>
+<style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+
+<text x="500" y="42" text-anchor="middle" class="title">Linux 实验中的调用层次</text>
+<rect x="200" y="85" width="600" height="90" rx="14" class="blue"/>
+<text x="500" y="121" text-anchor="middle" class="h">用户程序</text>
+<text x="500" y="151" text-anchor="middle" class="mono">fork() / read() / pthread_create()</text>
+<rect x="200" y="215" width="600" height="90" rx="14" class="purple"/>
+<text x="500" y="251" text-anchor="middle" class="h">C 库与线程库</text>
+<text x="500" y="281" text-anchor="middle" class="t">glibc / libpthread：整理参数并封装调用</text>
+<rect x="200" y="345" width="600" height="90" rx="14" class="green"/>
+<text x="500" y="381" text-anchor="middle" class="h">Linux 内核</text>
+<text x="500" y="411" text-anchor="middle" class="t">进程、内存、VFS、IPC 与设备驱动</text>
+<rect x="200" y="475" width="600" height="90" rx="14" class="orange"/>
+<text x="500" y="511" text-anchor="middle" class="h">硬件与设备</text>
+<text x="500" y="541" text-anchor="middle" class="t">CPU / 内存 / 磁盘 / 字符设备</text>
+<path d="M500 175 V215" class="arrow"/>
+<path d="M500 305 V345" class="arrow"/>
+<path d="M500 435 V475" class="arrow"/>
+<text x="825" y="330" class="t">系统调用边界</text>
+<path d="M805 320 H905" class="line dash"/>
+<text x="500" y="620" text-anchor="middle" class="t">应用不能直接执行特权操作，必须通过系统调用请求内核服务。</text>
+
+</svg>

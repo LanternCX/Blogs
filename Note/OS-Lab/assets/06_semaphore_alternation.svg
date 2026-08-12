@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#596579"/>
+  </marker>
+</defs>
+<style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+
+<text x="550" y="42" text-anchor="middle" class="title">两个信号量实现严格交替</text>
+<rect x="55" y="85" width="430" height="475" rx="16" class="box"/>
+<rect x="105" y="115" width="330" height="65" rx="14" class="blue"/>
+<text x="270" y="154" text-anchor="middle" class="h">白线程</text>
+<rect x="125" y="220" width="290" height="60" rx="12" class="blue"/>
+<text x="270" y="257" text-anchor="middle" class="mono">sem_wait(&amp;white)</text>
+<path d="M270 280 V320" class="arrow"/>
+<rect x="125" y="320" width="290" height="60" rx="12" class="gray"/>
+<text x="270" y="357" text-anchor="middle" class="t">执行白线程操作</text>
+<path d="M270 380 V420" class="arrow"/>
+<rect x="125" y="420" width="290" height="60" rx="12" class="orange"/>
+<text x="270" y="457" text-anchor="middle" class="mono">sem_post(&amp;black)</text>
+<rect x="615" y="85" width="430" height="475" rx="16" class="box"/>
+<rect x="665" y="115" width="330" height="65" rx="14" class="green"/>
+<text x="830" y="154" text-anchor="middle" class="h">黑线程</text>
+<rect x="685" y="220" width="290" height="60" rx="12" class="green"/>
+<text x="830" y="257" text-anchor="middle" class="mono">sem_wait(&amp;black)</text>
+<path d="M830 280 V320" class="arrow"/>
+<rect x="685" y="320" width="290" height="60" rx="12" class="gray"/>
+<text x="830" y="357" text-anchor="middle" class="t">执行黑线程操作</text>
+<path d="M830 380 V420" class="arrow"/>
+<rect x="685" y="420" width="290" height="60" rx="12" class="purple"/>
+<text x="830" y="457" text-anchor="middle" class="mono">sem_post(&amp;white)</text>
+<path d="M415 450 C505 450 595 250 685 250" class="arrow"/>
+<path d="M685 450 C610 545 490 545 415 250" class="arrow"/>
+<text x="550" y="350" text-anchor="middle" class="s">释放 black，黑线程获得许可</text>
+<text x="550" y="535" text-anchor="middle" class="s">释放 white，白线程获得许可</text>
+<rect x="275" y="585" width="550" height="45" rx="12" class="gray"/>
+<text x="550" y="613" text-anchor="middle" class="t">初值：white = 1，black = 0，因此顺序固定为白 → 黑 → 白 → 黑。</text>
+
+</svg>

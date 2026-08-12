@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#596579"/>
+  </marker>
+</defs>
+<style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+
+<text x="550" y="42" text-anchor="middle" class="title">同一进程内线程的共享与私有状态</text>
+<rect x="70" y="85" width="960" height="500" rx="16" class="gray"/>
+<text x="550" y="125" text-anchor="middle" class="h">一个进程的地址空间</text>
+<text x="110" y="176" class="t">所有线程共享</text>
+<rect x="160" y="195" width="210" height="80" rx="14" class="blue"/>
+<text x="265" y="243" text-anchor="middle" class="h">代码段</text>
+<rect x="445" y="195" width="210" height="80" rx="14" class="green"/>
+<text x="550" y="230" text-anchor="middle" class="h">全局数据与堆</text>
+<text x="550" y="257" text-anchor="middle" class="s">共享变量位于这里</text>
+<rect x="730" y="195" width="210" height="80" rx="14" class="orange"/>
+<text x="835" y="243" text-anchor="middle" class="h">打开文件</text>
+<path d="M130 303 H970" class="line dash"/>
+<text x="110" y="345" class="t">每个线程私有</text>
+<rect x="145" y="375" width="240" height="120" rx="14" class="purple"/>
+<text x="265" y="413" text-anchor="middle" class="h">线程 1</text>
+<text x="265" y="446" text-anchor="middle" class="t">PC / 寄存器</text>
+<text x="265" y="474" text-anchor="middle" class="t">独立栈</text>
+<rect x="430" y="375" width="240" height="120" rx="14" class="purple"/>
+<text x="550" y="413" text-anchor="middle" class="h">线程 2</text>
+<text x="550" y="446" text-anchor="middle" class="t">PC / 寄存器</text>
+<text x="550" y="474" text-anchor="middle" class="t">独立栈</text>
+<rect x="715" y="375" width="240" height="120" rx="14" class="purple"/>
+<text x="835" y="413" text-anchor="middle" class="h">线程 3</text>
+<text x="835" y="446" text-anchor="middle" class="t">PC / 寄存器</text>
+<text x="835" y="474" text-anchor="middle" class="t">独立栈</text>
+<rect x="225" y="545" width="650" height="70" rx="12" class="red"/>
+<text x="550" y="575" text-anchor="middle" class="t">共享地址空间让线程通信直接，也意味着多个线程可能同时修改同一变量。</text>
+<text x="550" y="601" text-anchor="middle" class="s">因此共享数据通常需要互斥锁或信号量保护。</text>
+
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#596579"/>
+  </marker>
+</defs>
+<style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+
+<text x="600" y="42" text-anchor="middle" class="title">管道、消息队列与共享内存的数据路径</text>
+<rect x="30" y="90" width="360" height="500" rx="16" class="blue"/>
+<text x="210" y="130" text-anchor="middle" class="h">管道 Pipe</text>
+<text x="210" y="160" text-anchor="middle" class="t">无格式字节流</text>
+<rect x="95" y="205" width="230" height="65" rx="12" class="box"/>
+<text x="210" y="244" text-anchor="middle" class="h">写进程</text>
+<path d="M210 270 V320" class="arrow"/>
+<rect x="95" y="320" width="230" height="80" rx="12" class="orange"/>
+<text x="210" y="353" text-anchor="middle" class="h">内核管道缓冲区</text>
+<text x="210" y="381" text-anchor="middle" class="mono">fd[1] → fd[0]</text>
+<path d="M210 400 V450" class="arrow"/>
+<rect x="95" y="450" width="230" height="65" rx="12" class="box"/>
+<text x="210" y="489" text-anchor="middle" class="h">读进程</text>
+<text x="210" y="555" text-anchor="middle" class="s">通常用于有亲缘关系的进程</text>
+<rect x="420" y="90" width="360" height="500" rx="16" class="orange"/>
+<text x="600" y="130" text-anchor="middle" class="h">消息队列 Message Queue</text>
+<text x="600" y="160" text-anchor="middle" class="t">带消息类型的离散消息</text>
+<rect x="485" y="205" width="230" height="65" rx="12" class="box"/>
+<text x="600" y="244" text-anchor="middle" class="mono">msgsnd()</text>
+<path d="M600 270 V320" class="arrow"/>
+<rect x="485" y="320" width="230" height="80" rx="12" class="purple"/>
+<text x="600" y="353" text-anchor="middle" class="h">内核消息链表</text>
+<text x="600" y="381" text-anchor="middle" class="t">mtype + mtext</text>
+<path d="M600 400 V450" class="arrow"/>
+<rect x="485" y="450" width="230" height="65" rx="12" class="box"/>
+<text x="600" y="489" text-anchor="middle" class="mono">msgrcv()</text>
+<text x="600" y="555" text-anchor="middle" class="s">无亲缘关系的进程也可通信</text>
+<rect x="810" y="90" width="360" height="500" rx="16" class="green"/>
+<text x="990" y="130" text-anchor="middle" class="h">共享内存 Shared Memory</text>
+<text x="990" y="160" text-anchor="middle" class="t">多个进程映射同一物理页</text>
+<rect x="845" y="230" width="115" height="90" rx="12" class="box"/>
+<text x="902" y="267" text-anchor="middle" class="h">进程 A</text>
+<text x="902" y="296" text-anchor="middle" class="mono">shmat</text>
+<rect x="1020" y="230" width="115" height="90" rx="12" class="box"/>
+<text x="1077" y="267" text-anchor="middle" class="h">进程 B</text>
+<text x="1077" y="296" text-anchor="middle" class="mono">shmat</text>
+<rect x="880" y="390" width="220" height="95" rx="14" class="purple"/>
+<text x="990" y="425" text-anchor="middle" class="h">同一共享内存段</text>
+<text x="990" y="456" text-anchor="middle" class="t">直接读写，不传递副本</text>
+<path d="M902 320 C902 350 940 365 965 390" class="arrow"/>
+<path d="M1077 320 C1077 350 1040 365 1015 390" class="arrow"/>
+<text x="990" y="555" text-anchor="middle" class="s">速度快，但必须另行处理同步</text>
+<rect x="230" y="620" width="740" height="42" rx="12" class="gray"/>
+<text x="600" y="647" text-anchor="middle" class="t">管道和消息队列由内核保存数据；共享内存让进程直接访问同一存储区域。</text>
+
+</svg>

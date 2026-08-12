@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="620" viewBox="0 0 1150 620">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#596579"/>
+  </marker>
+</defs>
+<style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+
+<text x="575" y="42" text-anchor="middle" class="title">fork() 后文件描述符的共享关系</text>
+<rect x="55" y="100" width="300" height="360" rx="14" class="blue"/>
+<text x="205" y="140" text-anchor="middle" class="h">父进程描述符表</text>
+<rect x="105" y="180" width="200" height="52" rx="10" class="box"/>
+<text x="205" y="213" text-anchor="middle" class="mono">fd 0 → stdin</text>
+<rect x="105" y="250" width="200" height="52" rx="10" class="box"/>
+<text x="205" y="283" text-anchor="middle" class="mono">fd 1 → stdout</text>
+<rect x="105" y="320" width="200" height="62" rx="10" class="orange"/>
+<text x="205" y="358" text-anchor="middle" class="mono">fd 3 → file</text>
+<text x="205" y="420" text-anchor="middle" class="s">fork 时复制描述符表</text>
+<rect x="795" y="100" width="300" height="360" rx="14" class="green"/>
+<text x="945" y="140" text-anchor="middle" class="h">子进程描述符表</text>
+<rect x="845" y="180" width="200" height="52" rx="10" class="box"/>
+<text x="945" y="213" text-anchor="middle" class="mono">fd 0 → stdin</text>
+<rect x="845" y="250" width="200" height="52" rx="10" class="box"/>
+<text x="945" y="283" text-anchor="middle" class="mono">fd 1 → stdout</text>
+<rect x="845" y="320" width="200" height="62" rx="10" class="orange"/>
+<text x="945" y="358" text-anchor="middle" class="mono">fd 3 → file</text>
+<text x="945" y="420" text-anchor="middle" class="s">描述符编号相同</text>
+<rect x="440" y="185" width="270" height="150" rx="14" class="orange"/>
+<text x="575" y="225" text-anchor="middle" class="h">内核打开文件表项</text>
+<text x="575" y="263" text-anchor="middle" class="t">共享文件偏移量</text>
+<text x="575" y="293" text-anchor="middle" class="t">状态标志与引用计数</text>
+<rect x="465" y="405" width="220" height="70" rx="14" class="gray"/>
+<text x="575" y="447" text-anchor="middle" class="h">inode / 实际文件</text>
+<path d="M305 351 C360 351 390 285 440 270" class="arrow"/>
+<path d="M845 351 C790 351 760 285 710 270" class="arrow"/>
+<path d="M575 335 V405" class="arrow"/>
+<rect x="190" y="520" width="770" height="62" rx="12" class="red"/>
+<text x="575" y="548" text-anchor="middle" class="t">父子进程不是各自打开了一个新文件表项。</text>
+<text x="575" y="572" text-anchor="middle" class="s">它们通过各自的 fd=3 指向同一个打开文件表项，因此文件偏移量会相互影响。</text>
+
+</svg>

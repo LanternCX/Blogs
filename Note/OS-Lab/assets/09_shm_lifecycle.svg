@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#596579"/>
+  </marker>
+</defs>
+<style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+
+<text x="600" y="42" text-anchor="middle" class="title">System V 共享内存的生命周期</text>
+<rect x="25" y="135" width="190" height="190" rx="14" class="blue"/>
+<text x="120" y="178" text-anchor="middle" class="h">shmget()</text>
+<text x="120" y="218" text-anchor="middle" class="t">创建或取得</text>
+<text x="120" y="248" text-anchor="middle" class="mono">shmid</text>
+<text x="120" y="282" text-anchor="middle" class="s">对象存在于内核</text>
+<rect x="265" y="135" width="190" height="190" rx="14" class="purple"/>
+<text x="360" y="178" text-anchor="middle" class="h">shmat()</text>
+<text x="360" y="218" text-anchor="middle" class="t">连接共享内存</text>
+<text x="360" y="248" text-anchor="middle" class="t">映射进地址空间</text>
+<rect x="505" y="135" width="190" height="190" rx="14" class="green"/>
+<text x="600" y="178" text-anchor="middle" class="h">直接读写</text>
+<text x="600" y="218" text-anchor="middle" class="t">像普通内存一样</text>
+<text x="600" y="248" text-anchor="middle" class="t">访问映射地址</text>
+<rect x="745" y="135" width="190" height="190" rx="14" class="orange"/>
+<text x="840" y="178" text-anchor="middle" class="h">shmdt()</text>
+<text x="840" y="218" text-anchor="middle" class="t">当前进程分离</text>
+<text x="840" y="248" text-anchor="middle" class="t">仅解除本地映射</text>
+<rect x="985" y="135" width="190" height="190" rx="14" class="red"/>
+<text x="1080" y="178" text-anchor="middle" class="h">shmctl()</text>
+<text x="1080" y="218" text-anchor="middle" class="mono">IPC_RMID</text>
+<text x="1080" y="248" text-anchor="middle" class="t">标记删除</text>
+<path d="M215 230 H265" class="arrow"/>
+<path d="M455 230 H505" class="arrow"/>
+<path d="M695 230 H745" class="arrow"/>
+<path d="M935 230 H985" class="arrow"/>
+<rect x="125" y="390" width="950" height="88" rx="14" class="red"/>
+<text x="600" y="425" text-anchor="middle" class="h">IPC_RMID 不一定立即释放</text>
+<text x="600" y="456" text-anchor="middle" class="t">已有映射仍可继续使用；只有最后一个进程分离后，内核才真正回收对象。</text>
+<rect x="195" y="515" width="810" height="58" rx="12" class="gray"/>
+<text x="600" y="551" text-anchor="middle" class="t">未执行 IPC_RMID 时，创建进程退出并不会自动删除 System V 共享内存。</text>
+
+</svg>

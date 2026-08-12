@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="650" viewBox="0 0 1150 650">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#596579"/>
+  </marker>
+</defs>
+<style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+
+<text x="575" y="42" text-anchor="middle" class="title">exec 与 system 的控制流差异</text>
+<rect x="45" y="85" width="500" height="500" rx="14" class="box"/>
+<text x="295" y="125" text-anchor="middle" class="h">exec()</text>
+<rect x="115" y="165" width="360" height="75" rx="14" class="blue"/>
+<text x="295" y="197" text-anchor="middle" class="h">原程序</text>
+<text x="295" y="224" text-anchor="middle" class="mono">printf("before");</text>
+<path d="M295 240 V300" class="arrow"/>
+<rect x="115" y="300" width="360" height="105" rx="14" class="green"/>
+<text x="295" y="338" text-anchor="middle" class="h">新程序映像</text>
+<text x="295" y="371" text-anchor="middle" class="t">代码、数据、堆和栈被替换</text>
+<rect x="115" y="455" width="360" height="70" rx="14" class="red"/>
+<text x="295" y="485" text-anchor="middle" class="t">成功时不返回原程序</text>
+<text x="295" y="511" text-anchor="middle" class="mono">printf("after"); 不执行</text>
+<path d="M295 405 V455" class="arrow"/>
+<rect x="605" y="85" width="500" height="500" rx="14" class="box"/>
+<text x="855" y="125" text-anchor="middle" class="h">system()</text>
+<rect x="675" y="155" width="360" height="70" rx="14" class="blue"/>
+<text x="855" y="186" text-anchor="middle" class="h">原程序</text>
+<text x="855" y="212" text-anchor="middle" class="mono">printf("before");</text>
+<path d="M855 225 V275" class="arrow"/>
+<rect x="675" y="275" width="360" height="90" rx="14" class="orange"/>
+<text x="855" y="311" text-anchor="middle" class="h">创建子 shell</text>
+<text x="855" y="341" text-anchor="middle" class="mono">/bin/sh -c "command"</text>
+<path d="M855 365 V420" class="arrow"/>
+<rect x="675" y="420" width="360" height="90" rx="14" class="green"/>
+<text x="855" y="456" text-anchor="middle" class="h">命令结束后返回</text>
+<text x="855" y="486" text-anchor="middle" class="mono">继续执行 printf("after");</text>
+<text x="575" y="625" text-anchor="middle" class="t">二者都能运行其他程序，但 exec 替换当前进程映像，system 会等待子 shell 后继续。</text>
+
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="600" viewBox="0 0 1150 600">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#596579"/>
+  </marker>
+</defs>
+<style>
+text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}
+.title{font-size:28px;font-weight:700}.h{font-size:20px;font-weight:700}.t{font-size:16px}.s{font-size:14px}.mono{font-family:Menlo,Consolas,monospace;font-size:15px}
+.box{fill:#f8fafc;stroke:#5b6b8c;stroke-width:2}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2}.red{fill:#fff0f1;stroke:#c64b55;stroke-width:2}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2}.gray{fill:#eef1f5;stroke:#7b879a;stroke-width:2}
+.line{stroke:#596579;stroke-width:2;fill:none}.arrow{stroke:#596579;stroke-width:2;fill:none;marker-end:url(#arrow)}.dash{stroke-dasharray:7 6}.thin{stroke-width:1.5}
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+
+<text x="575" y="42" text-anchor="middle" class="title">Linux 信号的产生、递送与处理</text>
+<rect x="35" y="120" width="230" height="170" rx="14" class="blue"/>
+<text x="150" y="162" text-anchor="middle" class="h">信号产生</text>
+<text x="150" y="201" text-anchor="middle" class="t">Ctrl-C / kill()</text>
+<text x="150" y="231" text-anchor="middle" class="t">alarm() / 硬件异常</text>
+<rect x="325" y="120" width="230" height="170" rx="14" class="orange"/>
+<text x="440" y="162" text-anchor="middle" class="h">内核记录</text>
+<text x="440" y="201" text-anchor="middle" class="t">设置 pending 状态</text>
+<text x="440" y="231" text-anchor="middle" class="t">检查屏蔽集合</text>
+<rect x="615" y="120" width="230" height="170" rx="14" class="green"/>
+<text x="730" y="162" text-anchor="middle" class="h">信号处理函数</text>
+<text x="730" y="201" text-anchor="middle" class="mono">handler(int sig)</text>
+<text x="730" y="231" text-anchor="middle" class="t">在用户态执行</text>
+<rect x="905" y="120" width="210" height="170" rx="14" class="purple"/>
+<text x="1010" y="162" text-anchor="middle" class="h">恢复执行</text>
+<text x="1010" y="201" text-anchor="middle" class="t">sigreturn</text>
+<text x="1010" y="231" text-anchor="middle" class="t">返回原控制流</text>
+<path d="M265 205 H325" class="arrow"/>
+<path d="M555 205 H615" class="arrow"/>
+<path d="M845 205 H905" class="arrow"/>
+<rect x="150" y="355" width="850" height="85" rx="14" class="red"/>
+<text x="575" y="390" text-anchor="middle" class="h">SIGKILL 与 SIGSTOP</text>
+<text x="575" y="419" text-anchor="middle" class="t">不能被捕获、忽略或改成自定义处理函数。</text>
+<rect x="210" y="485" width="730" height="72" rx="14" class="gray"/>
+<text x="575" y="515" text-anchor="middle" class="t">信号用于异步通知事件；信号量用于互斥、同步和资源计数。</text>
+<text x="575" y="542" text-anchor="middle" class="s">二者英文分别为 signal 与 semaphore，名称相近但不是同一种机制。</text>
+
+</svg>
