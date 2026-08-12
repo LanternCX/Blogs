@@ -311,15 +311,15 @@ $$
 
 #### 3.2.1 电路框架设计
 
-![main](main.491l9x6m0n.webp)
+![main](assets/main.491l9x6m0n.webp)
 
 #### 3.2.2 功率计设计
 
-![I](I.8vn8am55o9.webp)
+![I](assets/I.8vn8am55o9.webp)
 
 #### 3.2.3 STC最小系统板设计
 
-![STC](STC.1apb6eycjc.webp)
+![STC](assets/STC.1apb6eycjc.webp)
 
 ### 3.2 视觉算法设计分析
 
