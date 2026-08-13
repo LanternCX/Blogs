@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="455" viewBox="0 0 1080 455">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="540" y="42" text-anchor="middle" dominant-baseline="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="700" fill="#172033">可靠包固定帧结构</text>
+
+<text x="55" y="105" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">数据帧</text>
+<rect x="55" y="125" width="105" height="90" rx="5" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"/>
+<text x="107.5" y="164" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">帧头</text>
+<text x="107.5" y="189" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#4f46e5">0xA5</text>
+<rect x="160" y="125" width="120" height="90" rx="5" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="220" y="164" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">模式</text>
+<text x="220" y="189" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#2563eb">0x02</text>
+<rect x="280" y="125" width="135" height="90" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.8"/>
+<text x="347.5" y="164" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Topic</text>
+<text x="347.5" y="189" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#475569">消息类型</text>
+<rect x="415" y="125" width="105" height="90" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.8"/>
+<text x="467.5" y="164" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">序号</text>
+<text x="467.5" y="189" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#c2410c">0～255</text>
+<rect x="520" y="125" width="400" height="90" rx="5" fill="#ecfdf5" stroke="#059669" stroke-width="1.8"/>
+<text x="720" y="164" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Body</text>
+<text x="720" y="189" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#047857">业务数据，不足补 0</text>
+<rect x="920" y="125" width="105" height="90" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.8"/>
+<text x="972.5" y="164" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">CRC8</text>
+<text x="972.5" y="189" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#c2410c">校验</text>
+<text x="107.5" y="242" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">1 B</text>
+<text x="220" y="242" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">1 B</text>
+<text x="347.5" y="242" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">1 B</text>
+<text x="467.5" y="242" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">1 B</text>
+<text x="720" y="242" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">10 B</text>
+<text x="972.5" y="242" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">1 B</text>
+
+<text x="55" y="285" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">确认帧</text>
+<rect x="55" y="305" width="105" height="90" rx="5" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"/>
+<text x="107.5" y="344" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">帧头</text>
+<text x="107.5" y="369" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#4f46e5">0xA5</text>
+<rect x="160" y="305" width="120" height="90" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.8"/>
+<text x="220" y="344" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">模式</text>
+<text x="220" y="369" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#c2410c">0x03</text>
+<rect x="280" y="305" width="135" height="90" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.8"/>
+<text x="347.5" y="344" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Topic</text>
+<text x="347.5" y="369" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#475569">与数据帧一致</text>
+<rect x="415" y="305" width="105" height="90" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.8"/>
+<text x="467.5" y="344" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">序号</text>
+<text x="467.5" y="369" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#c2410c">与数据帧一致</text>
+<rect x="520" y="305" width="400" height="90" rx="5" fill="#f8fafc" stroke="#334155" stroke-width="1.8"/>
+<text x="720" y="344" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Body</text>
+<text x="720" y="369" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#475569">全 0</text>
+<rect x="920" y="305" width="105" height="90" rx="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.8"/>
+<text x="972.5" y="344" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">CRC8</text>
+<text x="972.5" y="369" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#c2410c">校验</text>
+<text x="107.5" y="422" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">1 B</text>
+<text x="220" y="422" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">1 B</text>
+<text x="347.5" y="422" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">1 B</text>
+<text x="467.5" y="422" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">1 B</text>
+<text x="720" y="422" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">10 B</text>
+<text x="972.5" y="422" text-anchor="middle" font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="13" font-weight="600" fill="#475569">1 B</text>
+
+</svg>

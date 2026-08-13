@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520">
+  <style>
+    text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}
+    .title{font-size:26px;font-weight:700}.label{font-size:17px;font-weight:650}.small{font-size:14px}
+    .box{fill:#f8fafc;stroke:#334155;stroke-width:2}.feedforward{fill:#eef2ff;stroke:#4f46e5;stroke-width:2}
+    .feedback{fill:#ecfdf5;stroke:#059669;stroke-width:2}.plant{fill:#fff7ed;stroke:#ea580c;stroke-width:2}
+    .line{stroke:#334155;stroke-width:2.4;fill:none}.vision-line{stroke:#059669;stroke-width:2.4;fill:none}
+    .dash{stroke-dasharray:8 6}.sum{fill:white;stroke:#334155;stroke-width:2.2}
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <marker id="arrowVision" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#059669"/></marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="white"/>
+  <text x="560" y="44" text-anchor="middle" class="title">辅车跟随控制系统</text>
+
+  <rect x="55" y="92" width="180" height="68" rx="12" class="feedforward"/>
+  <text x="145" y="120" text-anchor="middle" class="label">主车速度指令</text>
+  <text x="145" y="144" text-anchor="middle" class="small">速度前馈</text>
+
+  <rect x="295" y="92" width="170" height="68" rx="12" class="feedforward"/>
+  <text x="380" y="120" text-anchor="middle" class="label">主辅车通信</text>
+  <text x="380" y="144" text-anchor="middle" class="small">发送前馈速度</text>
+
+  <circle cx="545" cy="244" r="25" class="sum"/>
+  <text x="545" y="252" text-anchor="middle" font-size="24">Σ</text>
+  <text x="516" y="213" class="label">+</text>
+  <text x="516" y="282" class="label">+</text>
+
+  <rect x="625" y="210" width="180" height="68" rx="12" class="box"/>
+  <text x="715" y="238" text-anchor="middle" class="label">底盘速度控制</text>
+  <text x="715" y="262" text-anchor="middle" class="small">逆运动学与速度环</text>
+
+  <rect x="865" y="210" width="180" height="68" rx="12" class="plant"/>
+  <text x="955" y="238" text-anchor="middle" class="label">辅车运动</text>
+  <text x="955" y="262" text-anchor="middle" class="small">跟随主车</text>
+
+  <rect x="270" y="350" width="195" height="68" rx="12" class="feedback"/>
+  <text x="367" y="378" text-anchor="middle" class="label">视觉跟随控制</text>
+  <text x="367" y="402" text-anchor="middle" class="small">输出速度修正量</text>
+
+  <rect x="55" y="350" width="155" height="68" rx="12" class="feedback"/>
+  <text x="132" y="378" text-anchor="middle" class="label">色标位置误差</text>
+  <text x="132" y="402" text-anchor="middle" class="small">相对位置反馈</text>
+
+  <path d="M235,126 L295,126" class="line" marker-end="url(#arrow)"/>
+  <path d="M465,126 L545,126 L545,219" class="line" marker-end="url(#arrow)"/>
+  <path d="M570,244 L625,244" class="line" marker-end="url(#arrow)"/>
+  <path d="M805,244 L865,244" class="line" marker-end="url(#arrow)"/>
+
+  <path d="M465,384 L545,384 L545,269" class="vision-line" marker-end="url(#arrowVision)"/>
+  <path d="M210,384 L270,384" class="vision-line" marker-end="url(#arrowVision)"/>
+  <path d="M955,278 L955,458 L132,458 L132,418" class="vision-line dash" marker-end="url(#arrowVision)"/>
+  <text x="620" y="482" text-anchor="middle" class="small">摄像头观测主车后方色标</text>
+
+  <text x="720" y="112" text-anchor="middle" class="small">视觉短暂丢失时，前馈通路仍可维持基本跟随</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <style>
+    text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}
+    .label{font-size:22px;font-weight:650}.formula{font-size:22px;font-style:italic}
+    .orbit{stroke:#64748b;stroke-width:2.5;stroke-dasharray:9 8;fill:none}
+    .radius{stroke:#94a3b8;stroke-width:2.5;fill:none}
+    .base{stroke:#4f46e5;stroke-width:4;fill:none}
+    .xfix{stroke:#059669;stroke-width:4;fill:none}
+    .yfix{stroke:#ea580c;stroke-width:4;fill:none}
+  </style>
+  <defs>
+    <marker id="arrowBase" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#4f46e5"/></marker>
+    <marker id="arrowX" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#059669"/></marker>
+    <marker id="arrowY" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#ea580c"/></marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="white"/>
+
+  <circle cx="340" cy="350" r="235" class="orbit"/>
+
+  <circle cx="340" cy="350" r="48" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+  <text x="340" y="358" text-anchor="middle" class="label">目标</text>
+
+  <path d="M388,350 L548,350" class="radius"/>
+  <text x="468" y="334" text-anchor="middle" class="formula">r</text>
+
+  <g transform="translate(575 350)">
+    <path d="M-52,0 L38,-43 L24,0 L38,43 Z" fill="#eef2ff" stroke="#4f46e5" stroke-width="3"/>
+    <circle cx="0" cy="0" r="8" fill="#4f46e5"/>
+  </g>
+
+  <path d="M625,350 A50,50 0 1 1 587,302" class="base" marker-end="url(#arrowBase)"/>
+  <text x="668" y="400" class="formula">ω</text>
+
+  <path d="M575,350 L575,150" class="base" marker-end="url(#arrowBase)"/>
+  <text x="600" y="174" class="formula">v = ωr + Δvₓ</text>
+
+  <path d="M575,350 L575,235" class="xfix" marker-end="url(#arrowX)"/>
+  <text x="520" y="255" class="formula">Δvₓ</text>
+
+  <path d="M575,350 L430,350" class="yfix" marker-end="url(#arrowY)"/>
+  <text x="500" y="385" text-anchor="middle" class="formula">Δvᵧ</text>
+</svg>

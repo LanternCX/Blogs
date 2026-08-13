@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="410" viewBox="35 85 920 410">
+  <style>
+    text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}
+    .label{font-size:19px;font-weight:650}.small{font-size:15px}.formula{font-size:18px;font-style:italic}
+    .axis{stroke:#334155;stroke-width:2.2;fill:none}.actual{stroke:#4f46e5;stroke-width:4;fill:none}.target{stroke:#94a3b8;stroke-width:2;stroke-dasharray:8 7;fill:none}
+    .force{stroke:#059669;stroke-width:4;fill:none}.drag{stroke:#ea580c;stroke-width:4;fill:none}.dash{stroke:#94a3b8;stroke-width:1.5;stroke-dasharray:5 5}
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+    <marker id="arrowForce" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#059669"/></marker>
+    <marker id="arrowDrag" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#ea580c"/></marker>
+  </defs>
+
+  <rect x="35" y="85" width="920" height="410" fill="white"/>
+  <g transform="translate(75 125)">
+    <text x="165" y="0" text-anchor="middle" class="label">受力</text>
+    <rect x="95" y="125" width="140" height="88" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2.5"/>
+    <text x="165" y="207" text-anchor="middle" class="label">沙包</text>
+    <circle cx="165" cy="169" r="5" fill="#334155"/>
+    <path d="M165,169 L330,169" class="force" marker-end="url(#arrowForce)"/>
+    <text x="280" y="149" text-anchor="middle" class="formula">F</text>
+    <path d="M165,169 L20,169" class="drag" marker-end="url(#arrowDrag)"/>
+    <text x="58" y="205" text-anchor="middle" class="formula">f</text>
+    <path d="M20,225 L320,225" stroke="#64748b" stroke-width="2.5"/>
+  </g>
+
+  <g transform="translate(430 105)">
+    <path d="M40,335 L475,335" class="axis" marker-end="url(#arrow)"/>
+    <path d="M40,335 L40,25" class="axis" marker-end="url(#arrow)"/>
+    <text x="485" y="342" class="small">t</text>
+    <text x="20" y="23" class="formula">v</text>
+    <path d="M40,75 L455,75" class="target"/>
+    <text x="450" y="62" text-anchor="end" class="small">期望速度</text>
+    <path d="M40,335 C105,330 145,282 185,220 C230,151 275,127 330,126 L455,126" class="actual"/>
+    <text x="450" y="113" text-anchor="end" class="small">实际速度</text>
+    <path d="M250,335 L250,126" class="dash"/>
+    <text x="145" y="373" text-anchor="middle" class="label">加速</text>
+    <text x="355" y="373" text-anchor="middle" class="label">匀速</text>
+  </g>
+
+</svg>

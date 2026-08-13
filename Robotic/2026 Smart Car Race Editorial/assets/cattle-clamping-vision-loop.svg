@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="380" viewBox="120 75 760 380">
+  <style>
+    text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}
+    .label{font-size:19px;font-weight:650}.small{font-size:15px}.formula{font-size:18px;font-style:italic}
+    .car{fill:#eef2ff;stroke:#4f46e5;stroke-width:3}.object{fill:#fff7ed;stroke:#ea580c;stroke-width:2.5}
+    .carry{stroke:#4f46e5;stroke-width:4;fill:none}.vision{stroke:#059669;stroke-width:4;fill:none}.open{stroke:#94a3b8;stroke-width:2;stroke-dasharray:8 7;fill:none}
+  </style>
+  <defs>
+    <marker id="arrowCarry" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#4f46e5"/></marker>
+    <marker id="arrowVision" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#059669"/></marker>
+    <marker id="arrowOpen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/></marker>
+  </defs>
+
+  <rect x="120" y="75" width="760" height="380" fill="white"/>
+  <path d="M405,145 L595,145" class="carry" marker-end="url(#arrowCarry)"/>
+  <text x="500" y="125" text-anchor="middle" class="label">搬运方向</text>
+
+  <g>
+    <rect x="160" y="235" width="175" height="130" rx="18" class="car"/>
+    <path d="M335,267 L375,267 L375,333 L335,333 Z" fill="#c7d2fe" stroke="#4f46e5" stroke-width="2.5"/>
+    <text x="247" y="268" text-anchor="middle" class="label">主车</text>
+    <circle cx="247" cy="300" r="5" fill="#334155"/>
+    <path d="M247,300 L247,205" class="vision" marker-end="url(#arrowVision)"/>
+    <text x="270" y="218" class="formula">Δvₓ</text>
+    <path d="M247,390 L340,390" class="open" marker-end="url(#arrowOpen)"/>
+    <text x="247" y="420" text-anchor="middle" class="small">主车朝向</text>
+  </g>
+
+  <rect x="405" y="220" width="190" height="160" rx="18" class="object"/>
+  <text x="500" y="307" text-anchor="middle" class="label">物体</text>
+
+  <g>
+    <rect x="665" y="235" width="175" height="130" rx="18" class="car"/>
+    <path d="M665,267 L625,267 L625,333 L665,333 Z" fill="#c7d2fe" stroke="#4f46e5" stroke-width="2.5"/>
+    <text x="752" y="268" text-anchor="middle" class="label">辅车</text>
+    <circle cx="752" cy="300" r="5" fill="#334155"/>
+    <path d="M752,300 L752,395" class="vision" marker-end="url(#arrowVision)"/>
+    <text x="775" y="390" class="formula">Δvₓ</text>
+  </g>
+
+</svg>
