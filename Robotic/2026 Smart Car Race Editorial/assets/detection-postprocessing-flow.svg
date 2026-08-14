@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <style>
+    text{font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#172033}
+    .title{font-size:28px;font-weight:700}.subtitle{font-size:15px;fill:#64748b}.lane-title{font-size:21px;font-weight:700}.label{font-size:18px;font-weight:650}.small{font-size:14px}.tiny{font-size:13px}.branch{font-size:14px;font-weight:650}
+    .input{fill:#eff6ff;stroke:#2563eb;stroke-width:2}.filter{fill:#fff7ed;stroke:#ea580c;stroke-width:2}.state{fill:#eef2ff;stroke:#4f46e5;stroke-width:2}.pass{fill:#ecfdf5;stroke:#059669;stroke-width:2}.wait{fill:#f8fafc;stroke:#64748b;stroke-width:2}.unlock{fill:#fdf2f8;stroke:#db2777;stroke-width:2}
+    .lane-left{fill:#f8fafc;stroke:#94a3b8;stroke-width:1.6}.lane-right{fill:#fafaff;stroke:#818cf8;stroke-width:1.6}
+    .line{stroke:#334155;stroke-width:2.4;fill:none}.dash{stroke:#94a3b8;stroke-width:1.7;stroke-dasharray:6 5;fill:none}
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="white"/>
+  <text x="600" y="42" text-anchor="middle" class="title">模型输出如何进入候选集</text>
+  <text x="600" y="70" text-anchor="middle" class="subtitle">主车搜索阶段：先做基础筛选，再依据跨帧类别锁定状态形成当前候选集</text>
+
+  <rect x="55" y="105" width="170" height="104" rx="14" class="input"/>
+  <text x="140" y="141" text-anchor="middle" class="label">YOLO 输出</text>
+  <text x="140" y="170" text-anchor="middle" class="small">类别、置信度</text>
+  <text x="140" y="192" text-anchor="middle" class="small">归一化识别框</text>
+
+  <path d="M225,157 L265,157" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="265" y="87" width="285" height="140" rx="14" class="filter"/>
+  <text x="408" y="121" text-anchor="middle" class="label">基础有效性筛选</text>
+  <text x="408" y="150" text-anchor="middle" class="small">置信度 &gt; 0.80、识别框宽高有效</text>
+  <text x="408" y="174" text-anchor="middle" class="small">面积 ≥ 50 px²、类别在任务表内</text>
+  <text x="408" y="198" text-anchor="middle" class="small">搜索红沙包时长宽比 ≤ 1.5</text>
+
+  <path d="M550,157 L590,157" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="590" y="105" width="240" height="104" rx="14" class="state"/>
+  <text x="710" y="141" text-anchor="middle" class="label">读取类别锁定状态</text>
+  <text x="710" y="170" text-anchor="middle" class="small">object_task_name</text>
+  <text x="710" y="192" text-anchor="middle" class="small">决定本帧如何放行候选</text>
+
+  <path d="M830,157 L870,157" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="870" y="105" width="275" height="104" rx="14" class="input"/>
+  <text x="1008" y="141" text-anchor="middle" class="label">进入对应处理泳道</text>
+  <text x="1008" y="170" text-anchor="middle" class="small">未锁定：允许重新选类别</text>
+  <text x="1008" y="192" text-anchor="middle" class="small">已锁定：优先维持同一类别</text>
+
+  <path d="M1008,209 L1008,252 L305,252 L305,282" class="line" marker-end="url(#arrow)"/>
+  <text x="650" y="243" text-anchor="middle" class="branch">未锁定</text>
+  <path d="M1008,209 L1008,252 L885,252 L885,282" class="line" marker-end="url(#arrow)"/>
+  <text x="948" y="243" text-anchor="middle" class="branch">已锁定</text>
+
+  <rect x="45" y="282" width="520" height="335" rx="18" class="lane-left"/>
+  <text x="305" y="320" text-anchor="middle" class="lane-title">未锁定类别</text>
+
+  <rect x="105" y="350" width="400" height="88" rx="14" class="pass"/>
+  <text x="305" y="383" text-anchor="middle" class="label">放行本帧全部有效检测</text>
+  <text x="305" y="412" text-anchor="middle" class="small">形成候选集，交给后续“选择当前候选”</text>
+
+  <path d="M305,438 L305,475" class="line" marker-end="url(#arrow)"/>
+
+  <rect x="105" y="475" width="400" height="105" rx="14" class="state"/>
+  <text x="305" y="508" text-anchor="middle" class="label">后续选择结果更新锁定状态</text>
+  <text x="305" y="536" text-anchor="middle" class="small">连续 2 帧选中同一类别：锁定该类别</text>
+  <text x="305" y="560" text-anchor="middle" class="small">类别变化：从新类别的第 1 帧重新计数</text>
+
+  <rect x="595" y="282" width="560" height="335" rx="18" class="lane-right"/>
+  <text x="875" y="320" text-anchor="middle" class="lane-title">已锁定类别</text>
+
+  <rect x="625" y="350" width="225" height="88" rx="14" class="state"/>
+  <text x="738" y="383" text-anchor="middle" class="label">只保留锁定类别</text>
+  <text x="738" y="412" text-anchor="middle" class="small">其他类别不会进入候选集</text>
+
+  <path d="M850,394 L885,394" class="line" marker-end="url(#arrow)"/>
+
+  <path d="M960,337 L1035,394 L960,451 L885,394 Z" class="state"/>
+  <text x="960" y="388" text-anchor="middle" class="label">本帧命中</text>
+  <text x="960" y="413" text-anchor="middle" class="label">锁定类别？</text>
+
+  <path d="M960,451 L810,451 L810,502 L795,502" class="line" marker-end="url(#arrow)"/>
+  <text x="796" y="477" class="branch">是</text>
+  <rect x="625" y="455" width="170" height="95" rx="14" class="pass"/>
+  <text x="710" y="487" text-anchor="middle" class="label">放行同类候选</text>
+  <text x="710" y="516" text-anchor="middle" class="small">形成候选集</text>
+  <text x="710" y="538" text-anchor="middle" class="small">丢失计数清零</text>
+
+  <path d="M1035,394 L1090,394 L1090,485 L1060,485" class="line" marker-end="url(#arrow)"/>
+  <text x="1074" y="380" class="branch">否</text>
+  <rect x="825" y="455" width="235" height="130" rx="14" class="unlock"/>
+  <text x="943" y="487" text-anchor="middle" class="label">丢失计数 +1</text>
+  <text x="943" y="516" text-anchor="middle" class="small">第 1～4 帧：保持锁定</text>
+  <text x="943" y="539" text-anchor="middle" class="small">输出空候选，等待下一帧</text>
+  <text x="943" y="562" text-anchor="middle" class="small">第 5 帧：解锁并放行本帧有效检测</text>
+
+  <path d="M80,653 L1120,653" class="dash"/>
+  <text x="600" y="680" text-anchor="middle" class="subtitle">辅车不进行上述自动锁定：主控下发 object_id 后，辅车直接按对应类别过滤检测结果</text>
+</svg>
