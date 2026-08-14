@@ -16,6 +16,10 @@ pubDate: 2026-08-13
 
 整理了一下资料将我们的工作开源出来，希望能够给后来的智能车任务组、NXP-MicroPython 组的同学带来一些启发。
 
+仓库地址（访问需要通过魔法或 Github 镜像站）：[LanternCX/SmartCar2026-TransportCar](https://github.com/LanternCX/SmartCar2026-TransportCar)
+
+更多内容详见：[[#进一步交流]]
+
 ## 写在前面
 
 众所周知，蚂蚁搬家组的工程量是十分庞大的。工作量不仅仅来源于调试，更多的是来自漫长的前期方案设计与探索。
