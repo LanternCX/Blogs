@@ -1,4 +1,5 @@
 ---
+permalink: 3dof-kinematics
 title: 'RRR 构型关节式三自由度机械臂的运动学解算'
 pubDate: 2025-08-07
 ---

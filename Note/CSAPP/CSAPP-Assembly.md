@@ -1,4 +1,5 @@
 ---
+permalink: csapp-assembly
 title: 'CSAPP-Chapter 3: 程序的转换及机器级表示'
 pubDate: 2026-01-06
 ---

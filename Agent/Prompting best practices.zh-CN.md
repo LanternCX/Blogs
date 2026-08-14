@@ -1,4 +1,5 @@
 ---
+permalink: prompting-best-practices
 title: '提示词最佳实践'
 pubDate: 2026-03-11
 ---

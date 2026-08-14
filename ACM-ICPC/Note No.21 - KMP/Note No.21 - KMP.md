@@ -1,4 +1,5 @@
 ---
+permalink: acm-kmp
 title: 'ACM Note No.21: KMP'
 pubDate: 2025-10-27
 ---

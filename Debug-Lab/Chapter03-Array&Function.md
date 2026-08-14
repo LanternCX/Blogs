@@ -1,4 +1,5 @@
 ---
+permalink: debug-cp-array
 title: '[Debug 2025 Freshman] CP Chapter 03 Array, String and Function'
 pubDate: 2025-10-13
 ---

@@ -1,4 +1,5 @@
 ---
+permalink: question-template
 title: '提问报告模板'
 pubDate: 2025-10-16
 ---

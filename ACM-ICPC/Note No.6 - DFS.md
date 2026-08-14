@@ -1,4 +1,5 @@
 ---
+permalink: acm-dfs
 title: 'ACM Note No.6: DFS'
 pubDate: 2024-12-20
 ---

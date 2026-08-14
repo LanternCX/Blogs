@@ -1,4 +1,5 @@
 ---
+permalink: operating-system
 title: 'OS'
 pubDate: 2026-06-28
 ---

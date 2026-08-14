@@ -1,4 +1,5 @@
 ---
+permalink: acm-misc
 title: 'ACM Note No.1: Misc'
 pubDate: 2024-10-31
 ---

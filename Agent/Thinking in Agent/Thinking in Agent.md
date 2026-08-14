@@ -1,4 +1,5 @@
 ---
+permalink: agent-programming
 title: '面向 Agent 编程：Vibe Coding 设计哲学与最佳实践'
 pubDate: 2026-03-16
 ---

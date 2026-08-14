@@ -1,4 +1,5 @@
 ---
+permalink: acm-floyd
 title: 'ACM Note No.13: Floyd'
 pubDate: 2025-01-25
 ---

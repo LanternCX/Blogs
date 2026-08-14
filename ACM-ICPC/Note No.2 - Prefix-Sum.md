@@ -1,4 +1,5 @@
 ---
+permalink: acm-prefix-sum
 title: 'ACM Note No.2: 前缀和与差分'
 pubDate: 2024-10-31
 ---

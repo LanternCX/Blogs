@@ -1,4 +1,5 @@
 ---
+permalink: os-lab-review
 title: 'OS-Lab-Review'
 pubDate: 2026-07-04
 ---

@@ -1,4 +1,5 @@
 ---
+permalink: acm-geometry
 title: 'ACM Note No.20: Geometry'
 pubDate: 2025-05-13
 ---

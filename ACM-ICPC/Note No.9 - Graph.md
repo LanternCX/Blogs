@@ -1,4 +1,5 @@
 ---
+permalink: acm-graph
 title: 'ACM Note No.9: Graph'
 pubDate: 2025-01-25
 ---

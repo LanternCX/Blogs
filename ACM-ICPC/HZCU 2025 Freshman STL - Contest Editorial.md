@@ -1,4 +1,5 @@
 ---
+permalink: hzcu-2025-stl-contest
 title: 'HZCU 2025 Freshman STL: Contest Editorial'
 pubDate: 2025-11-04
 ---

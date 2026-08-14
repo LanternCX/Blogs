@@ -1,4 +1,5 @@
 ---
+permalink: csapp-linker
 title: 'CSAPP-Chapter 4: 链接'
 pubDate: 2026-01-06
 ---

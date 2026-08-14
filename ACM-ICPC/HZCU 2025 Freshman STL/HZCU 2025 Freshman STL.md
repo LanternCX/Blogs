@@ -1,4 +1,5 @@
 ---
+permalink: hzcu-2025-stl
 title: 'HZCU 2025 Freshman STL'
 pubDate: 2025-10-29
 ---

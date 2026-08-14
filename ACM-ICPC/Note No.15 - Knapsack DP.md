@@ -1,4 +1,5 @@
 ---
+permalink: acm-knapsack-dp
 title: 'ACM Note No.15: Knapsack DP'
 pubDate: 2025-01-26
 ---

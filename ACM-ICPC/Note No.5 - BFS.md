@@ -1,4 +1,5 @@
 ---
+permalink: acm-bfs
 title: 'ACM Note No.5: BFS'
 pubDate: 2024-12-14
 ---

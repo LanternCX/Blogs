@@ -1,4 +1,5 @@
 ---
+permalink: ignore-ds-store
 title: 'MacOS 下 git 全局 ignore .DS_Store'
 pubDate: 2025-10-03
 ---

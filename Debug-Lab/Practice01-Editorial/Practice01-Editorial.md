@@ -1,4 +1,5 @@
 ---
+permalink: debug-cp-practice-1
 title: '[Debug 2025 Freshman] CP Pracitce 01: I/O and Flow Control Editorial'
 pubDate: 2025-10-02
 ---

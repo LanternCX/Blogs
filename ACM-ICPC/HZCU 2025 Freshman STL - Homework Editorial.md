@@ -1,4 +1,5 @@
 ---
+permalink: hzcu-2025-stl-homework
 title: 'HZCU 2025 Freshman STL: Homework Editorial'
 pubDate: 2025-11-04
 ---

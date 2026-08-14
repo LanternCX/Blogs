@@ -1,4 +1,5 @@
 ---
+permalink: acm-dsu
 title: 'ACM Note No.10: DSU'
 pubDate: 2025-01-25
 ---
@@ -56,5 +57,4 @@ struct DSU {
     }
 };
 ```
-
 

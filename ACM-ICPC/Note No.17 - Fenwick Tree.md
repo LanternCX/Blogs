@@ -1,4 +1,5 @@
 ---
+permalink: acm-fenwick-tree
 title: 'ACM Note No.17: Fenwick Tree'
 pubDate: 2025-02-12
 ---

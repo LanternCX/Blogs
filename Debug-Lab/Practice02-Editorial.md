@@ -1,4 +1,5 @@
 ---
+permalink: debug-cp-practice-2
 title: '[Debug 2025 Freshman] CP Practice 02 - Array, String and Function Editorial'
 pubDate: 2025-10-14
 ---

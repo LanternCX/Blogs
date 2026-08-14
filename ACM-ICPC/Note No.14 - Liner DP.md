@@ -1,4 +1,5 @@
 ---
+permalink: acm-linear-dp
 title: 'ACM Note No.14: Liner DP'
 pubDate: 2025-01-26
 ---

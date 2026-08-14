@@ -1,4 +1,5 @@
 ---
+permalink: smart-car-2025-review
 title: 关于第二十届智能车竞赛备赛的总结
 pubDate: 2025-07-22
 ---

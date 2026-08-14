@@ -1,4 +1,5 @@
 ---
+permalink: csapp-data
 title: 'CSAPP-Chapter 2: 数据的机器级表示'
 pubDate: 2026-01-22
 ---

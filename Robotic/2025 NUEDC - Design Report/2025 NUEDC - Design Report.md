@@ -1,4 +1,5 @@
 ---
+permalink: nuedc-2025-report
 title: '[25电赛] 设计报告 - 基于单目视觉的目标物测量装置（C题）'
 pubDate: 2025-08-05
 ---

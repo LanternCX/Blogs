@@ -1,4 +1,5 @@
 ---
+permalink: acm-manacher
 title: 'ACM Note No.8: Manacher'
 pubDate: 2024-12-20
 ---

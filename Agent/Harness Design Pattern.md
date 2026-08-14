@@ -1,4 +1,5 @@
 ---
+permalink: harness-design
 title: 'Harness 设计模式'
 pubDate: 2026-03-23
 ---

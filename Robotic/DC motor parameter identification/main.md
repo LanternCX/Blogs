@@ -1,4 +1,7 @@
 ---
+permalink: dc-motor-id
+redirectFrom:
+  - robotic/dc-motor-parameter-identification/dc-motor-parameter-identification
 title: '直流有刷电机的系统辨识与前馈控制'
 pubDate: 2026-02-22
 ---

@@ -1,4 +1,5 @@
 ---
+permalink: acm-lca
 title: 'ACM Note No.18: LCA'
 pubDate: 2025-02-15
 ---

@@ -1,4 +1,5 @@
 ---
+permalink: acm-binary-search
 title: 'ACM Note No.4: 二分'
 pubDate: 2024-11-24
 ---

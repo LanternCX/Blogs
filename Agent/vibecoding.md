@@ -1,4 +1,5 @@
 ---
+permalink: vibe-coding
 title: '关于 Vibe Coding 的思考与探索'
 pubDate: 2026-02-22
 ---

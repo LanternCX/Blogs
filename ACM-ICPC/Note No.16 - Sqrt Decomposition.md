@@ -1,4 +1,5 @@
 ---
+permalink: acm-sqrt-decomposition
 title: 'ACM Note No.16: Sqrt Decomposition'
 pubDate: 2025-02-02
 ---

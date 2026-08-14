@@ -1,4 +1,5 @@
 ---
+permalink: acm-sparse-table
 title: 'ACM Note No.19: ST'
 pubDate: 2025-02-17
 ---

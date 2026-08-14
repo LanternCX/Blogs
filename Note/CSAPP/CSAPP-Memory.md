@@ -1,4 +1,5 @@
 ---
+permalink: csapp-memory
 title: 'CSAPP-Chapter 6: 存储'
 pubDate: 2026-01-22
 ---

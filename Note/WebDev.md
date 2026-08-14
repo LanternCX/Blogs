@@ -1,4 +1,5 @@
 ---
+permalink: web-development
 title: 'HZCU Web Develop'
 pubDate: 2026-01-22
 ---

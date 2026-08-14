@@ -1,4 +1,5 @@
 ---
+permalink: ai-costs
 title: '【未完工】怎么省钱：上下文、缓存命中与 Harness'
 pubDate: 2026-06-28
 ---

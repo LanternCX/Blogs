@@ -1,4 +1,5 @@
 ---
+permalink: acm-dijkstra
 title: 'ACM Note No.12: Dijkstra'
 pubDate: 2025-01-25
 ---

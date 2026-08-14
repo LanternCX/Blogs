@@ -1,4 +1,5 @@
 ---
+permalink: rocos-contribution
 title: 'Debug Lab - Contribution Guide for Rocos Repo'
 pubDate: 2025-03-11
 ---

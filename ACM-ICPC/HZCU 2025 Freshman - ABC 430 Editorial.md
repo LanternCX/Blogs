@@ -1,4 +1,5 @@
 ---
+permalink: hzcu-2025-abc430
 title: 'HZCU 2025 Freshman - ABC 430 A-D Editorial'
 pubDate: 2025-11-04
 ---

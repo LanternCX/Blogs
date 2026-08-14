@@ -1,4 +1,5 @@
 ---
+permalink: pocket-ubuntu
 title: 'Pocket Ubuntu: Ubuntu 22.04 即插即用双系统折腾笔记'
 pubDate: 2025-02-21
 ---

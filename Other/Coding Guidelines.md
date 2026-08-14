@@ -1,4 +1,5 @@
 ---
+permalink: cpp-coding-style
 title: '浅谈关于 C++ 的码风以及编码规范'
 pubDate: 2025-09-29
 ---

@@ -1,4 +1,5 @@
 ---
+permalink: database
 title: 'DB'
 pubDate: 2026-07-03
 ---

@@ -1,4 +1,5 @@
 ---
+permalink: acm-mst
 title: 'ACM Note No.11: MST'
 pubDate: 2025-01-25
 ---

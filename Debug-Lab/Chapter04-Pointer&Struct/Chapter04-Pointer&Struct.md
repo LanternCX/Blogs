@@ -1,4 +1,5 @@
 ---
+permalink: debug-cp-pointer
 title: '[Debug 2025 Freshman] CP Chapter 04 - Struct, Pointer and Debugger'
 pubDate: 2025-10-20
 ---

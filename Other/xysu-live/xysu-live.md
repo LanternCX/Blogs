@@ -1,4 +1,5 @@
 ---
+permalink: xysu-live
 title: '技术部攻略 | 直播技术初步'
 pubDate: 2025-02-21
 ---

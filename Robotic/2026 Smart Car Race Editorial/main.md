@@ -1,4 +1,7 @@
 ---
+permalink: smart-car-2026
+redirectFrom:
+  - robotic/2026-smart-car-race-editorial/2026-smart-car-race-editorial
 title: 2026 智能车蚂蚁搬家组想吃雪糕方案浅析
 pubDate: 2026-08-13
 ---

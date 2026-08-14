@@ -1,4 +1,5 @@
 ---
+permalink: 3dof-doc
 title: '智握：语音驱动的视觉抓取智能机械臂'
 pubDate: 2025-10-16
 ---

@@ -1,4 +1,5 @@
 ---
+permalink: debug-cp-practice-3
 title: '[Debug 2025 Freshman] CP Practice 03 - Struct, Pointer and Debugger Editorial'
 pubDate: 2025-10-23
 ---

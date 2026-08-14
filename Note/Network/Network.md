@@ -1,4 +1,5 @@
 ---
+permalink: computer-network
 title: 'Network'
 pubDate: 2026-07-03
 ---

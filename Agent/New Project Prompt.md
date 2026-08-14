@@ -1,4 +1,5 @@
 ---
+permalink: new-project-prompt
 title: '项目初始化 prompt'
 pubDate: 2026-03-02
 ---

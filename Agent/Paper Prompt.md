@@ -1,4 +1,5 @@
 ---
+permalink: paper-prompt
 title: 'Gemini 中文论文 prompt'
 pubDate: 2026-01-03
 ---

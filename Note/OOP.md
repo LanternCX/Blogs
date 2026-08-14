@@ -1,4 +1,5 @@
 ---
+permalink: oop
 title: 'OOP'
 pubDate: 2026-01-22
 ---

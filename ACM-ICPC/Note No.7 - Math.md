@@ -1,4 +1,5 @@
 ---
+permalink: acm-number-theory
 title: 'ACM Note No.7: 数论'
 pubDate: 2024-12-15
 ---

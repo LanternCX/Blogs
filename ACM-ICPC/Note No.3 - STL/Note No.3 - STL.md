@@ -1,4 +1,5 @@
 ---
+permalink: acm-stl
 title: 'ACM Note No.3: STL'
 pubDate: 2024-11-04
 ---
