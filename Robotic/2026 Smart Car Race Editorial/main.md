@@ -11,7 +11,7 @@ pubDate: 2026-08-13
 
 浙江省赛只比了决赛。这个决赛成绩在全国的区赛应该都能排到比较靠前的位置（华北赛区排名第一、东北赛区排名第二、华南赛区排名第三、西部赛区排名第三、华东赛区赛题和我们不一样无法比较），但是在浙江只拿到了省第五、学校第三。由于赛区政策原因，很遗憾只获得了省三，并且差一名进国。
 
-整理了一下资料将我们的工作开源出来，希望能够给后来的智能车任务组、NXP 组的同学带来一些启发。
+整理了一下资料将我们的工作开源出来，希望能够给后来的智能车任务组、NXP-MicroPython 组的同学带来一些启发。
 
 ## 写在前面
 
@@ -982,6 +982,7 @@ Github：[LanternCX (Cao Xin)](https://github.com/LanternCX)
 
 - [LanternCX/mpy-cli: mpy-cli | 轻量、便捷、灵活地完成 micro-python 代码部署](https://github.com/LanternCX/mpy-cli)
 - [LanternCX/micropython-smartcar-stubs: 逐飞 mpy 库 stubs，用于解决 VS Code 开发 micro-python 智能车的问题](https://github.com/LanternCX/micropython-smartcar-stubs)
+- [LanternCX/ChromaForge: 🎨 ChromaForge | 面向计算机视觉工作流的颜色规则标定桌面软件](https://github.com/LanternCX/ChromaForge)
 
 项目开源链接：
 
@@ -990,5 +991,7 @@ Github：[LanternCX (Cao Xin)](https://github.com/LanternCX)
 - 简陋的调试上位机：[LanternCX/SmartCar2026-Controller](https://github.com/LanternCX/SmartCar2026-Controller)
 
 如果我们的工作有帮助，欢迎到 Github 点 Star 支持。
+
+如果本篇的开源对你有启发，也欢迎开源自己的作品，共建生态。
 
 完结撒花 \o/
