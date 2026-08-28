@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1950" height="690" viewBox="0 0 1950 690" role="img" aria-labelledby="title desc">
+  <title id="title">2026 DEBUG 实验室考核流程</title>
+  <desc id="desc">开学第二周发布赛题后开始培训。培训期间可以多次提交赛题验收，满分完赛即可参加提前批面试；未满分且培训尚未结束则继续培训、修改赛题并再次验收。培训结束后统一验收，达到六十分即可参加正式批面试，通过面试者按赛题成绩参与正式批排名。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#7b879a"/>
+    </marker>
+  </defs>
+  <style>
+    text{font-family:Arial,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;fill:#172033}.title{font-size:36px;font-weight:700}.label{font-size:28px;font-weight:700}.decision{font-size:24px;font-weight:700}.note{font-size:20px;fill:#596579}.branch{font-size:19px;font-weight:700;fill:#596579}.connector{fill:none;stroke:#7b879a;stroke-width:3}.line{fill:none;stroke:#7b879a;stroke-width:3;marker-end:url(#arrow)}.blue{fill:#e8f0ff;stroke:#4978c7;stroke-width:2.5}.green{fill:#e9f8ef;stroke:#3c8a5a;stroke-width:2.5}.orange{fill:#fff3e3;stroke:#c97820;stroke-width:2.5}.purple{fill:#f3edff;stroke:#7855b5;stroke-width:2.5}.gray{fill:#f8fafc;stroke:#d8dee8;stroke-width:2}.end{fill:#eef1f5;stroke:#7b879a;stroke-width:2.5}
+  </style>
+  <rect width="1950" height="690" fill="#ffffff"/>
+  <text x="975" y="48" text-anchor="middle" class="title">2026 DEBUG 实验室考核流程</text>
+
+  <rect x="20" y="276" width="160" height="88" rx="14" class="gray"/>
+  <text x="100" y="328" text-anchor="middle" class="label">发布赛题</text>
+  <path d="M180 320H208" class="line"/>
+
+  <rect x="210" y="282" width="150" height="76" rx="38" class="blue"/>
+  <text x="285" y="328" text-anchor="middle" class="label">开始培训</text>
+  <path d="M360 320H388" class="line"/>
+
+  <rect x="390" y="272" width="180" height="96" rx="14" class="gray"/>
+  <text x="480" y="328" text-anchor="middle" class="label">赛题验收</text>
+  <path d="M570 320H620" class="connector"/>
+  <circle cx="620" cy="320" r="5" fill="#7b879a"/>
+
+  <path d="M620 320V149H898" class="line"/>
+  <text x="760" y="136" text-anchor="middle" class="branch">满分完赛</text>
+  <rect x="900" y="105" width="260" height="88" rx="14" class="purple"/>
+  <text x="1030" y="157" text-anchor="middle" class="label">提前批</text>
+
+  <path d="M620 320H838" class="line"/>
+  <text x="730" y="302" text-anchor="middle" class="branch">未满分</text>
+  <path d="M950 265 1060 320 950 375 840 320Z" class="orange"/>
+  <text x="950" y="328" text-anchor="middle" class="decision">培训结束</text>
+
+  <path d="M950 375V498" class="line"/>
+  <text x="965" y="430" class="branch">否</text>
+  <rect x="800" y="500" width="300" height="88" rx="14" class="gray"/>
+  <text x="950" y="552" text-anchor="middle" class="label">继续培训、修改作品</text>
+  <path d="M800 544H480V370" class="line"/>
+  <text x="640" y="530" text-anchor="middle" class="branch">修改作品后再次提交</text>
+
+  <path d="M1060 320H1120" class="connector"/>
+  <circle cx="1120" cy="320" r="5" fill="#7b879a"/>
+  <text x="1075" y="300" class="branch">是</text>
+  <path d="M1120 320H1188" class="line"/>
+  <text x="1154" y="302" text-anchor="middle" class="branch">≥ 60 分</text>
+  <rect x="1190" y="276" width="250" height="88" rx="14" class="green"/>
+  <text x="1315" y="312" text-anchor="middle" class="label">正式批</text>
+  <text x="1315" y="342" text-anchor="middle" class="note">验收后参加面试</text>
+
+  <path d="M1120 320V596H1473" class="line"/>
+  <text x="1155" y="582" class="branch">＜ 60 分</text>
+
+  <path d="M1160 149C1320 149 1460 185 1590 258" class="line"/>
+  <path d="M1440 320H1473" class="line"/>
+  <path d="M1590 260 1705 320 1590 380 1475 320Z" class="orange"/>
+  <text x="1590" y="328" text-anchor="middle" class="decision">面试通过</text>
+
+  <path d="M1705 320H1733" class="line"/>
+  <text x="1713" y="300" class="branch">是</text>
+  <rect x="1735" y="276" width="190" height="88" rx="44" class="blue"/>
+  <text x="1830" y="312" text-anchor="middle" class="label">正式加入</text>
+  <text x="1830" y="342" text-anchor="middle" class="note">DEBUG 实验室</text>
+
+  <path d="M1590 380V558" class="line"/>
+  <text x="1605" y="438" class="branch">否</text>
+  <rect x="1475" y="560" width="230" height="72" rx="36" class="end"/>
+  <text x="1590" y="604" text-anchor="middle" class="label">本轮选拔结束</text>
+</svg>
