@@ -3,6 +3,8 @@ permalink: debug-freshman-2026
 title: 2026 年 DEBUG 实验室招新介绍
 pubDate: 2026-08-26
 ---
+[‌⁠​‍​‬⁠​​﻿‍⁠⁠​⁠​​​‬﻿​‌⁠‍​​​​⁠‍‌‍‌​‬‌​⁠‌​‍​⁠﻿⁠⁠​​​​飞书云文档](https://hzcu-debug.feishu.cn/wiki/HVaywwX7ziPMVjk4452cs6hsnkf)
+
 亲爱的 26 级城院新生们：
 
 欢迎加入浙大城市学院！
