@@ -1,6 +1,6 @@
 ---
-permalink: debug-2026-freshman-guide
-title: To 2026 Freshman
+permalink: debug-freshman-2026
+title: 2026 年 DEBUG 实验室招新介绍
 pubDate: 2026-08-26
 ---
 亲爱的 26 级城院新生们：
