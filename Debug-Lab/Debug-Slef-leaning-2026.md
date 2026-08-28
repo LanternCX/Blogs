@@ -1,10 +1,10 @@
 ---
 permalink: debug-slefleaning-2026
-title: 2026 Debug 实验室软件组自学指南
+title: 2026 年 Debug 实验室软件组自学指南
 pubDate: 2026-08-29
 ---
 
-# 2026 Debug 实验室软件组自学指南
+# 2026 年 Debug 实验室软件组自学指南
 
 [‌​​​⁠﻿⁠​‍‬‬​‍‍‌‬‍﻿​​‍​‬​‬​﻿​​​﻿​‍​⁠​​​​‍⁠﻿​⁠飞书云文档](https://hzcu-debug.feishu.cn/wiki/Fk3swHkQaipHiXkgtlCcjkF0ndc)
 
