@@ -1,5 +1,5 @@
 ---
-permalink: debug-slefleaning-2026
+permalink: debug-sleflearning-2026
 title: 2026 年 Debug 实验室软件组自学指南
 pubDate: 2026-08-29
 ---
