@@ -1,6 +1,6 @@
 ---
 permalink: debug-2026-cp-practice-3
-title: '[Debug 2026 Freshman] CP Practice 03 - C Programming Review Editorial'
+title: "[Debug 2026 Freshman] CP Practice 03"
 pubDate: 2026-10-13
 ---
 

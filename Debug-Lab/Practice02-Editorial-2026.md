@@ -1,6 +1,6 @@
 ---
 permalink: debug-2026-cp-practice-2
-title: '[Debug 2026 Freshman] CP Practice 02 - Array, String and Function Editorial'
+title: "[Debug 2026 Freshman] CP Practice 02"
 pubDate: 2026-10-12
 ---
 

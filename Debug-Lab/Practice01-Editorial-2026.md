@@ -1,6 +1,6 @@
 ---
 permalink: debug-2026-cp-practice-1
-title: '[Debug 2026 Freshman] CP Practice 01 - I/O and Flow Control Editorial'
+title: "[Debug 2026 Freshman] CP Practice 01"
 pubDate: 2026-09-22
 ---
 
