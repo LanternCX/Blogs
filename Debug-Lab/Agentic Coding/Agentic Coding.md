@@ -13,7 +13,7 @@ OJ 上的 C 程序通常通过 `scanf` 读入数据，完成计算，再用 `pri
 
 把同样的计算做成一个供他人使用的成绩查询工具，需要决定的事情就多了。成绩从哪里导入，同名学生怎样区分，文件出错时怎样处理，原来的数据能否继续使用，都没有现成的题面。程序投入使用后，还会增加功能、修复 Bug，并交给其他成员维护。
 
-![OJ 与项目开发](./assets/agent-pair-programming/program-to-project.svg)
+![OJ 与项目开发](./assets/program-to-project.svg)
 
 Agent 已经能够承担其中不少工作。给出要求后，它可以阅读文件、编写函数、运行程序，并根据报错继续修改。原本需要逐句敲出的代码，现在可能很快就出现在编辑器里。
 
@@ -49,7 +49,7 @@ Agent 已经能够承担其中不少工作。给出要求后，它可以阅读�
 
 模型生成回答时，也是这样逐个生成 Token，最后将它们还原为可阅读的文本。输入和输出都以 Token 为处理单位，所以模型的上下文容量、生成长度和 API 用量常用 Token 数表示。
 
-![LLM generation](./assets/agent-pair-programming/llm-generation.svg)
+![LLM generation](./assets/llm-generation.svg)
 
 已有内容会影响后续生成，这些可参考的信息称为上下文。补入项目源码、报错或明确的要求，会改变模型作出判断的依据。上下文窗口有容量限制，应用需要决定哪些内容在这次调用中提供。
 
@@ -145,11 +145,11 @@ JSON 中的字段名说明数据用途。`role` 表示消息来源，`content` �
 
 这个过程称为 Tool Calling。模型写出“已经读取文件”不会触发文件操作，实际读取需要由工具完成。同样，声称“测试通过”和真正运行测试，是两件不同的事。
 
-![API 与本地工具](./assets/agent-pair-programming/model-api.svg)
+![API 与本地工具](./assets/model-api.svg)
 
 修复同名查询时，Agent 可以先搜索入口，读取相关函数，修改提前返回的逻辑，再运行测试。如果测试失败，报错会加入上下文，模型据此继续判断。不断调用工具、取得结果和调整行动，构成了 Agent Loop。
 
-![Agent Loop](./assets/agent-pair-programming/agent-loop.svg)
+![Agent Loop](./assets/agent-loop.svg)
 
 围绕模型管理上下文、工具、权限和循环的系统，通常称为 Harness。同一个模型使用不同的工具和背景信息，完成任务的表现也可能不同。界面采用命令行还是图形窗口，并不能单独决定协作质量。
 
@@ -165,7 +165,7 @@ Skill 则可以保存某类工作的说明、步骤和配套资源，供 Agent �
 
 有了视觉输入，Agent 可以通过截图观察软件界面，再调用点击、输入和滚动工具，取得新的截图继续判断。这就是 Computer Use 的一种实现方式。
 
-![Computer Use](./assets/agent-pair-programming/computer-use.svg)
+![Computer Use](./assets/computer-use.svg)
 
 例如，检查成绩查询页面时，Agent 可以输入姓名、点击查询，并观察返回的记录。点击动作成功，不代表结果正确，仍然需要检查页面内容。已有稳定 API 或命令行工具时，也可以直接调用，不必所有操作都经过屏幕。
 
@@ -189,7 +189,7 @@ Agent 修复一个问题时，会反复读取代码、调用模型、执行工�
 
 模型并不是直接读取聊天界面上的所有内容。每次调用前，Agent 的 Harness 要收集当前任务、保留的历史、项目规则和可用工具，决定哪些资料需要加载，再把它们整理成请求。这个组织过程决定了模型这一轮能看到什么，也决定了需要处理多少输入 Token。
 
-![Agent 组织上下文并调用模型](./assets/agent-pair-programming/context-request.svg)
+![Agent 组织上下文并调用模型](./assets/context-request.svg)
 
 图中间是一次请求的逻辑组成。最前面的 Instructions 放置系统要求和开发者指令；项目规则也可能被注入指令或消息中。Tool definitions 描述可用工具的名称、用途和参数格式。Messages 则保存用户要求、模型先前的回答、工具调用记录和工具结果。新问题或刚取得的结果通常继续追加到消息历史中。不同 API 对这些内容使用的字段和排列方式有所不同，最终还会由模型服务转换成模型实际处理的输入序列。
 
@@ -273,7 +273,7 @@ DeepSeek 的[上下文缓存文档](https://api-docs.deepseek.com/zh-cn/guides/k
 
 Prompt Cache 匹配的是模型服务实际收到的输入前缀。项目规则、工具定义、Skill 索引、已经加载的正文和对话历史，只要进入这个前缀，就可能参与匹配。它并不只缓存用户手写的那一句 Prompt，也不会因为一段内容叫作“系统提示词”就自动保证命中。
 
-![共同前缀与缓存复用](./assets/agent-pair-programming/prompt-cache-prefix.svg)
+![共同前缀与缓存复用](./assets/prompt-cache-prefix.svg)
 
 图中假设 A 和 B 对应的前缀计算状态已经保存，且当前请求满足服务的复用条件。A 是规则与工具定义，B 是保留的历史。第二次请求保留 A、B，在末尾换上新的结果 D，便有机会复用 A、B 的状态，只处理新增部分。图中的分块用于说明前缀关系，实际缓存边界由服务实现决定。
 
@@ -295,7 +295,7 @@ Prompt Cache 匹配的是模型服务实际收到的输入前缀。项目规则�
 
 假设第二次请求包含 21,000 个输入 Token，其中 20,000 个命中了缓存，另外 1,000 个没有命中，最终生成了 800 个输出 Token。这次调用的费用就由三部分组成：
 
-![缓存命中怎样改变一次请求的费用](./assets/agent-pair-programming/prompt-cache-cost.svg)
+![缓存命中怎样改变一次请求的费用](./assets/prompt-cache-cost.svg)
 
 分别乘以对应单价，再相加，就是这次调用的费用。若单价按每百万 Token 标注，数量也要先除以一百万。缓存降低的是重复输入的处理费用，新问题和新答案仍然产生费用，因此缓存输入的折扣不能直接当成整个任务的折扣。
 
@@ -457,7 +457,7 @@ Git 命令提供了一套通用的操作名称，便于理解不同工具正在�
 
 在本地，正在编辑的文件属于工作区。准备记录一项修改时，先检查差异（Diff），再把本次需要包含的内容放进暂存区（Staging Area），最后填写说明并提交。暂存区相当于下一次提交的待选内容，便于将相关修改放在一起。保存文件不会自动产生提交，Commit 也不会自动上传到 GitHub。
 
-![Git 的本地与远程操作](./assets/agent-pair-programming/git-states.svg)
+![Git 的本地与远程操作](./assets/git-states.svg)
 
 | 目的 | 常用 Git 命令 | 工作时关注什么 |
 | --- | --- | --- |
@@ -476,7 +476,7 @@ Git 命令提供了一套通用的操作名称，便于理解不同工具正在�
 
 具体安装、命令参数和冲突操作，可以查阅 [Pro Git 的 Git 基础](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)与[分支章节](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)。日常工作更需要养成一个顺序：先看状态与差异，再决定暂存、提交或合并。Agent 生成了总结，也仍然要检查实际 Diff。
 
-![Git Graph 中的提交与引用](./assets/agent-pair-programming/git-read-graph.svg)
+![Git Graph 中的提交与引用](./assets/git-read-graph.svg)
 
 Git Graph 用圆点表示提交，用连线表示父子关系。图中箭头指向父提交，M 连接 D 和 C 两条历史。分支名称是指向提交的引用，`HEAD -> main` 表示当前正在使用 `main` 分支。读图时先找当前位置，再看目标分支和共同祖先，便能判断两边是单纯落后，还是各自增加了修改。线条颜色只是界面的辅助表达，未提交编辑则需要另看更改列表，或在终端使用 `git status`。
 
@@ -533,7 +533,7 @@ Gitflow 的分支数量有维护成本。作者在 2020 年的补充说明中也
 
 ### Issue、PR 和 CI/CD 怎样连起来
 
-![Issue、工作分支、PR 检查与发布流程](./assets/agent-pair-programming/git-collaboration-flow.svg)
+![Issue、工作分支、PR 检查与发布流程](./assets/git-collaboration-flow.svg)
 
 分支解决修改在哪里推进，Issue 和 PR 则保存为什么修改、怎样接受修改。以修复串口丢帧为例，可以先用 Issue 记录故障现象、硬件与软件版本、复现条件和预期行为，再讨论方案。这样，人和 Agent 都能找到同一份任务依据。
 
@@ -623,7 +623,7 @@ Diff 是两个版本之间的差异。它把本次新增、删除和修改的内
 
 编辑器通常支持并排查看 Diff：左侧是旧版本，右侧是修改后的版本，删除的行标红，新增的行标绿。另一种形式是把两侧合在同一列，用 `-` 与 `+` 标出删除和新增。行号帮助定位代码，没有变化的相邻行则提供阅读所需的上下文。
 
-![编辑器中的并排 Diff：左侧删除无限等待，右侧加入超时返回](assets/agent-pair-programming/review-editor-diff.svg)
+![编辑器中的并排 Diff：左侧删除无限等待，右侧加入超时返回](./assets/review-editor-diff.svg)
 
 图中，`connected()` 表示连接状态，`millis()` 提供毫秒计时。右侧增加了等待满一秒后返回失败的逻辑。Diff 能清楚显示“增加了超时”，但还不能据此认定修改正确：等待期间是否妨碍其他任务，调用方是否处理了 `false`，都需要回到完整代码中检查。
 
@@ -635,7 +635,7 @@ Git 为这项工作提供了直接入口：`git diff` 查看尚未暂存的修�
 
 ### Review 实现与功能：把代码中的判断带到设备上验证
 
-![通过 Diff 定位修改、通过完整代码理解影响，再通过设备与测试验证行为](assets/agent-pair-programming/review-evidence.svg)
+![通过 Diff 定位修改、通过完整代码理解影响，再通过设备与测试验证行为](./assets/review-evidence.svg)
 
 读懂实现以后，才能更有针对性地验证功能。仍以通信恢复为例，如果代码声称断开连接后会超时退出、继续执行其他任务，并在连接恢复后重新接收数据，测试就应当实际覆盖这些行为。只检查“连接成功时能够收发”，没有检验这次修改最重要的部分。
 
@@ -653,7 +653,7 @@ Linux 内核开发同样面对这个问题。内核中的驱动、内存管理�
 
 在 2026 年 7 月关于将 AI 审查工具接入补丁工作流的邮件讨论中，Linus Torvalds 明确支持把 AI 作为工具使用，同时指出维护者可能因此承担额外工作。他强调，应当让这些工具帮助维护者。接受新工具和要求贡献质量，在这个立场里是同时成立的。[邮件原文：Re: Linking Patchwork with Sashiko?](https://lore.kernel.org/linux-media/CAHk-=wi4zC+Ze8e+p3tMv8TtG_80KzsZ1syL9anBtmEh5Z40vg@mail.gmail.com/)
 
-![Linus Torvalds 关于 AI 工具与内核维护工作的邮件内容，附中文翻译](assets/agent-pair-programming/linus-ai-mail.jpeg)
+![Linus Torvalds 关于 AI 工具与内核维护工作的邮件内容，附中文翻译](./assets/linus-ai-mail.jpeg)
 
 *Linus Torvalds，linux-media 邮件列表，2026 年 7 月；图中中文为附加译文。*
 
@@ -793,7 +793,7 @@ AI 改变的正是取得这种帮助的成本。面对同一份资料，它可�
 
 这种便利仍然需要与思考和实践结合。代码行为可以通过运行观察，接口定义可以回到文档核对，设计建议可以结合交付条件讨论。解释流畅与理解正确之间，还需要这些联系。
 
-![学习过程](./assets/agent-pair-programming/learning-loop.svg)
+![学习过程](./assets/learning-loop.svg)
 
 “学而不思则罔，思而不学则殆。”阅读让经验不局限于已经做过的项目，思考帮助判断别人的结论为何成立，实践则形成新的认识。AI 可以参与其中的每一环，但不能让这些环节失去联系。
 
