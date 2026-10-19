@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="320" viewBox="0 0 960 320">
+<title>Diff、完整代码与功能验证的关系</title>
+<desc>从 Diff 发现修改，回到完整代码理解影响，再通过设备与测试验证行为；发现问题后返回实现检查。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8" fill="none" stroke="#637791" stroke-width="1.4"/></marker></defs>
+<rect width="960" height="320" rx="16" fill="#f5f7fb"/>
+<g font-family="Arial, sans-serif" text-anchor="middle" fill="#25344a">
+<g stroke="#c4d2e4"><rect x="30" y="65" width="250" height="132" rx="12" fill="#eaf2ff"/><rect x="355" y="65" width="250" height="132" rx="12" fill="#eaf2ff"/><rect x="680" y="65" width="250" height="132" rx="12" fill="#e6f5ee"/></g>
+<g font-size="23" font-weight="bold"><text x="155" y="108">Diff</text><text x="480" y="108">Code</text><text x="805" y="108">Behavior</text></g>
+<g font-size="18"><text x="155" y="146">改了什么</text><text x="480" y="146">影响哪些执行路径</text><text x="805" y="146">设备是否符合预期</text></g>
+<g font-size="14" fill="#637791"><text x="155" y="175">新增超时返回</text><text x="480" y="175">调用方怎样处理失败</text><text x="805" y="175">断网、超时、恢复</text></g>
+<path d="M285 130H345M610 130H670M805 205V260H480V205" fill="none" stroke="#637791" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="644" y="292" font-size="16" fill="#637791">结果不符，回到实现定位原因</text>
+</g></svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+<title id="title">Model API and local tools</title><desc id="desc">本地 Agent 发送上下文给模型，接收工具调用请求，在本地执行工具，再把结果发送给模型以继续生成。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1 7 4 1 7" fill="none" stroke="#64748b" stroke-width="1.5"/></marker></defs>
+<rect width="960" height="560" rx="16" fill="#f8fafc"/>
+<g font-family="Inter, Arial, sans-serif" font-size="21" fill="#0f172a" text-anchor="middle">
+<rect x="25" y="25" width="580" height="510" rx="14" fill="#f1f5f9" stroke="#cbd5e1"/><rect x="650" y="25" width="285" height="510" rx="14" fill="#eff6ff" stroke="#cbd5e1"/><g font-size="16" fill="#64748b"><text x="315" y="52">Local</text><text x="792" y="52">Provider</text></g><rect x="70" y="70" width="160" height="55" rx="10" fill="#fff" stroke="#cbd5e1"/><text x="150" y="104.5">Tools</text>
+<rect x="365" y="70" width="175" height="55" rx="10" fill="#fff" stroke="#cbd5e1"/><text x="452.5" y="104.5">Agent</text>
+<rect x="710" y="70" width="165" height="55" rx="10" fill="#fff" stroke="#cbd5e1"/><text x="792.5" y="104.5">Model</text>
+<path d="M150 125 V510 M452 125 V510 M792 125 V510" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 6" fill="none"/><path d="M452 175 H792" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="622" y="163" font-size="18">Request</text><path d="M792 240 H452" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="622" y="228" font-size="18">Tool call</text><path d="M452 305 H150" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="301" y="293" font-size="18">Execute</text><path d="M150 370 H452" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="301" y="358" font-size="18">Result</text><path d="M452 435 H792" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="622" y="423" font-size="18">Context + result</text><path d="M792 500 H452" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="622" y="488" font-size="18">Answer / next call</text></g></svg>

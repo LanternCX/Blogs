@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="370" viewBox="0 0 1080 370" role="img" aria-labelledby="title desc">
+<title id="title">Branches and merge</title><desc id="desc">主分支与功能分支共享初始历史，功能分支增加 C 提交，主分支合入后产生 M 合并提交；箭头表示开发推进方向。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1 7 4 1 7" fill="none" stroke="#64748b" stroke-width="1.5"/></marker></defs>
+<rect width="1080" height="370" rx="16" fill="#f8fafc"/>
+<g font-family="Inter, Arial, sans-serif" font-size="22" fill="#0f172a" text-anchor="middle"><g fill="none" stroke="#64748b" stroke-width="3"><path d="M130 125 H350 H880"/><path d="M350 125 C440 125 440 260 540 260 H650 C760 260 760 125 880 125"/></g>
+<g fill="#eff6ff" stroke="#94a3b8" stroke-width="2"><circle cx="130" cy="125" r="26"/><circle cx="350" cy="125" r="26"/><circle cx="650" cy="260" r="26"/><circle cx="880" cy="125" r="26" fill="#ecfdf5"/></g>
+<text x="130" y="133">A</text><text x="350" y="133">B</text><text x="650" y="268">C</text><text x="880" y="133">M</text>
+<text x="880" y="68" font-size="19">main</text><text x="650" y="320" font-size="19">feat/student-name</text><text x="540" y="65" font-size="17" fill="#64748b">Create a merge commit</text>
+</g></svg>

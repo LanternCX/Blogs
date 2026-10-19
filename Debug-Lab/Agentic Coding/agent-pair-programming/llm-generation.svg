@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="400" viewBox="0 0 1100 400" role="img" aria-labelledby="title desc">
+<title id="title">LLM generation</title><desc id="desc">文本被切分为 Token，查询 Embedding 后经过多层含注意力和前馈网络的 Transformer，输出分数经 Softmax 形成概率，选择下一个 Token 并追加到序列。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1 7 4 1 7" fill="none" stroke="#64748b" stroke-width="1.5"/></marker></defs>
+<rect width="1100" height="400" rx="16" fill="#f8fafc"/>
+<g font-family="Inter, Arial, sans-serif" font-size="21" fill="#0f172a" text-anchor="middle">
+<rect x="30" y="75" width="100" height="70" rx="10" fill="#eff6ff" stroke="#cbd5e1"/><text x="80" y="117">Text</text>
+<rect x="185" y="75" width="125" height="70" rx="10" fill="#eff6ff" stroke="#cbd5e1"/><text x="247.5" y="117">Tokens</text>
+<rect x="365" y="75" width="160" height="70" rx="10" fill="#eff6ff" stroke="#cbd5e1"/><text x="445" y="117">Embedding</text>
+<rect x="585" y="40" width="475" height="140" rx="12" fill="#f1f5f9" stroke="#94a3b8"/><text x="822" y="69" font-size="18" fill="#64748b">Transformer × N</text><rect x="610" y="90" width="190" height="55" rx="10" fill="#eff6ff" stroke="#cbd5e1"/><text x="705" y="124.5">Attention</text>
+<rect x="840" y="90" width="190" height="55" rx="10" fill="#eff6ff" stroke="#cbd5e1"/><text x="935" y="124.5">MLP</text>
+<path d="M130 110 H185" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<path d="M310 110 H365" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<path d="M525 110 H585" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<path d="M800 117 H840" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="446" y="183" font-size="16" fill="#64748b">+ position</text><rect x="875" y="250" width="155" height="65" rx="10" fill="#eff6ff" stroke="#cbd5e1"/><text x="952.5" y="289.5">Logits</text>
+<rect x="640" y="250" width="175" height="65" rx="10" fill="#eff6ff" stroke="#cbd5e1"/><text x="727.5" y="289.5">Softmax</text>
+<rect x="390" y="250" width="190" height="65" rx="10" fill="#eff6ff" stroke="#cbd5e1"/><text x="485" y="289.5">P(next)</text>
+<rect x="75" y="250" width="225" height="65" rx="10" fill="#ecfdf5" stroke="#cbd5e1"/><text x="187.5" y="289.5">Next token</text>
+<path d="M1030 117 H1075 V220 H952 V250" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<path d="M875 282 H815" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<path d="M640 282 H580" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<path d="M390 282 H300" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="345" y="265" font-size="16" fill="#64748b">sample</text><path d="M75 282 H20 V205 H247 V145" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"/>
+<text x="135" y="194" font-size="16" fill="#64748b">append</text></g></svg>

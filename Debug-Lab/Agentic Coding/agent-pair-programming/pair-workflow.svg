@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="280" viewBox="0 0 1000 280" role="img" aria-labelledby="title desc">
+<title id="title">Pair programming</title>
+<desc id="desc">明确目标，选择方案，实施修改，观察结果，并根据验证结果调整方案。</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1 7 4 1 7" fill="none" stroke="#64748b" stroke-width="1.5"/></marker></defs>
+<rect width="1000" height="280" rx="16" fill="#f8fafc"/>
+<g font-family="Inter, Arial, sans-serif" font-size="23" text-anchor="middle" fill="#0f172a">
+<g fill="#eff6ff" stroke="#cbd5e1"><rect x="35" y="85" width="170" height="70" rx="10"/><rect x="285" y="85" width="170" height="70" rx="10"/><rect x="535" y="85" width="170" height="70" rx="10"/><rect x="785" y="85" width="180" height="70" rx="10" fill="#ecfdf5"/></g>
+<text x="120" y="128">Goal</text><text x="370" y="128">Design</text><text x="620" y="128">Change</text><text x="875" y="128">Verify</text>
+<g fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#a)"><path d="M205 120 H285"/><path d="M455 120 H535"/><path d="M705 120 H785"/><path d="M875 155 V220 H370 V155"/></g>
+<text x="620" y="209" font-size="17" fill="#64748b">Feedback</text>
+</g></svg>

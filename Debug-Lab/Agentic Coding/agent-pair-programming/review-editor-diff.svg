@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="470" viewBox="0 0 1040 470">
+<title>编辑器中的并排 Diff 示意</title>
+<desc>左侧旧版本使用无限等待，右侧新增超时返回。红色为删除，绿色为新增。底部指出超时期间仍会阻塞，需要结合调用位置继续审查。</desc>
+<rect width="1040" height="470" rx="16" fill="#f5f7fb"/>
+<g font-family="Arial, sans-serif" fill="#25344a">
+<rect x="24" y="24" width="992" height="366" rx="10" fill="white" stroke="#ccd5e2"/>
+<path d="M24 70H1016M520 70V390" stroke="#ccd5e2"/>
+<text x="44" y="53" font-size="18" font-weight="bold">connection.c</text>
+<text x="780" y="53" font-size="15" fill="#65758b">Changes · −2 / +5</text>
+<text x="44" y="99" font-size="14" fill="#65758b">BASE</text>
+<text x="540" y="99" font-size="14" fill="#65758b">WORKING TREE</text>
+<rect x="25" y="144" width="494" height="56" fill="#ffe8e6"/>
+<rect x="521" y="144" width="494" height="140" fill="#e3f5e9"/>
+<g font-family="Menlo, Consolas, monospace" font-size="15">
+<g fill="#8b97a8"><text x="43" y="134">20</text><text x="43" y="162">21</text><text x="43" y="190">22</text><text x="43" y="302">23</text><text x="43" y="330">24</text>
+<text x="539" y="134">20</text><text x="539" y="162">21</text><text x="539" y="190">22</text><text x="539" y="218">23</text><text x="539" y="246">24</text><text x="539" y="274">25</text><text x="539" y="302">26</text><text x="539" y="330">27</text></g>
+<text x="87" y="134">bool wait_connected(void) {</text>
+<text x="73" y="162" fill="#b23c34">−   while (!connected()) {</text>
+<text x="73" y="190" fill="#b23c34">−   }</text>
+<text x="87" y="302">    return true;</text><text x="87" y="330">}</text>
+<text x="583" y="134">bool wait_connected(void) {</text>
+<text x="569" y="162" fill="#226a43">+   uint32_t start = millis();</text>
+<text x="569" y="190" fill="#226a43">+   while (!connected()) {</text>
+<text x="569" y="218" fill="#226a43">+     if (millis() - start &gt;= 1000u)</text>
+<text x="569" y="246" fill="#226a43">+       return false;</text>
+<text x="569" y="274" fill="#226a43">+   }</text>
+<text x="583" y="302">    return true;</text><text x="583" y="330">}</text>
+</g>
+<text x="44" y="368" font-size="14" fill="#65758b">− removed</text><text x="540" y="368" font-size="14" fill="#65758b">+ added</text>
+<text x="38" y="432" font-size="19">有了超时，等待期间仍然阻塞。调用它的任务能否接受这段等待？</text>
+</g></svg>
