@@ -1,4 +1,11 @@
-# Agent 结对编程
+---
+permalink: embedded-ai-programming-guide
+title: '嵌入式视角下的 AI 辅助编程入门指南'
+pubDate: 2026-10-19
+description: '面向初学者，介绍语言模型与 Agent 的工作方式，以及嵌入式开发中的需求定义、上下文管理、Git 协作、代码审查与测试。'
+---
+
+# 嵌入式视角下的 AI 辅助编程入门指南
 
 ## 代码生成以后，还有哪些工作
 
